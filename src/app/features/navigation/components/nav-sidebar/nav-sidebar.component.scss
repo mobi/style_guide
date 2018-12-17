@@ -1,0 +1,22 @@
+@import "variables";
+@import "mixins";
+
+.nav-menu__list {
+  padding: 2rem 0;
+
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a, a:visited, a:focus, a:active {
+    color: $theme-light-color;
+  }
+
+  a {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+  }
+}
