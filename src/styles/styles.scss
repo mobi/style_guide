@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'reset';
+
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+
+// Base Styling
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+  @media (max-width: 768px){
+      width: 0 !important;
+      height: 0 !important;
+  }
+}
+
+::-webkit-scrollbar-track{
+  border-radius: 0;
+  background-color: $base-dark;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 0;
+  background-color: $base-dark-secondary;
+}

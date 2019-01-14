@@ -1,0 +1,23 @@
+@import 'mixins';
+@import 'variables';
+
+.nav-menu__list-icon {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.nav-menu__list-expand-icon {
+  border-radius: 50%;
+  color: $theme-light-color;
+  cursor: pointer;
+  padding: 0.5rem;
+  @include transition(all);
+
+  &:hover {
+    background: darken($theme-light-bg-hover, 10%);
+  }
+}
+
+.nav-menu__list-expand-icon--expanded {
+  transform: rotate(180deg);
+}

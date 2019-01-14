@@ -1,0 +1,81 @@
+@import 'variables';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// Headings
+h1 {
+  font-size: 6rem;
+  font-weight: $weight-light;
+  letter-spacing: -1.5pt;
+}
+
+h2 {
+  font-size: 3.75rem;
+  font-weight: $weight-light;
+  letter-spacing: -0.5pt;
+}
+
+h3 {
+  font-size: 3rem;
+  letter-spacing: 0pt;
+}
+
+h4 {
+  font-size: 2.125rem;
+  letter-spacing: 0.25pt;
+}
+
+h5 {
+  font-size: 1.5rem;
+  letter-spacing: 0pt;
+}
+
+h6 {
+  font-size: 1.25rem;
+  font-weight: $weight-bold;
+  letter-spacing: 0.15pt;
+}
+
+// Subtitles
+.subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.15pt;
+}
+
+.subtitle-2 {
+  font-size: 0.875rem;
+  font-weight: $weight-bold;
+  letter-spacing: 0.1pt;
+}
+
+// Body
+.body-copy {
+  font-size: 1rem;
+  letter-spacing: 0.5pt;
+}
+
+.body-copy-2 {
+  font-size: 0.875rem;
+  letter-spacing: 0.25pt;
+}
+
+// Button
+button {
+  font-size: 0.875rem;
+  letter-spacing: 1.25pt;
+  text-transform: uppercase;
+}
+
+// Extras
+caption {
+  font-size: 0.75rem;
+  letter-spacing: 0.4pt;
+}
+
+.overline {
+  font-size: 0.625rem;
+  letter-spacing: 1.5pt;
+  text-transform: uppercase;
+}
