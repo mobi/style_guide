@@ -14,8 +14,8 @@
     <nav class="main__nav">
       <nav-sidebar></nav-sidebar>
     </nav>
-    <div class="main__route-container" [@routerAnimation]="getRouteAnimation(o)">
-      <router-outlet #o="outlet"></router-outlet>
-    </div>
+    <main class="main__route-container" [@routerAnimation]="getRouteAnimation(o)">
+      <router-outlet class="main__route-container-outlet" #o="outlet"></router-outlet>
+    </main>
   </div>
 </div>

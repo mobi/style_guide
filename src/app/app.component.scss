@@ -30,12 +30,13 @@ body {
   display: flex;
   flex-grow: 1;
   position: relative;
-  router-outlet ~ * {
-    height: 100%;
-    padding: 3rem;
-    position: absolute;
-    width: 100%;
-  }
+}
+
+.main__route-container-outlet ~ * {
+  height: 100%;
+  padding: 3rem;
+  position: absolute;
+  width: 100%;
 }
 
 // NAV

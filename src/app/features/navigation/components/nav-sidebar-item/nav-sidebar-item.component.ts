@@ -15,16 +15,12 @@ export class NavSidebarItemComponent implements OnInit {
 
   ngOnInit() {
     this.router.events.subscribe(event => {
-      if (this.router.url.includes(this.menuItem.route)) {
-        this.expanded = true;
-      } else {
-        this.expanded = false;
-      }
+      this.expanded = this.router.url.includes(this.menuItem.route);
     });
   }
 
   toggleExpand() {
-    this.expanded = this.expanded ? false : true;
+    this.expanded = !this.expanded;
   }
 
 }
