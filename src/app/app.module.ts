@@ -6,7 +6,16 @@ import { AppRoutingModule } from './config/routes/app-routing.module';
 import { CoreModule } from './core/core.module';
 import { FeaturesModule } from './features/features.module';
 
-// import { NavSidebarComponent } from './features/navigation/nav-sidebar/nav-sidebar.component';
+import { HighlightModule } from 'ngx-highlightjs';
+import typescript from 'highlight.js/lib/languages/typescript';
+import xml from 'highlight.js/lib/languages/xml';
+
+export function hljsLanguages () {
+  return [
+    { name: 'typescript', func: typescript },
+    { name: 'xml', func: xml }
+  ]
+}
 
 @NgModule({
   declarations: [
@@ -15,7 +24,8 @@ import { FeaturesModule } from './features/features.module';
   imports: [
     AppRoutingModule,
     CoreModule,
-    FeaturesModule
+    FeaturesModule,
+    HighlightModule.forRoot({ languages: hljsLanguages })
   ],
   providers: [],
   bootstrap: [AppComponent]
