@@ -12,7 +12,7 @@ $global-radius: 4px;
 $base-dark: #313536;
 $base-dark-secondary: #202626;
 $base-light: #fff;
-$base-light-secondary: #707070;
+$base-light-secondary: #b1b1b1;
 $base-primary: #93989d;
 
 // Light Theme
@@ -31,3 +31,7 @@ $theme-dark-bg-hover: darken($base-dark, 7);
 $theme-dark-color: $base-light;
 $theme-dark-color-hover: darken($base-light, 20);
 $theme-dark-border: $base-dark-secondary;
+
+// Breakpoints
+$breakpoint_mobile: 768px;
+$breakpoint_tablet: 1024px;
