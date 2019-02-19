@@ -4,14 +4,15 @@
 @import 'variables';
 @import 'mixins';
 @import 'typography';
+@import 'layout';
 
 // Import styling for highlight.js
 @import '~highlight.js/styles/rainbow.css';
 
 // Base Styling
 ::-webkit-scrollbar{
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   @media (max-width: 768px){
       width: 0 !important;
       height: 0 !important;
@@ -19,13 +20,13 @@
 }
 
 ::-webkit-scrollbar-track{
-  border-radius: 0;
-  background-color: $base-dark;
+  background-color: $theme-light-app-bg;
 }
 
 ::-webkit-scrollbar-thumb{
-  border-radius: 0;
-  background-color: $base-dark-secondary;
+  background-color: $base-light-secondary;
+  border: 2px solid $theme-light-app-bg;
+  border-radius: 6px;
 }
 
 code {

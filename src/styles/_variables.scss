@@ -32,3 +32,7 @@ $theme-dark-bg-hover: darken($base-dark, 7);
 $theme-dark-color: $base-light;
 $theme-dark-color-hover: darken($base-light, 20);
 $theme-dark-border: $base-dark-secondary;
+
+// Breakpoints
+$breakpoint_mobile: 768px;
+$breakpoint_tablet: 1024px;
