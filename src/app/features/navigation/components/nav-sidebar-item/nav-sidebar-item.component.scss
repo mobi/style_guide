@@ -9,7 +9,7 @@
   @include transition(all);
 
   &:hover {
-    background: $theme-light-bg-hover;
+    background: $theme-dark-bg-hover;
   }
 }
 
@@ -31,15 +31,26 @@
 }
 
 .nav-menu__list-title {
+  font-weight: lighter;
   letter-spacing: 0.02rem;
   padding: 1rem 1rem 1rem 0;
 }
 
 .nav-menu__sub-nav {
   font-size: 0.833rem;
+
+  .nav-menu__sub-nav-item {
+    background: $theme-dark-bg;
+    @include transition(background);
+
+    &:hover {
+      background: $theme-dark-bg-hover;
+    }
+  }
 }
 
 .nav-menu__sub-nav-title {
+  font-weight: lighter;
   letter-spacing: 0.02rem;
   padding: 0.6rem 0.833rem 0.6rem 3.2rem;
 }

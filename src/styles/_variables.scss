@@ -14,7 +14,9 @@ $base-dark: #313536;
 $base-dark-secondary: #202626;
 $base-light: #fff;
 $base-light-secondary: #b1b1b1;
-$base-primary: #93989d;
+// $base-primary: #93989d;
+$base-primary: #65B360;
+$gradient-primary-horizontal: linear-gradient(to right, $base-primary, darken($base-primary, 7%));
 
 // Light Theme
 $theme-light-app-bg: #F0F0F0;

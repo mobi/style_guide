@@ -19,7 +19,7 @@ export function hljsLanguages () {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     AppRoutingModule,
