@@ -8,13 +8,13 @@
 
 .nav-menu__list-expand-icon {
   border-radius: 50%;
-  color: $theme-light-color;
+  color: $theme-dark-color;
   cursor: pointer;
   padding: 0.5rem;
   @include transition(all);
 
   &:hover {
-    background: darken($theme-light-bg-hover, 10%);
+    background: $theme-dark-bg;
   }
 }
 

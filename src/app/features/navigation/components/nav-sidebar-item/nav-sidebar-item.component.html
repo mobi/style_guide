@@ -10,7 +10,7 @@
            (click)="toggleExpand()"></go-icon>
   </div>
   <ul class="nav-menu__sub-nav" *ngIf="menuItem.subRoutes && expanded">
-    <li *ngFor="let item of menuItem.subRoutes">
+    <li class="nav-menu__sub-nav-item" *ngFor="let item of menuItem.subRoutes">
       <a [routerLink]="[item.route]" [routerLinkActive]="['nav-menu__list-item-link--active']" [routerLinkActiveOptions]="{exact:true}" class="nav-menu__list-item-link">
         <span class="nav-menu__sub-nav-title">{{ item.routeTitle }}</span>
       </a>
