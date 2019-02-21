@@ -7,4 +7,8 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
  templateUrl: './card.component.html'
 })
 
-export class CardComponent { }
+export class CardComponent {
+
+  @Input() showHeader: boolean = true;
+
+}

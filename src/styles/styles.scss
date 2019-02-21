@@ -40,3 +40,8 @@ code {
     font-weight: normal;
   }
 }
+
+.code-block--inline {
+  color: $theme-light-border;
+  display: inline;
+}

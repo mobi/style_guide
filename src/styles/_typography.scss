@@ -19,6 +19,7 @@ h2 {
 h3 {
   font-size: 3rem;
   letter-spacing: 0pt;
+  line-height: 1.5;
 }
 
 h4 {
@@ -35,6 +36,10 @@ h6 {
   font-size: 1.25rem;
   font-weight: $weight-bold;
   letter-spacing: 0.15pt;
+}
+
+h4, h5, h6 {
+  line-height: 2;
 }
 
 // Subtitles
@@ -69,16 +74,49 @@ button {
 
 // Extras
 caption {
+  display: inline-block;
   font-size: 0.75rem;
   letter-spacing: 0.4pt;
+  margin: 1rem 0;
+  text-align: left;
 }
 
 .overline {
+  display: block;
   font-size: 0.625rem;
   letter-spacing: 1.5pt;
+  margin-bottom: -0.25rem;
+  position: relative;
   text-transform: uppercase;
 }
 
 .page-title {
   padding: 0 1rem 1rem 1rem;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+pre {
+  margin-bottom: 0.75rem;
+}
+
+a {
+  border-bottom: 1px solid $base-primary;
+  color: $base-primary;
+  @include transition(all);
+
+  &:visited, &:active, &:focus {
+    color: $base-primary;
+  }
+
+  &:hover {
+    border-bottom-width: 2px;
+  }
 }

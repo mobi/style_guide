@@ -13,6 +13,7 @@ export class NavSidebarComponent implements OnInit {
     { route: 'standards', routeIcon: 'power_settings_new', routeTitle: 'Standards' },
     { route: 'ui-kit', routeIcon: 'widgets', routeTitle: 'Components', subRoutes: [
       { route: 'ui-kit/accordion', routeTitle: 'Accordion' },
+      { route: 'ui-kit/accordion-panel', routeTitle: 'Accordion Panel' },
       { route: 'ui-kit/table', routeTitle: 'Table'}
     ] },
     { route: 'patterns', routeIcon: 'view_quilt', routeTitle: 'Patterns' },
