@@ -11,6 +11,7 @@ import { AccordionDocsComponent } from './components/accordion-docs/accordion-do
 import { AccordionPanelDocsComponent } from './components/accordion-panel-docs/accordion-panel-docs.component';
 import { TableDocsComponent } from './components/table-docs/table-docs.component';
 import { UiKitComponent } from './components/ui-kit/ui-kit.component';
+import { CardDocsComponent } from './components/card-docs/card-docs.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { UiKitComponent } from './components/ui-kit/ui-kit.component';
     AccordionDocsComponent,
     AccordionPanelDocsComponent,
     TableDocsComponent,
-    UiKitComponent
+    UiKitComponent,
+    CardDocsComponent
   ]
 })
 
