@@ -11,9 +11,9 @@
 .go-column {
   flex-grow: 1;
   flex-shrink: 1;
-  padding: 1rem;
+  padding: 0 1rem 2rem 1rem;
 
-  & > * {
+  & > *:not(.go-container) {
     width: 100%;
   }
 }

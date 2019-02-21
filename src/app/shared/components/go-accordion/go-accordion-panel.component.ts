@@ -8,8 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } fro
 })
 export class GoAccordionPanelComponent implements OnInit {
 
-  @Input() expanded: boolean;
-  @Input() icon: string;
+  @Input() expanded: boolean = false;
+  @Input() icon: string = null;
   @Input() title: string;
   
   @Output() toggle: EventEmitter<any> = new EventEmitter<any>();
