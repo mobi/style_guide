@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'nav-sidebar-item',
   styleUrls: ['./nav-sidebar-item.component.scss'],
-  templateUrl: './nav-sidebar-item.component.html'
+  templateUrl: './nav-sidebar-item.component.html',
+  encapsulation: ViewEncapsulation.None
 })
 export class NavSidebarItemComponent implements OnInit {
 

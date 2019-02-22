@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { HighlightModule } from 'ngx-highlightjs';
+
+// GoPonents
+import { GoAccordionModule } from 'goponents';
+import { GoCardModule } from 'goponents';
+import { GoIconModule } from 'goponents';
 
 // Module Routes
 import { UiKitRoutesModule } from './routes/ui-kit-routing.module';
@@ -16,8 +20,10 @@ import { CardDocsComponent } from './components/card-docs/card-docs.component';
 @NgModule({
   imports: [
     CommonModule,
+    GoAccordionModule,
+    GoCardModule,
+    GoIconModule,
     HighlightModule,
-    SharedModule,
     UiKitRoutesModule
   ],
   declarations: [
