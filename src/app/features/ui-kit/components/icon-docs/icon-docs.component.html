@@ -1,0 +1,55 @@
+<h3 class="page-title">{{ pageTitle }}</h3>
+
+<div class="go-container">
+  <go-card [showHeader]="false" class="go-column go-column--33">
+    <ng-container go-card-content>
+      <!-- Intro -->
+      <h5>Usage</h5>
+      <p>The <code class="code-block--inline">&lt;go-icon&gt;</code> component should be the default for content.</p>
+
+      <!-- Bindings -->
+      <h5>Bindings</h5>
+      <pre><code [highlight]="componentBindings"></code></pre>
+
+      <h6>icon - (required)</h6>
+      <p>
+        The <code class="code-block--inline">icon</code> binding must be passed. This component requires the 
+        <a href="https://google.github.io/material-design-icons/#setup-method-1-using-via-google-web-fonts">Material Icons Font</a>
+        to be included in the application. To use, just pass the name of the icon to this binding.
+      </p>
+      <p>
+        See the <a href="https://material.io/tools/icons/">Material Design System Icons</a> page for available icons.
+      </p>
+      <p>
+        See the full <a href="https://google.github.io/material-design-icons/">Material Icons Developer Guide</a> for more information.
+      </p>
+    </ng-container>
+  </go-card>
+
+  <div class="go-column go-column--66">
+
+    <div class="go-container">
+
+      <go-card class="go-column go-column--100">
+        <ng-container go-card-header>
+          <h5>Default</h5>
+        </ng-container>
+        <ng-container go-card-content>
+          <div class="go-container">
+            <div class="go-column go-column--50">
+              <h6>Code</h6>
+              <pre><code [highlight]="defaultExample"></code></pre>
+            </div>
+            <div class="go-column go-column--50">
+              <h6>View</h6>
+              <go-icon icon="home"></go-icon>
+              <go-icon icon="settings"></go-icon>
+              <go-icon icon="landscape"></go-icon>
+            </div>
+          </div>
+        </ng-container>
+      </go-card>
+
+    </div>
+  </div>
+</div>
