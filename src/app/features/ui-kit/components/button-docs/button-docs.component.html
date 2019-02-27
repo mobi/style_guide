@@ -1,0 +1,152 @@
+<h3 class="page-title">{{ pageTitle }}</h3>
+
+<div class="go-container">
+  <go-card [showHeader]="false" class="go-column go-column--33">
+    <ng-container go-card-content>
+      <!-- Intro -->
+      <h5>Usage</h5>
+      <p>
+        The <code class="code-block--inline">&lt;go-button&gt;</code> component should be used for any instance
+        of a button throughout the app.
+      </p>
+
+      <!-- Bindings -->
+      <h5>Bindings</h5>
+      <pre><code [highlight]="componentBindings"></code></pre>
+
+      <h6>buttonDisabled</h6>
+      <p>
+        Disables the button. This should be handled by the parent component.
+      </p>
+
+      <h6>buttonIcon</h6>
+      <p>
+        Add an icon to the left of the text in the button. See the <a href="https://material.io/tools/icons/">Material Design System Icons</a> page for available icons.
+      </p>
+
+      <h6>buttonType</h6>
+      <p>
+        Changes the appearance of the button. There are two types, <code class="code-block--inline">default</code>
+        and <code class="code-block--inline">alert</code>. You only need to set this binding if a type other than
+        <code class="code-block--inline">default</code> is desired.
+      </p>
+
+      <h6>useLoader</h6>
+      <p>
+        Allows the use of the loading animation inside the button. By default this is false. It is recommended
+        to use this when processing data that will take longer than 250ms. Examples: submitting a form, sorting
+        data, refreshing data from the server, etc.
+      </p>
+
+      <h6>handleClick</h6>
+      <p>
+        This event fires when the button is clicked. Use this event to handle the click event.
+      </p>
+    </ng-container>
+  </go-card>
+
+  <div class="go-column go-column--66">
+
+    <div class="go-container">
+
+      <go-card class="go-column go-column--100">
+        <ng-container go-card-header>
+          <h5>Default</h5>
+        </ng-container>
+        <ng-container go-card-content>
+          <div class="go-container">
+            <div class="go-column go-column--50">
+              <h6>example.html</h6>
+              <pre><code [highlight]="defaultExample_html"></code></pre>
+              <h6>example.ts</h6>
+              <pre><code [highlight]="defaultExample_ts"></code></pre>
+            </div>
+            <div class="go-column go-column--50">
+              <h6>View</h6>
+              <go-button (handleClick)="testClick()">Click Me</go-button>
+            </div>
+          </div>
+        </ng-container>
+      </go-card>
+
+      <go-card class="go-column go-column--100">
+        <ng-container go-card-header>
+          <h5>Icon</h5>
+        </ng-container>
+        <ng-container go-card-content>
+          <div class="go-container">
+            <div class="go-column go-column--50">
+              <h6>example.html</h6>
+              <pre><code [highlight]="iconExample"></code></pre>
+            </div>
+            <div class="go-column go-column--50">
+              <h6>View</h6>
+              <go-button buttonIcon="settings">Settings</go-button>
+            </div>
+          </div>
+        </ng-container>
+      </go-card>
+
+      <go-card class="go-column go-column--100">
+        <ng-container go-card-header>
+          <h5>Alert</h5>
+        </ng-container>
+        <ng-container go-card-content>
+          <div class="go-container">
+            <div class="go-column go-column--50">
+              <h6>example.html</h6>
+              <pre><code [highlight]="alertExample_html"></code></pre>
+              <h6>example.ts</h6>
+              <pre><code [highlight]="alertExample_ts"></code></pre>
+            </div>
+            <div class="go-column go-column--50">
+              <h6>View</h6>
+              <go-button (handleClick)="alertClick()" buttonType="alert">Delete Me</go-button>
+            </div>
+          </div>
+        </ng-container>
+      </go-card>
+
+      <go-card class="go-column go-column--100">
+        <ng-container go-card-header>
+          <h5>Disabled</h5>
+        </ng-container>
+        <ng-container go-card-content>
+          <div class="go-container">
+            <div class="go-column go-column--50">
+              <h6>example.html</h6>
+              <pre><code [highlight]="disabledExample"></code></pre>
+            </div>
+            <div class="go-column go-column--50">
+              <h6>View</h6>
+              <go-button [buttonDisabled]="true">Can't Touch This</go-button>
+            </div>
+          </div>
+        </ng-container>
+      </go-card>
+
+      <go-card class="go-column go-column--100">
+        <ng-container go-card-header>
+          <h5>Click with loader</h5>
+        </ng-container>
+        <ng-container go-card-content>
+          <div class="go-container">
+            <div class="go-column go-column--50">
+              <h6>example.html</h6>
+              <pre><code [highlight]="handleClickLoader_html"></code></pre>
+              <h6>example.ts</h6>
+              <pre><code [highlight]="handleClickLoader_ts"></code></pre>
+            </div>
+            <div class="go-column go-column--50">
+              <h6>View</h6>
+              <go-button (handleClick)="testSubmit()" [useLoader]="true" #submitButton>Load Me</go-button>
+            </div>
+          </div>
+        </ng-container>
+      </go-card>
+
+
+
+    </div>
+  </div>
+</div>
