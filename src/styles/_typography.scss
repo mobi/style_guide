@@ -105,7 +105,7 @@ p {
 }
 
 pre {
-  margin-bottom: 0.75rem;
+  margin: 0.5rem 0;
 }
 
 a {
@@ -120,4 +120,10 @@ a {
   &:hover {
     border-bottom-width: 2px;
   }
+}
+
+ol {
+  list-style: decimal;
+  margin: 0.75rem 0;
+  padding-left: 1rem;
 }

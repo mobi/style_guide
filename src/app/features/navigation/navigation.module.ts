@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from 'src/app/core/core.module';
-import { GoIconModule } from 'goponents';
+import { GoIconModule } from '@tangoe/goponents';
 
 // Module Components
 import { NavSidebarComponent } from './components/nav-sidebar/nav-sidebar.component';

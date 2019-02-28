@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { HighlightModule } from 'ngx-highlightjs';
 
 // GoPonents
-import { GoAccordionModule } from 'goponents';
-import { GoButtonModule } from 'goponents';
-import { GoCardModule } from 'goponents';
-import { GoIconModule } from 'goponents';
+import { GoAccordionModule } from '@tangoe/goponents';
+import { GoButtonModule } from '@tangoe/goponents';
+import { GoCardModule } from '@tangoe/goponents';
+import { GoIconModule } from '@tangoe/goponents';
+import { GoModalModule, GoModalService } from '@tangoe/goponents';
 
 // Module Routes
 import { UiKitRoutesModule } from './routes/ui-kit-routing.module';
@@ -19,6 +20,8 @@ import { CardDocsComponent } from './components/card-docs/card-docs.component';
 import { IconDocsComponent } from './components/icon-docs/icon-docs.component';
 import { TableDocsComponent } from './components/table-docs/table-docs.component';
 import { UiKitComponent } from './components/ui-kit/ui-kit.component';
+import { ModalDocsComponent } from './components/modal-docs/modal-docs.component';
+import { ModalTestComponent } from './components/modal-test/modal-test.component';
 
 @NgModule({
   imports: [
@@ -27,6 +30,7 @@ import { UiKitComponent } from './components/ui-kit/ui-kit.component';
     GoButtonModule,
     GoCardModule,
     GoIconModule,
+    GoModalModule,
     HighlightModule,
     UiKitRoutesModule
   ],
@@ -37,7 +41,15 @@ import { UiKitComponent } from './components/ui-kit/ui-kit.component';
     CardDocsComponent,
     IconDocsComponent,
     TableDocsComponent,
-    UiKitComponent
+    UiKitComponent,
+    ModalDocsComponent,
+    ModalTestComponent
+  ],
+  entryComponents: [
+    ModalTestComponent
+  ],
+  providers: [
+    GoModalService
   ]
 })
 

@@ -16,7 +16,8 @@ export class NavSidebarComponent implements OnInit {
       { route: 'ui-kit/accordion-panel', routeTitle: 'Accordion Panel' },
       { route: 'ui-kit/button', routeTitle: 'Button' },
       { route: 'ui-kit/card', routeTitle: 'Card' },
-      { route: 'ui-kit/icon', routeTitle: 'Icon' }
+      { route: 'ui-kit/icon', routeTitle: 'Icon' },
+      { route: 'ui-kit/modal', routeTitle: 'Modal' }
       // { route: 'ui-kit/table', routeTitle: 'Table'}
     ] },
     // { route: 'patterns', routeIcon: 'view_quilt', routeTitle: 'Patterns' },

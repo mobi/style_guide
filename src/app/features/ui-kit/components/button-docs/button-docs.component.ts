@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { GoButtonComponent } from 'goponents';
+import { GoButtonComponent } from '@tangoe/goponents';
 
 @Component({
   selector: 'app-button-docs',
