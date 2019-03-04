@@ -6,6 +6,13 @@
     </ng-container>
 
     <ng-container go-card-content>
+      <p>
+        By default we apply margin to the bottom of all of the basic typograhical elements.
+        This allows us to establish a more clear vertical rhythm to enhance readibility.
+      </p>
+      <p>
+        To learn how to remove this margin see below.
+      </p>
       <code [highlight]="basicExample"></code>
     </ng-container>
   </go-card>
@@ -24,15 +31,15 @@
     </ng-container>
 
     <ng-container go-card-content>
-      <p>
+      <p class="go-body-copy">
         The default heading margin can be removed by adding the
         <code class="code-block--inline">go-heading--no-margin</code>
         modifier class to any heading.
       </p>
-      <p>
+      <p class="go-body-copy">
         The same styles can be applied on body copy by adding the
         <code class="code-block--inline">body-copy--no-margin</code>
-        modifier class to any heading.
+        modifier class to any paragraph.
       </p>
       <code [highlight]="noMarginExample"></code>
     </ng-container>
@@ -67,7 +74,7 @@
         adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et 
         dolore magnam aliquam quaerat voluptatem.
       </p>
-      <p>
+      <p class="go-body-copy go-body-copy--no-margin">
         Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit 
         laboriosam, nisi ut aliquid ex ea commodi consequatur?
       </p>
