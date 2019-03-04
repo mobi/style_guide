@@ -6,6 +6,7 @@ import { AccordionPanelDocsComponent } from '../components/accordion-panel-docs/
 import { ButtonDocsComponent } from '../components/button-docs/button-docs.component';
 import { CardDocsComponent } from '../components/card-docs/card-docs.component';
 import { IconDocsComponent } from '../components/icon-docs/icon-docs.component';
+import { ModalDocsComponent } from '../components/modal-docs/modal-docs.component';
 import { TableDocsComponent } from '../components/table-docs/table-docs.component';
 import { UiKitComponent } from '../components/ui-kit/ui-kit.component';
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'ui-kit/button', component: ButtonDocsComponent },
   { path: 'ui-kit/card', component: CardDocsComponent },
   { path: 'ui-kit/icon', component: IconDocsComponent },
+  { path: 'ui-kit/modal', component: ModalDocsComponent },
   { path: 'ui-kit/table', component: TableDocsComponent }
 ];
 
