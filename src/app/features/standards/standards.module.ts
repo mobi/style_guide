@@ -1,17 +1,24 @@
 import { NgModule } from '@angular/core';
+import { HighlightModule } from 'ngx-highlightjs';
 
 // Module Routes
 import { StandardsRoutesModule } from './routes/standards-routing.module';
 
+import { GoCardModule } from '@tangoe/goponents';
+
 // Module Components
 import { StandardsComponent } from './components/standards/standards.component';
+import { TypographyComponent } from './components/typography/typography.component';
 
 @NgModule({
   imports: [
-    StandardsRoutesModule
+    HighlightModule,
+    StandardsRoutesModule,
+    GoCardModule
   ],
   declarations: [
-    StandardsComponent
+    StandardsComponent,
+    TypographyComponent
   ]
 })
 
