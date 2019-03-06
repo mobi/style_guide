@@ -9,6 +9,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class NavSidebarComponent implements OnInit {
 
   menuItems = [
+    { route: '', routeIcon: 'home', routeTitle: 'Home' },
     { route: 'standards', routeIcon: 'power_settings_new', routeTitle: 'Standards', subRoutes: [
       { route: 'standards/typography', routeTitle: 'Typography' },
     ]},
