@@ -1,0 +1,55 @@
+@import '~@tangoe/goponents/styles/variables';
+
+#go-color-brand { background: $brand-color; }
+#go-color-brand--active { background: $brand-color-active; }
+#go-color-brand--hover { background: $brand-color-hover; }
+#go-color-brand, #go-color-brand--active, #go-color-brand--hover {
+  color: $base-light;
+}
+
+#go-color-negative { background: $ui-color-negative; }
+#go-color-negative--active { background: $ui-color-negative-active; }
+#go-color-negative--hover { background: $ui-color-negative-hover; }
+#go-color-negative, #go-color-negative--active, #go-color-negative--hover {
+  color: $base-light;
+}
+
+#go-color-neutral { background: $ui-color-neutral; }
+#go-color-neutral--active { background: $ui-color-neutral-active; }
+#go-color-neutral--hover { background: $ui-color-neutral-hover; }
+#go-color-neutral, #go-color-neutral--active, #go-color-neutral--hover {
+  color: $base-light;
+}
+
+#go-color-positive { background: $ui-color-positive; }
+#go-color-positive--active { background: $ui-color-positive-active; }
+#go-color-positive--hover { background: $ui-color-positive-hover; }
+#go-color-positive, #go-color-positive--active, #go-color-positive--hover {
+  color: $base-dark;
+}
+
+.go-color-item {
+  border-radius: $global-radius;
+  flex-grow: 1;
+  height: 150px;
+}
+
+.go-color-items {
+  display: flex;
+
+  & > :first-child {
+    border-radius: $global-radius 0 0 $global-radius;
+  }
+
+  & > :last-child {
+    border-radius: 0 $global-radius $global-radius 0;
+  }
+
+  & > * {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    height: 150px;
+    justify-content: center;
+  }
+}
