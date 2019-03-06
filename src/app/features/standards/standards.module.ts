@@ -7,6 +7,7 @@ import { StandardsRoutesModule } from './routes/standards-routing.module';
 import { GoCardModule } from '@tangoe/goponents';
 
 // Module Components
+import { ColorsComponent } from './components/colors/colors.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { TypographyComponent } from './components/typography/typography.component';
 
@@ -17,6 +18,7 @@ import { TypographyComponent } from './components/typography/typography.componen
     GoCardModule
   ],
   declarations: [
+    ColorsComponent,
     StandardsComponent,
     TypographyComponent
   ]
