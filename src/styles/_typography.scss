@@ -41,16 +41,17 @@ pre {
 }
 
 a {
-  border-bottom: 1px solid $base-primary;
-  color: $base-primary;
+  border-bottom: 1px solid;
+  color: $theme-light-color;
   @include transition(all);
 
   &:visited, &:active, &:focus {
-    color: $base-primary;
+    color: $theme-light-color;
   }
 
   &:hover {
-    border-bottom-width: 2px;
+    color: $ui-color-neutral;
+    // border-bottom-width: 2px;
   }
 }
 
