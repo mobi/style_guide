@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'reset';
 
-@import 'variables';
-@import 'mixins';
+@import '~@tangoe/goponents/styles/variables';
+@import '~@tangoe/goponents/styles/mixins';
+@import '~@tangoe/goponents/styles/typography';
+@import '~@tangoe/goponents/styles/layout';
+
 @import 'typography';
-@import 'layout';
 
 // Import styling for highlight.js
 @import '~highlight.js/styles/rainbow.css';
