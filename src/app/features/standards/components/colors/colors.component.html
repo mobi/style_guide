@@ -2,110 +2,162 @@
   <h3 class="go-heading-3">{{ pageTitle }}</h3>
 </header>
 <div class="go-container">
+  <section class="go-column go-column--100">
+    <go-card>
+      <ng-container go-card-header>
+        <h5 class="go-heading-4">SASS Color Variables</h5>
+      </ng-container>
+      <ng-container go-card-content>
+        <p>
+          All of the available sass variables for theming, branding, & other
+          UI states are available via the gosheets package. 
+          If the gosheets package is installed, these can be imported in an
+          scss file with: 
+          <code class="code-block--inline">@import '~@tangoe/gosheets/base/variables';</code>
+        </p>
+      </ng-container>
+    </go-card>
+  </section>
 
-  <div class="go-column go-column--50">
-    <section class="go-container">
-      <go-card [showHeader]="false" class="go-column go-column--100">
-        <ng-container go-card-content>
-          <section class="go-container">
-            <div class="go-column go-column--100">
-              <h4 class="go-heading-5">Go Brand</h4>
-              <p>
-                This color should be used to add an accent to a UI element. It should not appear in large blocks
-                and should not be used on actionable UI elements. (Buttons, Links, etc.) Use the UI colors below for that. <br/>
-                <caption>Base SASS variable: $brand-color</caption>
-              </p>
-              <div class="go-color-items">
-                <div id="go-color-brand">
-                  <span class="overline">#65B360</span>
-                </div>
-                <div id="go-color-brand--active">
-                  <span class="overline">#52A24D</span>
-                </div>
-                <div id="go-color-brand--hover">
-                  <span class="overline">#4D9848</span>
-                </div>
+  <section id="go-color-base" class="go-column go-column--100">
+    <go-card>
+      <ng-container go-card-header>
+        <h5 class="go-heading-5">Base Colors</h5>
+      </ng-container>
+      <ng-container go-card-content>
+        <section class="go-container">
+          <div class="go-column go-column--50">
+            <div class="go-color-items">
+              <div id="go-color-primary" class="go-color-items__item">
+                <span class="overline">#65B360</span>
+              </div>
+              <div id="go-color-light" class="go-color-items__item go-color-items__item--dark">
+                <span class="overline">#FFFFFF</span>
+              </div>
+              <div id="go-color-light-secondary" class="go-color-items__item go-color-items__item--dark">
+                <span class="overline">#B1B1B1</span>
+              </div>
+              <div id="go-color-dark" class="go-color-items__item">
+                <span class="overline">#313536</span>
+              </div>
+              <div id="go-color-dark-secondary" class="go-color-items__item">
+                <span class="overline">#202626</span>
               </div>
             </div>
-            <div class="go-column go-column--100">
-              <h4 class="go-heading-5">Horizon Red</h4>
-              <p>
-                Horizon Red should be used when an action will result in a negative result (ex: deletion), when
-                an event has resulted in an error (ex: failed form submission), a sense of urgency is needed (ex: alerts or warnings), or
-                numerical negative (ex: currency).<br/>
-                <caption>Base SASS variable: $ui-color-negative</caption>
-              </p>
-              <div class="go-color-items">
-                <div id="go-color-negative">
-                  <span class="overline">#DD4C4C</span>
-                </div>
-                <div id="go-color-negative--active">
-                  <span class="overline">#BA3F3F</span>
-                </div>
-                <div id="go-color-negative--hover">
-                  <span class="overline">#A83939</span>
-                </div>
-              </div>
-            </div>
-            <div class="go-column go-column--100">
-              <h4 class="go-heading-5">Nebula Purple</h4>
-              <p>
-                Nebula Purple should be used to present additional information (ex: notice), or when taking a neutral action (ex: data refresh). <br/>
-                <caption>Base SASS variable: $ui-color-neutral</caption>
-              </p>
-              <div class="go-color-items">
-                <div id="go-color-neutral">
-                  <span class="overline">#8A4EDE</span>
-                </div>
-                <div id="go-color-neutral--active">
-                  <span class="overline">#7F47CC</span>
-                </div>
-                <div id="go-color-neutral--hover">
-                  <span class="overline">#7441BA</span>
-                </div>
-              </div>
-            </div>
-            <div class="go-column go-column--100">
-              <h4 class="go-heading-5">Galaxy Blue</h4>
-              <p>
-                Galaxy Blue should be used when an action will result in a completion (ex: form submission), to indicate a positive event
-                (ex: form completion), a positive status (ex: indicator), or to show a numerical positive (ex: currency). <br/>
-                <caption>Base SASS variable: $ui-color-positive</caption>
-              </p>
-              <div class="go-color-items">
-                <div id="go-color-positive">
-                  <span class="overline">#4EDED2</span>
-                </div>
-                <div id="go-color-positive--active">
-                  <span class="overline">#47CCC1</span>
-                </div>
-                <div id="go-color-positive--hover">
-                  <span class="overline">#41BAB0</span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </ng-container>
-      </go-card>
-    </section>
-  </div>
+          </div>
+          <div class="go-column go-column--50">
+            <code [highlight]="baseColors"></code>
+          </div>
+        </section>
+      </ng-container>
+    </go-card>
+  </section>
 
-  <div class="go-column go-column--50">
-    <section class="go-container">
-      <go-card class="go-column go-column--100">
-        <ng-container go-card-header>
-          <h5 class="go-heading-4">SASS Color Variables</h5>
-        </ng-container>
-        <ng-container go-card-content>
-          <p>
-            Available sass variables for theming, branding, & other UI states. If the Goponents package is installed,
-            these can be imported in an scss file with: <br/>
-            <code class="code-block--inline">@import '~@tangoe/goponents/styles/variables';</code>
-          </p>
-          <code [highlight]="colorVariables"></code>
-        </ng-container>
-      </go-card>
-    </section>
-  </div>
+  <section id="go-color-positive" class="go-column go-column--100">
+    <go-card>
+      <ng-container go-card-header>
+        <h5 class="go-heading-5">Galaxy Blue</h5>
+      </ng-container>
+      <ng-container go-card-content>
+        <section class="go-container">
+          <div class="go-column go-column--50">
+            <p>
+              Galaxy Blue should be used when an action will result in a completion (ex: form submission), to indicate a positive event
+              (ex: form completion), a positive status (ex: indicator), or to show a numerical positive (ex: currency). <br/>
+              <caption>Base SASS variable: $ui-color-positive</caption>
+            </p>
+            <div class="go-color-items">
+              <div class="go-color-items__item go-color-items__item--dark">
+                <span class="overline">#4EDED2</span>
+              </div>
+              <div class="go-color-items__item go-color-items__item--dark">
+                <span class="overline">#47CCC1</span>
+              </div>
+              <div class="go-color-items__item go-color-items__item--dark">
+                <span class="overline">#41BAB0</span>
+              </div>
+              <div class="go-color-items__item go-color-items__item--dark">
+                <span class="overline">$ui-color-positive-gradient</span>
+              </div>
+            </div>
+          </div>
+          <div class="go-column go-column--50">
+            <code [highlight]="galaxyBlue"></code>
+          </div>
+        </section>
+      </ng-container>
+    </go-card>
+  </section>
 
+  <section id="go-color-negative" class="go-column go-column--100">
+    <go-card>
+      <ng-container go-card-header>
+        <h5 class="go-heading-5">Horizon Red</h5>
+      </ng-container>
+      <ng-container go-card-content>
+        <section class="go-container">
+          <div class="go-column go-column--50">
+            <p>
+              Horizon Red should be used when an action will result in a negative result (ex: deletion), when
+              an event has resulted in an error (ex: failed form submission), a sense of urgency is needed (ex: alerts or warnings), or
+              numerical negative (ex: currency).<br/>
+              <caption>Base SASS variable: $ui-color-negative</caption>
+            </p>
+            <div class="go-color-items">
+              <div class="go-color-items__item">
+                <span class="overline">#DD4C4C</span>
+              </div>
+              <div class="go-color-items__item">
+                <span class="overline">#BA3F3F</span>
+              </div>
+              <div class="go-color-items__item">
+                <span class="overline">#A83939</span>
+              </div>
+              <div class="go-color-items__item">
+                <span class="overline">$ui-color-negative-gradient</span>
+              </div>
+            </div>
+          </div>
+          <div class="go-column go-column--50">
+            <code [highlight]="horizonRed"></code>
+          </div>
+        </section>
+      </ng-container>
+    </go-card>
+  </section>
+
+  <section id="go-color-neutral" class="go-column go-column--100">
+    <go-card>
+      <ng-container go-card-header>
+        <h5 class="go-heading-5">Nebula Purple</h5>
+      </ng-container>
+      <ng-container go-card-content>
+        <section class="go-container">
+          <div class="go-column go-column--50">
+            <p>
+              Nebula Purple should be used to present additional information (ex: notice), or when taking a neutral action (ex: data refresh). <br/>
+              <caption>Base SASS variable: $ui-color-neutral</caption>
+            </p>
+            <div class="go-color-items">
+              <div class="go-color-items__item">
+                <span class="overline">#8A4EDE</span>
+              </div>
+              <div class="go-color-items__item">
+                <span class="overline">#7F47CC</span>
+              </div>
+              <div class="go-color-items__item">
+                <span class="overline">#7441BA</span>
+              </div>
+              <div class="go-color-items__item">
+                <span class="overline">$ui-color-neutral-gradient</span>
+              </div>
+            </div>
+          </div>
+          <div class="go-column go-column--50">
+            <code [highlight]="nebulaPurple"></code>
+          </div>
+        </section>
+      </ng-container>
+    </go-card>
+  </section>
 </div>
