@@ -8,6 +8,7 @@ import { GoCardModule } from '@tangoe/goponents';
 
 // Module Components
 import { ColorsComponent } from './components/colors/colors.component';
+import { GridComponent } from './components/grid/grid.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { TypographyComponent } from './components/typography/typography.component';
 
@@ -19,6 +20,7 @@ import { TypographyComponent } from './components/typography/typography.componen
   ],
   declarations: [
     ColorsComponent,
+    GridComponent,
     StandardsComponent,
     TypographyComponent
   ]
