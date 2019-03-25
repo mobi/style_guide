@@ -78,6 +78,14 @@ p,
   margin: 0;
 }
 
+strong {
+  font-weight: $weight-bold;
+}
+
+em {
+  font-style: italic;
+}
+
 // Button
 button {
   font-size: 0.875rem;

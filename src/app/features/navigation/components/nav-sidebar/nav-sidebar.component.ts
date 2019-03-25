@@ -11,6 +11,7 @@ export class NavSidebarComponent implements OnInit {
   menuItems = [
     { route: 'standards', routeIcon: 'power_settings_new', routeTitle: 'Standards', subRoutes: [
       { route: 'standards/colors', routeTitle: 'Colors' },
+      { route: 'standards/grid', routeTitle: 'Grid System' },
       { route: 'standards/typography', routeTitle: 'Typography' }
     ]},
     { route: 'ui-kit', routeIcon: 'widgets', routeTitle: 'Components', subRoutes: [
