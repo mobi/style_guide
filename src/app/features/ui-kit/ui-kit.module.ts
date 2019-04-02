@@ -8,6 +8,7 @@ import { GoButtonModule } from '@tangoe/goponents';
 import { GoCardModule } from '@tangoe/goponents';
 import { GoIconModule } from '@tangoe/goponents';
 import { GoModalModule, GoModalService } from '@tangoe/goponents';
+import { GoTableModule } from '@tangoe/goponents';
 
 // Module Routes
 import { UiKitRoutesModule } from './routes/ui-kit-routing.module';
@@ -18,10 +19,13 @@ import { AccordionPanelDocsComponent } from './components/accordion-panel-docs/a
 import { ButtonDocsComponent } from './components/button-docs/button-docs.component';
 import { CardDocsComponent } from './components/card-docs/card-docs.component';
 import { IconDocsComponent } from './components/icon-docs/icon-docs.component';
-import { TableDocsComponent } from './components/table-docs/table-docs.component';
-import { UiKitComponent } from './components/ui-kit/ui-kit.component';
 import { ModalDocsComponent } from './components/modal-docs/modal-docs.component';
 import { ModalTestComponent } from './components/modal-test/modal-test.component';
+import { TableDocsComponent } from './components/table-docs/table-docs.component';
+import { TableOverviewComponent } from './components/table-docs/components/table-overview/table-overview.component';
+import { TableSortingComponent } from './components/table-docs/components/table-sorting/table-sorting.component';
+import { TableTemplatesComponent } from './components/table-docs/components/table-templates/table-templates.component';
+import { UiKitComponent } from './components/ui-kit/ui-kit.component';
 
 @NgModule({
   imports: [
@@ -31,6 +35,7 @@ import { ModalTestComponent } from './components/modal-test/modal-test.component
     GoCardModule,
     GoIconModule,
     GoModalModule,
+    GoTableModule,
     HighlightModule,
     UiKitRoutesModule
   ],
@@ -40,10 +45,13 @@ import { ModalTestComponent } from './components/modal-test/modal-test.component
     ButtonDocsComponent,
     CardDocsComponent,
     IconDocsComponent,
-    TableDocsComponent,
-    UiKitComponent,
     ModalDocsComponent,
-    ModalTestComponent
+    ModalTestComponent,
+    TableDocsComponent,
+    TableOverviewComponent,
+    TableSortingComponent,
+    TableTemplatesComponent,
+    UiKitComponent
   ],
   entryComponents: [
     ModalTestComponent

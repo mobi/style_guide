@@ -1,4 +1,4 @@
-@import '~@tangoe/goponents/styles/variables';
+@import '~@tangoe/gosheets/base/variables';
 @import '~@tangoe/goponents/styles/mixins';
 
 // GLOBAL
@@ -10,11 +10,16 @@ a {
 body {
   background: $theme-light-app-bg;
   color: $theme-light-color;
-  font-family: $base-font-family;
+  font-family: $base-font-stack;
+  font-weight: 300;
 }
 
 code {
-  margin: 2rem 0;
+  margin: 0.5rem 0 1.5rem 0;
+
+  &.code-block--no-bottom-margin {
+    margin-bottom: 0;
+  }
 }
 
 .main {
