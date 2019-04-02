@@ -1,0 +1,56 @@
+<div class="go-container">
+  <go-card class="go-column go-column--33">
+    <ng-container go-card-header>
+      <h5>Usage</h5>
+    </ng-container>
+    <ng-container go-card-content>
+      <p>
+        The <code class="code-block--inline">&lt;go-table&gt;</code> component should be used for any instance
+        of a data table throughout the app.
+      </p>
+
+      <h5>Bindings</h5>
+      <code [highlight]="componentBindings"></code>
+
+      <h6>tableConfig</h6>
+      <p>
+        This is a class to represent the entire table data and its configurations.
+        The only required property is <code class="code-block--inline">tableData</code>.
+      </p>
+      <p>
+        It has these properties:
+        <code [highlight]="tableConfigClass"></code>
+      </p>
+    </ng-container>
+  </go-card>
+
+  <div class="go-column go-column--66">
+    <div class="go-container">
+      <go-card class="go-column go-column--100">
+        <ng-container go-card-header>
+          <h5>Default Usage</h5>
+        </ng-container>
+        <ng-container go-card-content>
+          <div class="go-container">
+            <div class="go-column go-column--50">
+              <go-table [tableConfig]="tableConfig">
+                <go-table-column field="id" title="ID"></go-table-column>
+                <go-table-column field="name.first" title="First Name"></go-table-column>
+                <go-table-column field="name.last" title="Last Name"></go-table-column>
+                <go-table-column field="email" title="Email"></go-table-column>
+                <go-table-column field="gender" title="Gender"></go-table-column>
+                <go-table-column field="ip_address" title="IP Address"></go-table-column>
+              </go-table>
+            </div>
+            <div class="go-column go-column--50">
+              <h6>example.html</h6>
+              <code [highlight]="basicExample_html"></code>
+              <h6>example.ts</h6>
+              <code [highlight]="basicExample_ts"></code>
+            </div>
+          </div>
+        </ng-container>
+      </go-card>
+    </div>
+  </div>
+</div>
