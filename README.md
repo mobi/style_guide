@@ -1,27 +1,31 @@
 # StyleGuide
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
+This project represents the 'Go' design system as a whole. It includes branding standards as well as documentation for our suite of `goponents`.
+
+Modules documented in this project:
+- @tangoe/goponents
+- @tangoe/gosheets
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Deployment
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To deploy this project, simply merge the PR with master and Heroku will take care of the rest.
 
-## Build
+## Issues
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+To request documentation to be update, request a new feature, submit a bug, etc. file an issue and add the appriopriate labels.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+> Note: If you're requesting a new UI component or filing a bug about one of the `goponents` then please file the issue in that repo. See here: https://github.com/mobi/goponents
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This project is developed using Angular and SASS.
+
+- For help with Angular, http://angular.io/
+- For help with SASS, http://sass-lang.com/
+- For help with design in general, check this project! (otherwise ask the UI/UX team for assistance)
+- For help with decisions, (pick red or blue beforehand!) check http://sometimesredsometimesblue.com/
+- For answers to the universe, check https://bit.ly/IqT6zt
