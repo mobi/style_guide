@@ -5,9 +5,11 @@ import { HighlightModule } from 'ngx-highlightjs';
 import { StandardsRoutesModule } from './routes/standards-routing.module';
 
 import { GoCardModule } from '@tangoe/goponents';
+import { GoButtonModule } from '@tangoe/goponents';
 
 // Module Components
 import { ColorsComponent } from './components/colors/colors.component';
+import { FormsComponent } from './components/forms/forms.component';
 import { GridComponent } from './components/grid/grid.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { TypographyComponent } from './components/typography/typography.component';
@@ -16,10 +18,12 @@ import { TypographyComponent } from './components/typography/typography.componen
   imports: [
     HighlightModule,
     StandardsRoutesModule,
-    GoCardModule
+    GoCardModule,
+    GoButtonModule
   ],
   declarations: [
     ColorsComponent,
+    FormsComponent,
     GridComponent,
     StandardsComponent,
     TypographyComponent

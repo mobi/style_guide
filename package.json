@@ -25,7 +25,7 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "@tangoe/goponents": "^0.5.5",
-    "@tangoe/gosheets": "^0.5.1",
+    "@tangoe/gosheets": "^0.6.1",
     "core-js": "^2.5.4",
     "express": "^4.16.4",
     "highlight.js": "^9.13.1",

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -6,11 +6,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./nav-sidebar.component.scss'],
   templateUrl: './nav-sidebar.component.html'
 })
-export class NavSidebarComponent implements OnInit {
-
+export class NavSidebarComponent {
   menuItems = [
     { route: 'standards', routeIcon: 'power_settings_new', routeTitle: 'Standards', subRoutes: [
       { route: 'standards/colors', routeTitle: 'Colors' },
+      { route: 'standards/forms', routeTitle: 'Forms' },
       { route: 'standards/grid', routeTitle: 'Grid System' },
       { route: 'standards/typography', routeTitle: 'Typography' }
     ]},
@@ -28,7 +28,4 @@ export class NavSidebarComponent implements OnInit {
     // { route: 'themes', routeIcon: 'format_paint', routeTitle: 'Themes' },
     // { route: 'branding', routeIcon: 'domain', routeTitle: 'Branding' }
   ]
-
-  ngOnInit() { }
-
 }

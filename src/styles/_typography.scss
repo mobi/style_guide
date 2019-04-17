@@ -6,13 +6,6 @@ em {
   font-style: italic;
 }
 
-// Button
-button {
-  font-size: 0.875rem;
-  letter-spacing: 1.25pt;
-  text-transform: uppercase;
-}
-
 // Extras
 caption {
   display: inline-block;
@@ -50,12 +43,17 @@ a {
 
   &:hover {
     color: $ui-color-neutral;
-    // border-bottom-width: 2px;
   }
 }
 
-ol {
+ol,
+.go-ordered-list {
   list-style: decimal;
-  margin: 0.75rem 0;
+  margin: 0 $column-gutter $column-gutter--three-quarters;
   padding-left: 1rem;
+}
+
+.go-ordered-list__item {
+  margin: $column-gutter--half 0;
+  line-height: 1.5;
 }
