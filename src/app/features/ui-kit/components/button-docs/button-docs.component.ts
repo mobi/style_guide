@@ -36,7 +36,7 @@ export class ButtonDocsComponent {
   `;
 
   alertExample_html = `
-  <go-button buttonType="alert">Delete Me</go-button>
+  <go-button buttonVariant="negative">Delete Me</go-button>
   `;
 
   alertExample_ts = `
