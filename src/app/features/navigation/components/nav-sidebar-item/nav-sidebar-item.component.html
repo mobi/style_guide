@@ -1,10 +1,10 @@
 <li *ngIf="menuItem">
   <div class="nav-menu__list-item">
     <a [routerLink]="[menuItem.route]" [routerLinkActive]="['nav-menu__list-item-link--active']" [routerLinkActiveOptions]="{exact:true}" class="nav-menu__list-item-link">
-      <go-icon icon="{{ menuItem.routeIcon }}" class="nav-menu__list-icon"></go-icon>
+      <go-icon icon="{{ menuItem.routeIcon }}" iconClass="nav-menu__list-icon"></go-icon>
       <span class="nav-menu__list-title">{{ menuItem.routeTitle }}</span>
     </a>
-    <go-icon class="nav-menu__list-expand-icon"
+    <go-icon iconClass="nav-menu__list-expand-icon"
              icon="expand_more"
              [ngClass]="{ 'nav-menu__list-expand-icon--expanded': expanded }"
              *ngIf="menuItem.subRoutes"

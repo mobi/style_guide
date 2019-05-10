@@ -64,7 +64,7 @@ export class TableSortingComponent {
   ];
 
   tableConfig = new GoTableConfig({
-    sort: new GoTableSortConfig({
+    sortConfig: new GoTableSortConfig({
       column: 'name.first',
       direction: SortDirection.descending
     }),
