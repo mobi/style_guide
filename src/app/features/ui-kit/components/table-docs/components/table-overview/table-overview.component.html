@@ -12,6 +12,11 @@
       <h5>Bindings</h5>
       <code [highlight]="componentBindings"></code>
 
+      <h6>loadingData</h6>
+      <p>
+        This binding can be used to apply a loading state to the table.
+        Typically, this should only be used for server-side integration while awaiting data.
+      </p>
       <h6>tableConfig</h6>
       <p>
         This is a class to represent the entire table data and its configurations.
@@ -20,6 +25,10 @@
       <p>
         It has these properties:
         <code [highlight]="tableConfigClass"></code>
+      </p>
+      <h6>tableTitle</h6>
+      <p>
+        This property adds a title above the table, this is optional.
       </p>
     </ng-container>
   </go-card>
@@ -31,26 +40,20 @@
           <h5>Default Usage</h5>
         </ng-container>
         <ng-container go-card-content>
-          <div class="go-container">
-            <div class="go-column go-column--50">
-              <go-table [tableConfig]="tableConfig">
-                <go-table-column field="id" title="ID"></go-table-column>
-                <go-table-column field="name.first" title="First Name"></go-table-column>
-                <go-table-column field="name.last" title="Last Name"></go-table-column>
-                <go-table-column field="email" title="Email"></go-table-column>
-                <go-table-column field="gender" title="Gender"></go-table-column>
-                <go-table-column field="ip_address" title="IP Address"></go-table-column>
-              </go-table>
-            </div>
-            <div class="go-column go-column--50">
-              <h6>example.html</h6>
-              <code [highlight]="basicExample_html"></code>
-              <h6>example.ts</h6>
-              <code [highlight]="basicExample_ts"></code>
-            </div>
-          </div>
+          <h6>example.html</h6>
+          <code [highlight]="basicExample_html"></code>
+          <h6>example.ts</h6>
+          <code [highlight]="basicExample_ts"></code>
         </ng-container>
       </go-card>
+      <go-table class="go-column go-column--100" [tableConfig]="tableConfig" tableTitle="Default Usage">
+        <go-table-column field="id" title="ID"></go-table-column>
+        <go-table-column field="name.first" title="First Name"></go-table-column>
+        <go-table-column field="name.last" title="Last Name"></go-table-column>
+        <go-table-column field="email" title="Email"></go-table-column>
+        <go-table-column field="gender" title="Gender"></go-table-column>
+        <go-table-column field="ip_address" title="IP Address"></go-table-column>
+      </go-table>
     </div>
   </div>
 </div>

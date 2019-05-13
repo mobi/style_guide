@@ -26,7 +26,7 @@ export class TableSortingComponent {
   import { GoTableConfig, GoTableSortConfig, SortDirection } from '@tangoe/goponents';
 
   this.tableConfig = new GoTableConfig({
-    sort: new GoTableSortConfig({
+    sortConfig: new GoTableSortConfig({
       column: 'name.first',
       direction: SortDirection.descending
     }),

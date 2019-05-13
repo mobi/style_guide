@@ -21,8 +21,10 @@ import { CardDocsComponent } from './components/card-docs/card-docs.component';
 import { IconDocsComponent } from './components/icon-docs/icon-docs.component';
 import { ModalDocsComponent } from './components/modal-docs/modal-docs.component';
 import { ModalTestComponent } from './components/modal-test/modal-test.component';
+import { ServerIntegrationComponent } from './components/table-docs/components/server-integration/server-integration.component';
 import { TableDocsComponent } from './components/table-docs/table-docs.component';
 import { TableOverviewComponent } from './components/table-docs/components/table-overview/table-overview.component';
+import { TablePaginationComponent } from './components/table-docs/components/table-pagination/table-pagination.component';
 import { TableSortingComponent } from './components/table-docs/components/table-sorting/table-sorting.component';
 import { TableTemplatesComponent } from './components/table-docs/components/table-templates/table-templates.component';
 import { UiKitComponent } from './components/ui-kit/ui-kit.component';
@@ -47,8 +49,10 @@ import { UiKitComponent } from './components/ui-kit/ui-kit.component';
     IconDocsComponent,
     ModalDocsComponent,
     ModalTestComponent,
+    ServerIntegrationComponent,
     TableDocsComponent,
     TableOverviewComponent,
+    TablePaginationComponent,
     TableSortingComponent,
     TableTemplatesComponent,
     UiKitComponent
