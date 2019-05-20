@@ -8,77 +8,79 @@ import { GoButtonComponent } from '@tangoe/goponents';
 })
 export class ButtonDocsComponent {
   
-  @ViewChild('submitButton') submitButton: GoButtonComponent;
+  @ViewChild('defaultButton') defaultButton: GoButtonComponent;
+  @ViewChild('negativeButton') negativeButton: GoButtonComponent;
+  @ViewChild('neutralButton') neutralButton: GoButtonComponent;
+  @ViewChild('positiveButton') positiveButton: GoButtonComponent;
 
   pageTitle: string = "Button";
 
-  componentBindings = `
-  @Input()  buttonDisabled: boolean;
-  @Input()  buttonIcon:     string;
-  @Input()  buttonType:     string;
-  @Input()  useLoader:      boolean;
+  componentBindings: string = `
+  @Input() buttonDisabled: boolean;
+  @Input() buttonIcon: string;
+  @Input() buttonType: string = 'button';
+  @Input() buttonVariant: string;
+  @Input() useLoader: boolean;
 
   @Output() handleClick = new EventEmitter<boolean>();
   `;
 
-  defaultExample_html = `
-  <go-button (handleClick)="testClick()">Click Me</go-button>
+  defaultExample: string = `
+  <go-button (handleClick)="testClick()">
+    Default
+  </go-button>
+
+  <go-button (handleClick)="testClick()" buttonDisabled="true">
+    Disabled
+  </go-button>
+
+  <go-button (handleClick)="testClick()" icon="work">
+    With Icon
+  </go-button>
   `;
 
-  defaultExample_ts = `
-  testClick() {
-    alert("I've been clicked!");
-  }
-  `;
+  negativeExample: string = this.buttonTemplate('negative', 'delete');
+  neutralExample: string = this.buttonTemplate('neutral', 'live_help');
+  positiveExample: string = this.buttonTemplate('positive', 'check');
 
-  iconExample = `
-  <go-button buttonIcon="settings">Settings</go-button>
-  `;
-
-  alertExample_html = `
-  <go-button buttonVariant="negative">Delete Me</go-button>
-  `;
-
-  alertExample_ts = `
-  alertClick() {
-    confirm("You sure?");
-  }
-  `;
-
-  disabledExample = `
-  <go-button [buttonDisabled]="true">Can't Touch This</go-button>
-  `;
-  
-  handleClickLoader_html = `
-  <go-button (handleClick)="testSubmit()" [useLoader]="true" #submitButton>Load Me</go-button>
-  `;
-
-  handleClickLoader_ts = `
+  loadingExampleTS = `
   import { GoButtonComponent } from 'goponents';
 
   @ViewChild('submitButton') submitButton: GoButtonComponent;
 
   testSubmit() {
-    // Do something with click, if need be reset it
+    // Do something with click, then reset the button
     this.submitButton.reset();
   }
   `;
 
+  handleClickLoader_html = `
+  <go-button (handleClick)="testSubmit()" [useLoader]="true" #submitButton>Load Me</go-button>
+  `;
 
-  constructor() { }
-
-  testClick() {
-    alert("I've been clicked!");
-  }
-
-  alertClick() {
-    confirm("You sure?");
-  }
-
-  testSubmit() {
+  public testSubmit(): void {
     setTimeout(() => {
-      this.submitButton.reset();
+      this.defaultButton.reset();
+      this.negativeButton.reset();
+      this.neutralButton.reset();
+      this.positiveButton.reset();
     }, 2000);
   }
 
+
+  private buttonTemplate (variant: string, icon: string): string {
+    return `
+  <go-button (handleClick)="testClick()" buttonVariant="${variant}">
+    Negative
+  </go-button>
+
+  <go-button (handleClick)="testClick()" buttonVariant="${variant}" buttonDisabled="true">
+    Disabled
+  </go-button>
+
+  <go-button (handleClick)="testClick()" buttonVariant="${variant}" icon="${icon}">
+    With Icon
+  </go-button>
+    `;
+  }
 }
