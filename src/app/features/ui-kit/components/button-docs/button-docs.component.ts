@@ -26,17 +26,11 @@ export class ButtonDocsComponent {
   `;
 
   defaultExample: string = `
-  <go-button (handleClick)="testClick()">
-    Default
-  </go-button>
+  <go-button (handleClick)="testClick()">Default</go-button>
 
-  <go-button (handleClick)="testClick()" buttonDisabled="true">
-    Disabled
-  </go-button>
+  <go-button (handleClick)="testClick()" buttonDisabled="true">Disabled</go-button>
 
-  <go-button (handleClick)="testClick()" icon="work">
-    With Icon
-  </go-button>
+  <go-button (handleClick)="testClick()" icon="work">With Icon</go-button>
   `;
 
   negativeExample: string = this.buttonTemplate('negative', 'delete');
@@ -58,13 +52,10 @@ export class ButtonDocsComponent {
   <go-button (handleClick)="testSubmit()" [useLoader]="true" #submitButton>Load Me</go-button>
   `;
 
-  public testSubmit(): void {
+  public testSubmit(button: string): void {
     setTimeout(() => {
-      this.defaultButton.reset();
-      this.negativeButton.reset();
-      this.neutralButton.reset();
-      this.positiveButton.reset();
-    }, 2000);
+      this[button].reset();
+    }, 3800);
   }
 
 
