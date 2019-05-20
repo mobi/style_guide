@@ -37,7 +37,7 @@ export class ButtonDocsComponent {
   neutralExample: string = this.buttonTemplate('neutral', 'live_help');
   positiveExample: string = this.buttonTemplate('positive', 'check');
 
-  loadingExampleTS = `
+  loadingExampleTS: string = `
   import { GoButtonComponent } from 'goponents';
 
   @ViewChild('submitButton') submitButton: GoButtonComponent;
@@ -48,9 +48,13 @@ export class ButtonDocsComponent {
   }
   `;
 
-  handleClickLoader_html = `
+  loadingExampleHTML: string = `
   <go-button (handleClick)="testSubmit()" [useLoader]="true" #submitButton>Load Me</go-button>
   `;
+
+  public testClick(): void {
+    alert("Button clicked!");
+  }
 
   public testSubmit(button: string): void {
     setTimeout(() => {
