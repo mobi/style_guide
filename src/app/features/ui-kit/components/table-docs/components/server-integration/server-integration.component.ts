@@ -5,8 +5,13 @@ import { TableDocsService } from '../../table-docs.service';
   templateUrl: './server-integration.component.html'
 })
 export class ServerIntegrationComponent {
+  constructor(private tableDocsService: TableDocsService) {
+    this.tableDocsService.pageTitle = "Table Server Integration";
+  }
 
-  tableConfig_ts = `
+  ////////////////////////////
+
+  tableConfig_ts: string = `
   tableConfig: GoTableConfig = new GoTableConfig({
     dataMode: GoTableDataSource.server,
     tableData: []
@@ -20,20 +25,19 @@ export class ServerIntegrationComponent {
   }
   `;
   
-  tableConfig_ts_tableChange = `
+  tableConfig_ts_tableChange: string = `
   handleTableChange(currentTableConfig: GoTableConfig) : void {
-    this.mockService.getMockData(currentTableConfig)
-        .subscribe(data => {
-          currentTableConfig.tableData = data.results;
-          currentTableConfig.totalCount = data.totalCount;
+    this.mockService.getMockData(currentTableConfig).subscribe(data => {
+      currentTableConfig.tableData = data.results;
+      currentTableConfig.totalCount = data.totalCount;
 
-          this.tableConfig = currentTableConfig;
-          this.tableLoading = false;
-        });
+      this.tableConfig = currentTableConfig;
+      this.tableLoading = false;
+    });
   }
   `;
 
-  tableConfig_html = `
+  tableConfig_html: string = `
   <go-table *ngIf="tableConfig"
             (tableChange)="handleTableChange($event)"
             [loadingData]="tableLoading"
@@ -47,15 +51,10 @@ export class ServerIntegrationComponent {
   </go-table>
   `;
 
-  server_response = `
+  server_response: string  = `
   {
     results: [{}], // the actual results for the table
     totalCount: 12345 // the total count for the entire table, not just this page
   }
   `;
-
-  constructor(private tableDocsService: TableDocsService) {
-    this.tableDocsService.pageTitle = "Table Server Integration";
-  }
-
 }
