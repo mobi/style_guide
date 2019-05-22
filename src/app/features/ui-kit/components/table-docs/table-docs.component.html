@@ -6,11 +6,16 @@
     <router-outlet class="table-docs-container-outlet" #o="outlet"></router-outlet>
   </div>
   <div class="table-docs-submenu">
-    <h5 class="table-docs-submenu__title">Table</h5>
+    <h5 class="table-docs-submenu__title">Basics</h5>
     <ul class="table-docs-submenu__ul">
       <li><a class="table-docs-submenu__a" [routerLinkActive]="['table-docs-submenu__a--active']" [routerLinkActiveOptions]="{exact:true}" routerLink="./">Overview</a></li>
+      <li><a class="table-docs-submenu__a" [routerLinkActive]="['table-docs-submenu__a--active']" [routerLinkActiveOptions]="{exact:true}" routerLink="./pagination">Pagination</a></li>
       <li><a class="table-docs-submenu__a" [routerLinkActive]="['table-docs-submenu__a--active']" [routerLinkActiveOptions]="{exact:true}" routerLink="./sorting">Sorting</a></li>
       <li><a class="table-docs-submenu__a" [routerLinkActive]="['table-docs-submenu__a--active']" [routerLinkActiveOptions]="{exact:true}" routerLink="./templating">Templating</a></li>
+    </ul>
+    <h6 class="table-docs-submenu__title">Advanced</h6>
+    <ul class="table-docs-submenu__ul">
+      <li><a class="table-docs-submenu__a" [routerLinkActive]="['table-docs-submenu__a--active']" [routerLinkActiveOptions]="{exact:true}" routerLink="./server-integration">Server-Side Integration</a></li>
     </ul>
   </div>
 </div>

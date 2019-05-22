@@ -6,7 +6,7 @@
     <ng-container go-card-content>
       <p>
         By default, sorting is enabled. To set the sorted column and direction, you may pass an <code class="code-block--inline">GoTableSortConfig</code>
-        class to the <code class="code-block--inline">sort</code> property on the <code class="code-block--inline">GoTableConfig</code> object.
+        class to the <code class="code-block--inline">sortConfig</code> property on the <code class="code-block--inline">GoTableConfig</code> object.
       </p>
 
       <code [highlight]="tableSortConfig"></code>
@@ -32,52 +32,40 @@
           <h5>Setting the Sort</h5>
         </ng-container>
         <ng-container go-card-content>
-          <div class="go-container">
-            <div class="go-column go-column--50">
-              <go-table [tableConfig]="tableConfig">
-                <go-table-column field="id" title="ID"></go-table-column>
-                <go-table-column field="name.first" title="First Name"></go-table-column>
-                <go-table-column field="name.last" title="Last Name"></go-table-column>
-                <go-table-column field="email" title="Email"></go-table-column>
-                <go-table-column field="gender" title="Gender"></go-table-column>
-                <go-table-column field="ip_address" title="IP Address"></go-table-column>
-              </go-table>
-            </div>
-            <div class="go-column go-column--50">
-              <h6>example.html</h6>
-              <code [highlight]="tableConfigEx_html"></code>
-              <h6>example.ts</h6>
-              <code [highlight]="tableConfigEx" class="code-block--no-bottom-margin"></code>
-            </div>
-          </div>
+          <h6>example.html</h6>
+          <code [highlight]="tableConfigEx_html"></code>
+          <h6>example.ts</h6>
+          <code [highlight]="tableConfigEx" class="code-block--no-bottom-margin"></code>
         </ng-container>
       </go-card>
+      <go-table class="go-column go-column--100" [tableConfig]="tableConfig" tableTitle="Sort Example">
+        <go-table-column field="id" title="ID"></go-table-column>
+        <go-table-column field="name.first" title="First Name"></go-table-column>
+        <go-table-column field="name.last" title="Last Name"></go-table-column>
+        <go-table-column field="email" title="Email"></go-table-column>
+        <go-table-column field="gender" title="Gender"></go-table-column>
+        <go-table-column field="ip_address" title="IP Address"></go-table-column>
+      </go-table>
 
       <go-card class="go-column go-column--100" id="restrictingSort">
         <ng-container go-card-header>
-          <h5>Restricting Sorting</h5>
+          <h5>Restricting Sort Example</h5>
         </ng-container>
         <ng-container go-card-content>
-          <div class="go-container">
-            <div class="go-column go-column--50">
-              <go-table [tableConfig]="tableConfig_nosort">
-                <go-table-column field="id" title="ID"></go-table-column>
-                <go-table-column field="name.first" title="First Name"></go-table-column>
-                <go-table-column field="name.last" title="Last Name"></go-table-column>
-                <go-table-column field="email" title="Email"></go-table-column>
-                <go-table-column field="gender" title="Gender"></go-table-column>
-                <go-table-column field="ip_address" title="IP Address"></go-table-column>
-              </go-table>
-            </div>
-            <div class="go-column go-column--50">
-              <h6>example.html</h6>
-              <code [highlight]="tableConfigEx_html"></code>
-              <h6>example.ts</h6>
-              <code [highlight]="tableConfigEx_nosort" class="code-block--no-bottom-margin"></code>
-            </div>
-          </div>
+          <h6>example.html</h6>
+          <code [highlight]="tableConfigEx_html"></code>
+          <h6>example.ts</h6>
+          <code [highlight]="tableConfigEx_nosort" class="code-block--no-bottom-margin"></code>
         </ng-container>
       </go-card>
+      <go-table class="go-column go-column--100" [tableConfig]="tableConfig_nosort" tableTitle="Restricting Sort">
+          <go-table-column field="id" title="ID"></go-table-column>
+          <go-table-column field="name.first" title="First Name"></go-table-column>
+          <go-table-column field="name.last" title="Last Name"></go-table-column>
+          <go-table-column field="email" title="Email"></go-table-column>
+          <go-table-column field="gender" title="Gender"></go-table-column>
+          <go-table-column field="ip_address" title="IP Address"></go-table-column>
+        </go-table>
     </div>
   </div>
 </div>

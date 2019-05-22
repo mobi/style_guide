@@ -7,11 +7,13 @@ import { ButtonDocsComponent } from '../components/button-docs/button-docs.compo
 import { CardDocsComponent } from '../components/card-docs/card-docs.component';
 import { IconDocsComponent } from '../components/icon-docs/icon-docs.component';
 import { ModalDocsComponent } from '../components/modal-docs/modal-docs.component';
+import { ServerIntegrationComponent } from '../components/table-docs/components/server-integration/server-integration.component';
 import { TableDocsComponent } from '../components/table-docs/table-docs.component';
 import { TableOverviewComponent } from '../components/table-docs/components/table-overview/table-overview.component';
+import { TablePaginationComponent } from '../components/table-docs/components/table-pagination/table-pagination.component';
 import { TableSortingComponent } from '../components/table-docs/components/table-sorting/table-sorting.component';
-import { UiKitComponent } from '../components/ui-kit/ui-kit.component';
 import { TableTemplatesComponent } from '../components/table-docs/components/table-templates/table-templates.component';
+import { UiKitComponent } from '../components/ui-kit/ui-kit.component';
 
 const routes: Routes = [
   { path: 'ui-kit', component: UiKitComponent },
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'ui-kit/modal', component: ModalDocsComponent },
   { path: 'ui-kit/table', component: TableDocsComponent, children: [
     { path: '', component: TableOverviewComponent },
+    { path: 'pagination', component: TablePaginationComponent },
+    { path: 'server-integration', component: ServerIntegrationComponent },
     { path: 'sorting', component: TableSortingComponent },
     { path: 'templating', component: TableTemplatesComponent }
   ]}
