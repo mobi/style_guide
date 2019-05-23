@@ -39,6 +39,9 @@ code {
 }
 
 .code-block--inline {
-  color: $theme-light-border;
-  display: inline;
+  background-color: $theme-light-app-bg;
+  border: 1px solid $theme-light-border;
+  display: inline-block;
+  margin: 0;
+  padding: 0 .25rem;
 }
