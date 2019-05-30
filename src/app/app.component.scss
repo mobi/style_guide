@@ -97,3 +97,9 @@ code {
     background: $theme-light-bg-hover;
   }
 }
+
+.dark-example-area {
+  background: $theme-dark-bg;
+  border-radius: $global-radius;
+  padding: $column-gutter;
+}

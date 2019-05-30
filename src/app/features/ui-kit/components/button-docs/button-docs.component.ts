@@ -10,6 +10,7 @@ export class ButtonDocsComponent {
   
   @ViewChild('defaultButton') defaultButton: GoButtonComponent;
   @ViewChild('negativeButton') negativeButton: GoButtonComponent;
+  @ViewChild('negativeDarkButton') negativeDarkButton: GoButtonComponent;
   @ViewChild('neutralButton') neutralButton: GoButtonComponent;
   @ViewChild('positiveButton') positiveButton: GoButtonComponent;
 
@@ -21,6 +22,7 @@ export class ButtonDocsComponent {
   @Input() buttonType: string = 'button';
   @Input() buttonVariant: string;
   @Input() useLoader: boolean;
+  @Input() useDarkTheme: boolean;
 
   @Output() handleClick = new EventEmitter<boolean>();
   `;
