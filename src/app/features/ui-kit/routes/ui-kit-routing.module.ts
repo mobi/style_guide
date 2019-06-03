@@ -13,6 +13,7 @@ import { TableOverviewComponent } from '../components/table-docs/components/tabl
 import { TablePaginationComponent } from '../components/table-docs/components/table-pagination/table-pagination.component';
 import { TableSortingComponent } from '../components/table-docs/components/table-sorting/table-sorting.component';
 import { TableTemplatesComponent } from '../components/table-docs/components/table-templates/table-templates.component';
+import { ToastDocsComponent } from '../components/toast-docs/toast-docs.component';
 import { UiKitComponent } from '../components/ui-kit/ui-kit.component';
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
     { path: 'server-integration', component: ServerIntegrationComponent },
     { path: 'sorting', component: TableSortingComponent },
     { path: 'templating', component: TableTemplatesComponent }
-  ]}
+  ]},
+  { path: 'ui-kit/toast', component: ToastDocsComponent }
 ];
 
 @NgModule({

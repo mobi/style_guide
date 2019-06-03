@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './config/routes/app-routing.module';
 
-import { GoModalModule } from '@tangoe/goponents';
+import {
+  GoModalModule,
+  GoToasterModule
+} from '@tangoe/goponents';
 
 import { CoreModule } from './core/core.module';
 import { FeaturesModule } from './features/features.module';
@@ -28,6 +31,7 @@ export function hljsLanguages () {
     CoreModule,
     FeaturesModule,
     GoModalModule,
+    GoToasterModule,
     HighlightModule.forRoot({ languages: hljsLanguages })
   ],
   providers: [],

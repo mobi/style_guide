@@ -3,12 +3,17 @@ import { CommonModule } from '@angular/common';
 import { HighlightModule } from 'ngx-highlightjs';
 
 // GoPonents
-import { GoAccordionModule } from '@tangoe/goponents';
-import { GoButtonModule } from '@tangoe/goponents';
-import { GoCardModule } from '@tangoe/goponents';
-import { GoIconModule } from '@tangoe/goponents';
-import { GoModalModule, GoModalService } from '@tangoe/goponents';
-import { GoTableModule } from '@tangoe/goponents';
+import {
+  GoAccordionModule,
+  GoButtonModule,
+  GoCardModule,
+  GoIconModule,
+  GoModalModule,
+  GoModalService,
+  GoTableModule,
+  GoToastModule,
+  GoToasterService
+} from '@tangoe/goponents';
 
 // Module Routes
 import { UiKitRoutesModule } from './routes/ui-kit-routing.module';
@@ -27,6 +32,7 @@ import { TableOverviewComponent } from './components/table-docs/components/table
 import { TablePaginationComponent } from './components/table-docs/components/table-pagination/table-pagination.component';
 import { TableSortingComponent } from './components/table-docs/components/table-sorting/table-sorting.component';
 import { TableTemplatesComponent } from './components/table-docs/components/table-templates/table-templates.component';
+import { ToastDocsComponent } from './components/toast-docs/toast-docs.component';
 import { UiKitComponent } from './components/ui-kit/ui-kit.component';
 
 @NgModule({
@@ -38,6 +44,7 @@ import { UiKitComponent } from './components/ui-kit/ui-kit.component';
     GoIconModule,
     GoModalModule,
     GoTableModule,
+    GoToastModule,
     HighlightModule,
     UiKitRoutesModule
   ],
@@ -55,13 +62,15 @@ import { UiKitComponent } from './components/ui-kit/ui-kit.component';
     TablePaginationComponent,
     TableSortingComponent,
     TableTemplatesComponent,
-    UiKitComponent
+    ToastDocsComponent,
+    UiKitComponent,
   ],
   entryComponents: [
     ModalTestComponent
   ],
   providers: [
-    GoModalService
+    GoModalService,
+    GoToasterService
   ]
 })
 
