@@ -55,7 +55,7 @@ export class ButtonDocsComponent {
   `;
 
   darkButtonExample: string = `
-  <go-button (handleClick)="testClick()" useDarkTheme="true">
+  <go-button (handleClick)="testClick()" [useDarkTheme]="true">
     Default
   </go-button>
   `;

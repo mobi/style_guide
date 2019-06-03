@@ -283,16 +283,16 @@
           <div class="dark-example-area">
             <div class="go-container">
               <div class="go-column go-column--50">
-                <go-button (handleClick)="testClick()" useDarkTheme="true">
+                <go-button (handleClick)="testClick()" [useDarkTheme]="true">
                   Default
                 </go-button>
               </div>
               <div class="go-column go-column--50">
                 <go-button
                   (handleClick)="testClick()"
+                  [useDarkTheme]="true"
                   buttonVariant="neutral"
                   buttonIcon="live_help"
-                  useDarkTheme="true"
                 >
                   With Icon
                 </go-button>
@@ -300,10 +300,10 @@
               <div class="go-column go-column--50">
                 <go-button
                   (handleClick)="testSubmit('negativeDarkButton')"
-                  useLoader="true"
+                  [useDarkTheme]="true"
                   buttonIcon="delete"
                   buttonVariant="negative"
-                  useDarkTheme="true"
+                  useLoader="true"
                   #negativeDarkButton
                 >
                   Negative Loading
@@ -311,9 +311,9 @@
               </div>
               <div class="go-column go-column--50">
                 <go-button
+                  [useDarkTheme]="true"
                   buttonIcon="check"
                   buttonVariant="positive"
-                  useDarkTheme="true"
                   buttonDisabled="true"
                 >
                   Positive Disabled
