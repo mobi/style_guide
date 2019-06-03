@@ -10,6 +10,7 @@ export class ButtonDocsComponent {
   
   @ViewChild('defaultButton') defaultButton: GoButtonComponent;
   @ViewChild('negativeButton') negativeButton: GoButtonComponent;
+  @ViewChild('negativeDarkButton') negativeDarkButton: GoButtonComponent;
   @ViewChild('neutralButton') neutralButton: GoButtonComponent;
   @ViewChild('positiveButton') positiveButton: GoButtonComponent;
 
@@ -21,6 +22,7 @@ export class ButtonDocsComponent {
   @Input() buttonType: string = 'button';
   @Input() buttonVariant: string;
   @Input() useLoader: boolean;
+  @Input() useDarkTheme: boolean;
 
   @Output() handleClick = new EventEmitter<boolean>();
   `;
@@ -50,6 +52,12 @@ export class ButtonDocsComponent {
 
   loadingExampleHTML: string = `
   <go-button (handleClick)="testSubmit()" [useLoader]="true" #submitButton>Load Me</go-button>
+  `;
+
+  darkButtonExample: string = `
+  <go-button (handleClick)="testClick()" [useDarkTheme]="true">
+    Default
+  </go-button>
   `;
 
   public testClick(): void {

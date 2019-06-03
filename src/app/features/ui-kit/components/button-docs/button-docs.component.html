@@ -69,13 +69,20 @@
               submitting a form, sorting data, refreshing data from the
               server, etc.
             </p>
+            <h3 class="go-heading-6">useDarkTheme</h3>
+            <p>
+              Applies a dark theme to the button component.
+              The dark button styles can be applied by setting the
+              <code class="code-block--inline">useDarkTheme</code>
+              binding to <code class="code-block--inline">true</code>.
+            </p>
           </div>
         </div>
       </ng-container>
     </go-card>
   </div>
 
-  <go-card class="go-column go-column--100" id="default-button">
+  <go-card class="go-column go-column--100" id="default-buttons">
     <ng-container go-card-header>
       <h2 class="go-heading-5">Default Button</h2>
     </ng-container>
@@ -102,7 +109,7 @@
     </ng-container>
   </go-card>
 
-  <go-card class="go-column go-column--100" id="negative-button">
+  <go-card class="go-column go-column--100" id="negative-buttons">
     <ng-container go-card-header>
       <h2 class="go-heading-5">Negative Buttons</h2>
     </ng-container>
@@ -129,7 +136,7 @@
     </ng-container>
   </go-card>
 
-  <go-card class="go-column go-column--100" id="neutral-button">
+  <go-card class="go-column go-column--100" id="neutral-buttons">
     <ng-container go-card-header>
       <h2 class="go-heading-5">Neutral Buttons</h2>
     </ng-container>
@@ -157,7 +164,7 @@
     </ng-container>
   </go-card>
 
-  <go-card class="go-column go-column--100" id="positive-button">
+  <go-card class="go-column go-column--100" id="positive-buttons">
     <ng-container go-card-header>
       <h2 class="go-heading-5">Positive Buttons</h2>
     </ng-container>
@@ -184,7 +191,7 @@
     </ng-container>
   </go-card>
 
-  <go-card class="go-column go-column--100" id="loading-button">
+  <go-card class="go-column go-column--100" id="loading-buttons">
     <ng-container go-card-header>
       <h2 class="go-heading-5">Button with loader</h2>
     </ng-container>
@@ -246,6 +253,74 @@
           >
             Positive Loading
           </go-button>
+        </div>
+      </div>
+    </ng-container>
+  </go-card>
+
+  <go-card class="go-column go-column--100 go-column--no-padding" id="dark-buttons">
+    <ng-container go-card-header>
+      <h2 class="go-heading-5">Dark buttons</h2>
+    </ng-container>
+    <ng-container go-card-content>
+      <div class="go-container">
+        <div class="go-column go-column--100 go-column--no-padding">
+          <p>
+            Dark buttons work all the same as the rest of the buttons,
+            the difference being that some of the colors have been tweaked
+            to allow this button to maintain an appropriate amount of
+            contrast when displayed on a dark background.
+          </p>
+          <p>
+            The dark button styles can be applied by setting the
+            <code class="code-block--inline">useDarkTheme</code>
+            binding to <code class="code-block--inline">true</code>.
+          </p>
+
+          <pre><code [highlight]="darkButtonExample"></code></pre>
+        </div>
+        <div class="go-column go-column--100 go-column--no-padding">
+          <div class="dark-example-area">
+            <div class="go-container">
+              <div class="go-column go-column--50">
+                <go-button (handleClick)="testClick()" [useDarkTheme]="true">
+                  Default
+                </go-button>
+              </div>
+              <div class="go-column go-column--50">
+                <go-button
+                  (handleClick)="testClick()"
+                  [useDarkTheme]="true"
+                  buttonVariant="neutral"
+                  buttonIcon="live_help"
+                >
+                  With Icon
+                </go-button>
+              </div>
+              <div class="go-column go-column--50">
+                <go-button
+                  (handleClick)="testSubmit('negativeDarkButton')"
+                  [useDarkTheme]="true"
+                  buttonIcon="delete"
+                  buttonVariant="negative"
+                  useLoader="true"
+                  #negativeDarkButton
+                >
+                  Negative Loading
+                </go-button>
+              </div>
+              <div class="go-column go-column--50">
+                <go-button
+                  [useDarkTheme]="true"
+                  buttonIcon="check"
+                  buttonVariant="positive"
+                  buttonDisabled="true"
+                >
+                  Positive Disabled
+                </go-button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </ng-container>
