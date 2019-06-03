@@ -54,6 +54,12 @@ export class ButtonDocsComponent {
   <go-button (handleClick)="testSubmit()" [useLoader]="true" #submitButton>Load Me</go-button>
   `;
 
+  darkButtonExample: string = `
+  <go-button (handleClick)="testClick()" useDarkTheme="true">
+    Default
+  </go-button>
+  `;
+
   public testClick(): void {
     alert("Button clicked!");
   }
