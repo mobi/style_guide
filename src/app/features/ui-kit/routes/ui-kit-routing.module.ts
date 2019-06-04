@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'ui-kit/card', component: CardDocsComponent },
   { path: 'ui-kit/icon', component: IconDocsComponent },
   { path: 'ui-kit/modal', component: ModalDocsComponent },
-  { path: 'ui-kit/off-canvas', component: OffCanvasDocsComponent }
+  { path: 'ui-kit/off-canvas', component: OffCanvasDocsComponent },
   { path: 'ui-kit/table', component: TableDocsComponent, children: [
     { path: '', component: TableOverviewComponent },
     { path: 'pagination', component: TablePaginationComponent },
