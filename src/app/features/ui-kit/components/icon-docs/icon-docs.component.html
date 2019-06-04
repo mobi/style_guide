@@ -3,7 +3,7 @@
 </header>
 
 <div class="go-container">
-  <go-card [showHeader]="false" class="go-column go-column--33">
+  <go-card [showHeader]="false" class="go-column go-column--100">
     <ng-container go-card-content>
       <div class="go-container">
         <div class="go-column go-column--100 go-column--no-padding">
@@ -20,7 +20,7 @@
             <div class="go-column go-column--100 go-column--no-padding">
               <!-- Bindings -->
               <h2 class="go-heading-5">Bindings</h2>
-              <pre><code [highlight]="componentBindings"></code></pre>
+              <code [highlight]="componentBindings"></code>
             </div>
             <div class="go-column go-column--100">
               <h3 class="go-heading-6">icon - (required)</h3>
@@ -92,59 +92,58 @@
       </div>
     </ng-container>
   </go-card>
-  <div class="go-column go-column--50">
-    <div class="go-container">
-      <go-card class="go-column go-column--100">
-        <ng-container go-card-header>
-          <h2 class="go-heading-5">Basic</h2>
-        </ng-container>
-        <ng-container go-card-content>
-          <h3 class="go-heading-6">Code</h3>
-          <pre><code [highlight]="basicExample"></code></pre>
-          <h3 class="go-heading-6">View</h3>
-          <go-icon icon="home"></go-icon>
-          <go-icon icon="delete"></go-icon>
-          <go-icon icon="info"></go-icon>
-          <go-icon icon="done_all"></go-icon>
-        </ng-container>
-      </go-card>
+  <go-card class="go-column go-column--100">
+    <ng-container go-card-header>
+      <h2 class="go-heading-5">Basic</h2>
+    </ng-container>
+    <ng-container go-card-content>
+      <h3 class="go-heading-6">Code</h3>
+      <code [highlight]="basicExample"></code>
+      <h3 class="go-heading-6">View</h3>
+      <go-icon icon="home"></go-icon>
+      <go-icon icon="delete"></go-icon>
+      <go-icon icon="info"></go-icon>
+      <go-icon icon="done_all"></go-icon>
+    </ng-container>
+  </go-card>
 
-      <go-card class="go-column go-column--100">
-        <ng-container go-card-header>
-          <h2 class="go-heading-5">Modified</h2>
-        </ng-container>
-        <ng-container go-card-content>
-          <h3 class="go-heading-6">Code</h3>
-          <pre><code [highlight]="modifiedExample"></code></pre>
-          <h3 class="go-heading-6">View</h3>
-          <go-icon icon="home" iconModifier="light"></go-icon>
-          <go-icon icon="delete" iconModifier="negative"></go-icon>
-          <go-icon icon="info" iconModifier="neutral"></go-icon>
-          <go-icon icon="done_all" iconModifier="positive"></go-icon>
-        </ng-container>
-      </go-card>
+  <go-card class="go-column go-column--100">
+    <ng-container go-card-header>
+      <h2 class="go-heading-5">Modified</h2>
+    </ng-container>
+    <ng-container go-card-content>
+      <h3 class="go-heading-6">Code</h3>
+      <code [highlight]="modifiedExample"></code>
+      <h3 class="go-heading-6">View</h3>
+      <go-icon icon="home" iconModifier="light"></go-icon>
+      <go-icon icon="delete" iconModifier="negative"></go-icon>
+      <go-icon icon="info" iconModifier="neutral"></go-icon>
+      <go-icon icon="done_all" iconModifier="positive"></go-icon>
+    </ng-container>
+  </go-card>
+  
+  <go-toast class="go-column go-column--100" type="negative" header="Wait!" [message]="iconOverrideWarning"></go-toast>
 
-      <go-card class="go-column go-column--100">
-        <ng-container go-card-header>
-          <h2 class="go-heading-5">Overidden</h2>
-        </ng-container>
-        <ng-container go-card-content>
-          <h3 class="go-heading-6">Code</h3>
-          <pre><code [highlight]="overriddenStyles"></code></pre>
-          <pre><code [highlight]="overriddenExample"></code></pre>
-          <h3 class="go-heading-6">View</h3>
-          <ul class="list">
-            <li>
-              <go-icon icon="face" iconClass="list__icon" iconModifier="positive"></go-icon>
-              Face
-            </li>
-            <li>
-              <go-icon icon="toys" iconClass="list__icon"></go-icon>
-              Toys
-            </li>
-          </ul>
-        </ng-container>
-      </go-card>
-    </div>
-  </div>
+  <go-card class="go-column go-column--100">
+    <ng-container go-card-header>
+      <h2 class="go-heading-5">Overriding Icon Styles</h2>
+    </ng-container>
+    <ng-container go-card-content>
+      <h3 class="go-heading-6">component.scss</h3>
+      <code [highlight]="overriddenStyles"></code>
+      <h3 class="go-heading-6">component.html</h3>
+      <code [highlight]="overriddenExample"></code>
+      <h3 class="go-heading-6">View</h3>
+      <ul class="list">
+        <li>
+          <go-icon icon="face" iconClass="list__icon" iconModifier="positive"></go-icon>
+          Face
+        </li>
+        <li>
+          <go-icon icon="toys" iconClass="list__icon"></go-icon>
+          Toys
+        </li>
+      </ul>
+    </ng-container>
+  </go-card>
 </div>

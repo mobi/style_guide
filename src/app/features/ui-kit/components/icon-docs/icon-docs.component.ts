@@ -30,7 +30,7 @@ export class IconDocsComponent {
 
   overriddenStyles: string = `
   .list {
-    line-break: 4rem;
+    line-height: 4rem;
     list-style: none;
   }
 
@@ -51,6 +51,12 @@ export class IconDocsComponent {
       Toys
     </li>
   </ul>
+  `;
+
+  iconOverrideWarning: string = `
+  You most likely will never need to perform an override like the one shown below.
+  This functionality goes against the guidelines Angular sets, but we've included it just in case this is absolutely necessary.
+  If possible, apply a class directory to the <go-icon> element before performing this override.
   `;
 
   constructor() { }
