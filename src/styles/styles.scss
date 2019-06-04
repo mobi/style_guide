@@ -31,7 +31,8 @@ code {
   font-family: $roboto-code;
   font-size: 0.75rem;
   line-height: 1.6;
-  white-space: pre-wrap;
+  overflow-x: auto;
+  white-space: pre;
 
   .hljs-section, .hljs-name, .hljs-strong {
     font-weight: normal;
@@ -44,4 +45,5 @@ code {
   display: inline-block;
   margin: 0;
   padding: 0 .25rem;
+  vertical-align: text-bottom;
 }

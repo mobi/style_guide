@@ -43,6 +43,7 @@ code {
 
 .main__route-container-outlet ~ * {
   height: 100%;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 3rem;
   position: absolute;

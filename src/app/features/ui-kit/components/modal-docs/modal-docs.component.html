@@ -3,7 +3,7 @@
 </header>
 
 <div class="go-container">
-  <go-card [showHeader]="false" class="go-column go-column--33">
+  <go-card [showHeader]="false" class="go-column go-column--100">
     <ng-container go-card-content>
       <!-- Intro -->
       <h5>Usage</h5>
@@ -19,7 +19,7 @@
           <p>
             Import the <code class="code-block--inline">GoModalModule</code> into <code class="code-block--inline">app.module.ts</code>
           </p>
-          <pre><code [highlight]="appModuleImport"></code></pre>
+          <code [highlight]="appModuleImport"></code>
         </li>
         <li>
           <p>
@@ -30,58 +30,51 @@
     </ng-container>
   </go-card>
 
-  <div class="go-column go-column--66">
-
-    <div class="go-container">
-
-      <go-card class="go-column go-column--100">
-        <ng-container go-card-header>
-          <h5>Using the Modal service</h5>
-        </ng-container>
-        <ng-container go-card-content>
-          <div class="go-container">
-            <div class="go-column go-column-100">
-              <p>
-                For this example, the component we want to render in the modal is <code class="code-block--inline">ModalTestComponent</code>.
-                This component lives in the <code class="code-block--inline">UiKitModule</code>.
-                To make use of the modal in our component:
-              </p>
-              <ol>
-                <li>
-                  In the module that imports your component, import the <code class="code-block--inline">GoModalModule</code>,
-                  add the component that will be rendered in the modal to the <code class="code-block--inline">entryComponents</code>,
-                  and add the <code class="code-block--inline">GoModalService</code> to the providers.
-                  <pre><code [highlight]="ex_UiKitModule"></code></pre>
-                </li>
-                <li>
-                  In the component that is telling the modal to open, import the <code class="code-block--inline">GoModalService</code>,
-                  and the component that is being rendered inside the modal.
-                  <pre><code [highlight]="ex_ModalDocsImports"></code></pre>
-                </li>
-                <li>
-                  To open the modal, use the service to call <code class="code-block--inline">openModal</code>. This method takes the component type
-                  (ModalTestComponent in our case), and the bindings for that component as an object.
-                  <pre><code [highlight]="ex_ModalDocsOpenModal"></code></pre>
-                </li>
-                <li>
-                  Lastly, the button that triggers the openModal method.
-                  <div class="go-container">
-                    <div class="go-column go-column--50">
-                      <h5>component.html</h5>
-                      <pre><code [highlight]="ex_ModalDocsHtml"></code></pre>
-                    </div>
-                    <div class="go-column go-column--50">
-                      <h5>View</h5>
-                      <go-button (handleClick)="openModal()">Click Me</go-button>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </ng-container>
-      </go-card>
-
-    </div>
-  </div>
+  <go-card class="go-column go-column--100">
+    <ng-container go-card-header>
+      <h5>Using the Modal service</h5>
+    </ng-container>
+    <ng-container go-card-content>
+      <div class="go-container">
+        <div class="go-column go-column-100">
+          <p>
+            For this example, the component we want to render in the modal is <code class="code-block--inline">ModalTestComponent</code>.
+            This component lives in the <code class="code-block--inline">UiKitModule</code>.
+            To make use of the modal in our component:
+          </p>
+          <ol>
+            <li>
+              In the module that imports your component, import the <code class="code-block--inline">GoModalModule</code>,
+              add the component that will be rendered in the modal to the <code class="code-block--inline">entryComponents</code>,
+              and add the <code class="code-block--inline">GoModalService</code> to the providers.
+              <code [highlight]="ex_UiKitModule"></code>
+            </li>
+            <li>
+              In the component that is telling the modal to open, import the <code class="code-block--inline">GoModalService</code>,
+              and the component that is being rendered inside the modal.
+              <code [highlight]="ex_ModalDocsImports"></code>
+            </li>
+            <li>
+              To open the modal, use the service to call <code class="code-block--inline">openModal</code>. This method takes the component type
+              (ModalTestComponent in our case), and the bindings for that component as an object.
+              <code [highlight]="ex_ModalDocsOpenModal"></code>
+            </li>
+            <li>
+              Lastly, the button that triggers the openModal method.
+              <div class="go-container">
+                <div class="go-column go-column--50">
+                  <h5>component.html</h5>
+                  <code [highlight]="ex_ModalDocsHtml"></code>
+                </div>
+                <div class="go-column go-column--50">
+                  <h5>View</h5>
+                  <go-button (handleClick)="openModal()">Click Me</go-button>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </ng-container>
+  </go-card>
 </div>
