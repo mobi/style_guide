@@ -10,6 +10,8 @@ import {
   GoIconModule,
   GoModalModule,
   GoModalService,
+  GoOffCanvasModule,
+  GoOffCanvasService,
   GoTableModule,
   GoToastModule,
   GoToasterService
@@ -34,6 +36,8 @@ import { TableSortingComponent } from './components/table-docs/components/table-
 import { TableTemplatesComponent } from './components/table-docs/components/table-templates/table-templates.component';
 import { ToastDocsComponent } from './components/toast-docs/toast-docs.component';
 import { UiKitComponent } from './components/ui-kit/ui-kit.component';
+import { BasicTestComponent } from './components/basic-test/basic-test.component';
+import { OffCanvasDocsComponent } from './components/off-canvas-docs/off-canvas-docs.component';
 
 @NgModule({
   imports: [
@@ -43,6 +47,7 @@ import { UiKitComponent } from './components/ui-kit/ui-kit.component';
     GoCardModule,
     GoIconModule,
     GoModalModule,
+    GoOffCanvasModule,
     GoTableModule,
     GoToastModule,
     HighlightModule,
@@ -51,11 +56,13 @@ import { UiKitComponent } from './components/ui-kit/ui-kit.component';
   declarations: [
     AccordionDocsComponent,
     AccordionPanelDocsComponent,
+    BasicTestComponent,
     ButtonDocsComponent,
     CardDocsComponent,
     IconDocsComponent,
     ModalDocsComponent,
     ModalTestComponent,
+    OffCanvasDocsComponent,
     ServerIntegrationComponent,
     TableDocsComponent,
     TableOverviewComponent,
@@ -63,13 +70,15 @@ import { UiKitComponent } from './components/ui-kit/ui-kit.component';
     TableSortingComponent,
     TableTemplatesComponent,
     ToastDocsComponent,
-    UiKitComponent,
+    UiKitComponent
   ],
   entryComponents: [
+    BasicTestComponent,
     ModalTestComponent
   ],
   providers: [
     GoModalService,
+    GoOffCanvasService,
     GoToasterService
   ]
 })

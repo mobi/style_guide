@@ -5,6 +5,7 @@ import { AppRoutingModule } from './config/routes/app-routing.module';
 
 import {
   GoModalModule,
+  GoOffCanvasModule,
   GoToasterModule
 } from '@tangoe/goponents';
 
@@ -31,6 +32,7 @@ export function hljsLanguages () {
     CoreModule,
     FeaturesModule,
     GoModalModule,
+    GoOffCanvasModule,
     GoToasterModule,
     HighlightModule.forRoot({ languages: hljsLanguages })
   ],

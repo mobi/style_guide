@@ -1,0 +1,14 @@
+@import '~@tangoe/gosheets/base/variables';
+
+.basic-test {
+  padding: $column-gutter;
+}
+
+label {
+  color: $base-light;
+}
+
+input {
+  background: transparent;
+  color: $base-light;
+}

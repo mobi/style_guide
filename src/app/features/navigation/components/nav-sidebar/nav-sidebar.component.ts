@@ -21,6 +21,7 @@ export class NavSidebarComponent {
       { route: 'ui-kit/card', routeTitle: 'Card' },
       { route: 'ui-kit/icon', routeTitle: 'Icon' },
       { route: 'ui-kit/modal', routeTitle: 'Modal' },
+      { route: 'ui-kit/off-canvas', routeTitle: 'Off Canvas' },
       { route: 'ui-kit/table', routeTitle: 'Table'},
       { route: 'ui-kit/toast', routeTitle: 'Toast' }
     ]},
