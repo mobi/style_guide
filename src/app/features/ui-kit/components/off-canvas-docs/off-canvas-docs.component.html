@@ -7,7 +7,7 @@
       <h2 class="go-heading-5">Usage</h2>
       <p>
         The <code class="code-block--inline">&lt;go-off-canvas&gt;</code>
-        component should be the only instance of a modal in the app.
+        component should be the only instance of the off canvas in the app.
       </p>
 
       <h2 class="go-heading-5">Setup</h2>
@@ -50,18 +50,18 @@
           <p>
             In the module that imports your component, import the
             <code class="code-block--inline">GoOffCanvasModule</code>,
-            add the component that will be rendered in the modal to the 
-            <code class="code-block--inline">entryComponents</code>,
-            and add the <code class="code-block--inline">GoModalService</code>
+            add the component that will be rendered in the off canvas to
+            the <code class="code-block--inline">entryComponents</code>,
+            and add the <code class="code-block--inline">GoOffCanvasService</code>
             to the providers.
           </p>
           <code [highlight]="uiKitExample"></code>
         </li>
         <li>
           <p>
-            In the component that is telling the modal to open, import the
-            <code class="code-block--inline">GoModalService</code>, and the
-            component that is being rendered inside the modal.
+            In the component that is telling the off canvas to open, import the
+            <code class="code-block--inline">GoOffCanvasService</code>, and the
+            component that is being rendered inside the off canvas.
           </p>
           <code [highlight]="implementationExample"></code>
         </li>

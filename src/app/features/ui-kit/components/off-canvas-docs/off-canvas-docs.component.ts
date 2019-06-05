@@ -8,7 +8,7 @@ import { BasicTestComponent } from "../basic-test/basic-test.component";
   templateUrl: './off-canvas-docs.component.html'
 })
 export class OffCanvasDocsComponent {
-  noteMessage: string = 'For this example, the component we want to render in the modal is "BasicTestComponent", but we can follow the same pattern to render any component inside of the off canvas.';
+  noteMessage: string = 'For this example, the component we want to render in the off canvas is "BasicTestComponent", but we can follow the same pattern to render any component inside of the off canvas.';
 
   appModuleImport: string = `
   import { GoOffCanvasModule } from 'goponents';
