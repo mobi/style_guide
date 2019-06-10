@@ -1,89 +1,32 @@
 <div class="basic-test">
   <form class="go-form go-form--dark">
     <div class="go-container">
-      <div class="go-column go-column--100 go-column--no-padding">
-        <div class="go-container">
-          <div class="go-column go-column--50">
-            <label for="advanced-first-name" class="go-form__label">First Name</label>
-            <input class="go-form__input" id="advanced-first-name" placeholder="Jonny" type="text">
-          </div>
-          <div class="go-column go-column--50">
-            <label for="advanced-last-name" class="go-form__label">Last Name</label>
-            <input class="go-form__input" id="advanced-last-name" placeholder="Appleseed" type="text">
-          </div>
-          <div class="go-column go-column--100">
-            <label for="advanced-phone" class="go-form__label">Phone Number</label>
-            <input class="go-form__input go-form__input--error" id="advanced-phone" placeholder="+0(000)000-0000">
-            <p class="go-hint go-hint--error">
-              <span class="go-hint__status">Error:</span>
-              Phone number is a require input.
-            </p>
-            <p class="go-hint">
-              This is the phone number for your work phone. 
-              Please us the following format: +0(000)000-0000.
-              If you have any further questions please contact support.
-            </p>
-          </div>
-          <div class="go-column go-column--100">
-            <label for="country-input" class="go-form__label">Country</label>
-            <select class="go-form__select" id="country-input">
-              <option value="" disabled selected>Select A Country</option>
-              <option value="1">United States</option>
-              <option value="2">Canada</option>
-            </select>
-            <p class="go-hint">
-              This setting specifies the country in which the shipping 
-              address is located.
-            </p>
-          </div>
-        </div>
-        <fieldset class="go-form__fieldset">
-          <legend class="go-form__legend">Select a Favorite Character</legend>
-          <div>
-            <input class="go-form__checkbox"
-                  id="advanced-radio-1"
-                  name="character"
-                  type="radio">
-            <label for="advanced-radio-1" class="go-form__label go-form__label--inline">
-              Draco Malfoy
-            </label>
-          </div>
-          <div>
-            <input class="go-form__checkbox"
-                    id="advanced-radio-2"
-                    name="character"
-                    type="radio">
-            <label for="advanced-radio-2" class="go-form__label go-form__label--inline">
-              The Owl
-            </label>
-          </div>
-          <div>
-            <input class="go-form__checkbox"
-                  id="advanced-radio-3"
-                  name="character"
-                  type="radio">
-            <label for="advanced-radio-3" class="go-form__label go-form__label--inline">
-              Harry Potter
-            </label>
-          </div>
-          <p class="go-hint">
-            These are all characters from the beloved Harry Potter series
-            written by J.R.R. Tolkien.
-          </p>
-        </fieldset>
+      <div class="go-column go-column--50">
+        <label for="first-name-input" class="go-form__label">First Name</label>
+        <input class="go-form__input" id="first-name-input" placeholder="Jonny" type="text">
       </div>
-
+      <div class="go-column go-column--50">
+        <label for="last-name-input" class="go-form__label">Last Name</label>
+        <input class="go-form__input" id="last-name-input" placeholder="Appleseed" type="text">
+      </div>
       <div class="go-column go-column--100">
-        <go-button
-          buttonVariant="positive"
-          (handleClick)="fakeSubmit()"
-          [useDarkTheme]="true"
-          [useLoader]="true"
-          #submitButton
-        >
-          Submit
-        </go-button>
+        <label for="email-input" class="go-form__label">Email</label>
+        <input class="go-form__input" id="email-input" placeholder="your@email.com" type="email">
+      </div>
+      <div class="go-column go-column--100">
+        <label for="password-input" class="go-form__label">Password</label>
+        <input class="go-form__input" id="password-input" placeholder="**************" type="password">
       </div>
     </div>
+
+    <go-button
+      buttonVariant="positive"
+      (handleClick)="fakeSubmit()"
+      [useDarkTheme]="true"
+      [useLoader]="true"
+      #submitButton
+    >
+      Submit
+    </go-button>
   </form>
 </div>

@@ -9,52 +9,25 @@ em {
 // Extras
 caption {
   display: inline-block;
-  font-size: 0.75rem;
-  letter-spacing: 0.4pt;
+  font-size: .75rem;
+  letter-spacing: .4pt;
   margin: 1rem 0;
   text-align: left;
 }
 
 .overline {
   display: block;
-  font-size: 0.625rem;
+  font-size: .625rem;
   letter-spacing: 1.5pt;
-  margin-bottom: -0.25rem;
+  margin-bottom: -.25rem;
   position: relative;
   text-transform: uppercase;
 }
 
 .go-page-title {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1rem 1rem;
 }
 
 pre {
-  margin: 0.5rem 0;
-}
-
-a {
-  border-bottom: 1px solid;
-  color: $theme-light-color;
-  transition: .25s cubic-bezier(.25, .8, .25, 1);
-
-  &:visited, &:active, &:focus {
-    color: $theme-light-color;
-  }
-
-  &:hover {
-    color: $ui-color-neutral;
-  }
-}
-
-ol,
-.go-ordered-list {
-  list-style: decimal;
-  margin: 0 $column-gutter $column-gutter--three-quarters;
-  padding-left: 1rem;
-}
-
-ol > li,
-.go-ordered-list__item {
-  margin: $column-gutter--half 0;
-  line-height: 1.5;
+  margin: .5rem 0;
 }

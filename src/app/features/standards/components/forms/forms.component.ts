@@ -1,38 +1,14 @@
 import { Component, ViewChild } from '@angular/core';
+import { GoOffCanvasService } from '@tangoe/goponents';
+import { BasicTestComponent } from 'src/app/features/ui-kit/components/basic-test/basic-test.component';
 
 @Component({
   templateUrl: './forms.component.html'
 })
 export class FormsComponent {
   pageTitle: string = "Forms";
-
-  basicForm: string = `
-  <form class="go-form">
-    <div class="go-container">
-      <div class="go-column go-column--50">
-        <label for="first-name-input" class="go-form__label">First Name</label>
-        <input class="go-form__input" id="first-name-input" placeholder="Jonny" type="text">
-      </div>
-      <div class="go-column go-column--50">
-        <label for="last-name-input" class="go-form__label">Last Name</label>
-        <input class="go-form__input" id="last-name-input" placeholder="Appleseed" type="text">
-      </div>
-      <div class="go-column go-column--100">
-        <label for="email-input" class="go-form__label">Email</label>
-        <input class="go-form__input" id="email-input" placeholder="your@email.com" type="email">
-      </div>
-      <div class="go-column go-column--100">
-        <label for="password-input" class="go-form__label">Password</label>
-        <input class="go-form__input" id="password-input" placeholder="**************" type="password">
-      </div>
-      <div class="go-column go-column--100 go-column--no-padding">
-        <div>
-          <go-button buttonVariant="button">Submit</go-button>
-        </div>
-      </div>
-    </div>
-  </form>
-  `;
+  basicForm: string = this.basicFormTemplate();
+  darkForm: string = this.basicFormTemplate(true);
 
   formHints: string = `
   <form class="go-form">
@@ -83,6 +59,10 @@ export class FormsComponent {
           This input is required. Please fill this out to proceed.
         </p>
       </div>
+      <div class="go-column go-column--100">
+        <label for="dark-input" class="go-form__label go-form__label--dark">Dark Input</label>
+        <input class="go-form__input go-form__input--dark" id="dark-input" placeholder=".go-form__input.go-form__input--dark" type="text">
+      </div>
     </div>
   </form>
   `;
@@ -117,6 +97,17 @@ export class FormsComponent {
           <span class="go-hint__status">Error:</span>
           This input is required. Please select an option to proceed.
         </p>
+      </div>
+      <div class="go-column go-column--100">
+        <label for="dark-select" class="go-form__label go-form__label--dark">
+          Dark Select
+          <em>(.go-form__label.go-form__label--dark)</em>
+        </label>
+        <select class="go-form__select go-form__select--dark" id="dark-select">
+          <option value="" disabled selected>.go-form__select.go-form__select--dark</option>
+          <option value="1">Option #1</option>
+          <option value="2">Option #2</option>
+        </select>
       </div>
     </div>
   </form>
@@ -171,6 +162,21 @@ export class FormsComponent {
           <span class="go-hint__status">Error:</span>
           This input is required. Please select an option to proceed.
         </p>
+      </div>
+    </fieldset>
+    <fieldset class="go-form__fieldset go-form__fieldset--dark go-form__fieldset--no-margin">
+      <legend class="go-form__legend go-form__legend--dark">Select a dark option</legend>
+      <div>
+        <input class="go-form__checkbox" id="dark-checkbox-1" type="checkbox" checked>
+        <label for="dark-checkbox-1" class="go-form__label go-form__label--dark go-form__label--inline">
+          #1 .go-form__label.go-form__label--dark
+        </label>
+      </div>
+      <div>
+        <input class="go-form__checkbox" id="dark-checkbox-2" type="checkbox">
+        <label for="dark-checkbox-2" class="go-form__label go-form__label--dark go-form__label--inline">
+          #2 .go-form__label.go-form__label--dark
+        </label>
       </div>
     </fieldset>
   </form>
@@ -336,4 +342,48 @@ export class FormsComponent {
     </div>
   </form>
   `;
+
+  constructor(
+    private goOffCanvasService: GoOffCanvasService
+  ) { }
+
+  public openOffCanvas(): void {
+    this.goOffCanvasService.openOffCanvas({
+      component: BasicTestComponent,
+      bindings: {}
+    });
+  }
+
+  private basicFormTemplate(useDark: boolean = false): string {
+    let formElement: string = useDark ? '<form class="go-form go-form--dark">' : '<form class="go-form">';
+    let buttonAttribute: string = useDark ? ' [useDarkTheme]="true"' : '';
+
+    return `
+  ${formElement}
+    <div class="go-container">
+      <div class="go-column go-column--50">
+        <label for="first-name-input" class="go-form__label">First Name</label>
+        <input class="go-form__input" id="first-name-input" placeholder="Jonny" type="text">
+      </div>
+      <div class="go-column go-column--50">
+        <label for="last-name-input" class="go-form__label">Last Name</label>
+        <input class="go-form__input" id="last-name-input" placeholder="Appleseed" type="text">
+      </div>
+      <div class="go-column go-column--100">
+        <label for="email-input" class="go-form__label">Email</label>
+        <input class="go-form__input" id="email-input" placeholder="your@email.com" type="email">
+      </div>
+      <div class="go-column go-column--100">
+        <label for="password-input" class="go-form__label">Password</label>
+        <input class="go-form__input" id="password-input" placeholder="**************" type="password">
+      </div>
+      <div class="go-column go-column--100 go-column--no-padding">
+        <go-button buttonVariant="positive" buttonIcon="done"${buttonAttribute}>
+          Submit
+        </go-button>
+      </div>
+    </div>
+  </form>
+    `;
+  }
 }
