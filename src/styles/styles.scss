@@ -47,3 +47,8 @@ code {
   padding: 0 .25rem;
   vertical-align: text-bottom;
 }
+
+.go-column--dark {
+  background-color: $theme-dark-bg;
+  padding-top: $column-gutter;
+}

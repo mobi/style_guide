@@ -13,12 +13,26 @@
             All forms follow several simple rules.
           </p>
           <ol class="go-ordered-list">
-            <li class="go-ordered-list__item">Be sure to use an appropriate type attribute on all inputs.</li>
-            <li class="go-ordered-list__item">All inputs should also have a corresponding label.</li>
-            <li class="go-ordered-list__item">Outlines on inputs should never be hidden as to have better visibility and accessibility.</li>
-            <li class="go-ordered-list__item">Outlines should also correspond consistently with error states.</li>
-            <li class="go-ordered-list__item">Hints are to be used as help text and as a way to display more robust validation errors.</li>
-            <li class="go-ordered-list__item">UI controls should never apply brand colors.</li>
+            <li class="go-ordered-list__item">
+              Be sure to use an appropriate type attribute on all inputs.
+            </li>
+            <li class="go-ordered-list__item">
+              All inputs should also have a corresponding label.
+            </li>
+            <li class="go-ordered-list__item">
+              Outlines on inputs should never be hidden as to have better
+              visibility and accessibility.
+            </li>
+            <li class="go-ordered-list__item">
+              Outlines should also correspond consistently with error states.
+            </li>
+            <li class="go-ordered-list__item">
+              Hints are to be used as help text and as a way to display more
+              robust validation errors.
+            </li>
+            <li class="go-ordered-list__item">
+              UI controls should never apply brand colors.
+            </li>
           </ol>
         </div>
       </div>
@@ -41,9 +55,12 @@
             <input class="go-form__input" id="password-input" placeholder="**************" type="password">
           </div>
           <div class="go-column go-column--100 go-column--no-padding">
-            <div>
-              <go-button buttonVariant="button">Submit</go-button>
-            </div>
+            <go-button
+              buttonVariant="positive"
+              buttonIcon="done"
+            >
+              Submit
+            </go-button>
           </div>
         </div>
       </form>
@@ -69,8 +86,8 @@
             which they describe.
           </p>
           <p>
-            Hints have two states. The default state is established by the 
-            <code class="code-block--inline">go-hint</code> class. 
+            Hints have two states. The default state is established by the
+            <code class="code-block--inline">go-hint</code> class.
           </p>
         </div>
       </div>
@@ -80,7 +97,7 @@
             <label for="phone-input-hint" class="go-form__label">Phone Number</label>
             <input class="go-form__input" id="phone-input-hint" placeholder="+0(000)000-0000">
             <p class="go-hint">
-              This is the phone number for your work phone. 
+              This is the phone number for your work phone.
               Please use the following format: +0(000)000-0000.
               If you have any further questions please contact support.
             </p>
@@ -93,8 +110,8 @@
             </p>
             <p>
               For better accessibility in the error state, an additional 
-              <code class="code-block--inline">go-hint__status</code> 
-              element can be added directly inside the hint to better 
+              <code class="code-block--inline">go-hint__status</code>
+              element can be added directly inside the hint to better
               distinguish between different types of hints.
             </p>
           </div>
@@ -106,7 +123,7 @@
               Phone number is a required input.
             </p>
             <p class="go-hint">
-              This is the phone number for your work phone. 
+              This is the phone number for your work phone.
               Please use the following format: +0(000)000-0000.
               If you have any further questions please contact support.
             </p>
@@ -135,14 +152,32 @@
             class on text based inputs.
           </p>
           <p>
-            The disabled state can be achieved by the addition of the <code class="code-block--inline">disabled</code>
-            attribute, while the error state can be applied by the addition of the <code class="code-block--inline">go-form__input--error</code>
+            The disabled state can be achieved by the addition of the
+            <code class="code-block--inline">disabled</code> attribute,
+            while the error state can be applied by the addition of the
+            <code class="code-block--inline">go-form__input--error</code>
             modifier class.
           </p>
           <p>
-            An input with an error modifier should be followed by an error hint describing 
+            An input with an error modifier should be followed by an error hint describing
             why it is in such a state.
           </p>
+          <p>
+            If there is an instance where an individual label or input
+            needs to be displayed on top of a dark background the
+            <code class="code-block--inline">--dark</code> modifiers
+            can be added.
+          </p>
+          <ol>
+            <li>
+              <code class="code-block--inline">.go-form__label--dark</code>
+              - To apply the dark theme styles to a label
+            </li>
+            <li>
+              <code class="code-block--inline">.go-form__input--dark</code>
+              - To apply the dark theme styles to an input
+            </li>
+          </ol>
         </div>
       </div>
       <form class="go-form">
@@ -163,6 +198,10 @@
               This input is required. Please fill this out to proceed.
             </p>
           </div>
+          <div class="go-column go-column--100 go-column--dark">
+            <label for="dark-input" class="go-form__label go-form__label--dark">Dark Input <em>(.go-form__label.go-form__label--dark)</em></label>
+            <input class="go-form__input go-form__input--dark" id="dark-input" placeholder=".go-form__input.go-form__input--dark" type="text">
+          </div>
         </div>
       </form>
     </ng-container>
@@ -182,13 +221,13 @@
       <div class="go-container">
         <div class="go-column go-column--100">
           <p>
-            Similar to the input element, the default state of select boxes are established 
+            Similar to the input element, the default state of select boxes are established
             by the <code class="code-block--inline">go-form__select</code> class.
           </p>
           <p>
-            The disabled state can be achieved by the addition of the 
+            The disabled state can be achieved by the addition of the
             <code class="code-block--inline">disabled</code>
-            attribute, while the error state can be applied by the addition of the 
+            attribute, while the error state can be applied by the addition of the
             <code class="code-block--inline">go-form__select--error</code>
             modifier class.
           </p>
@@ -196,6 +235,22 @@
             A select box with an error modifier should be followed by an error hint
             describing why it is in such a state.
           </p>
+          <p>
+            If there is an instance where an individual label or select
+            box needs to be displayed on top of a dark background the
+            <code class="code-block--inline">--dark</code> modifiers
+            can be added.
+          </p>
+          <ol>
+            <li>
+              <code class="code-block--inline">.go-form__label--dark</code>
+              - To apply the dark theme styles to a label
+            </li>
+            <li>
+              <code class="code-block--inline">.go-form__select--dark</code>
+              - To apply the dark theme styles to the select box
+            </li>
+          </ol>
         </div>
       </div>
       <form class="go-form">
@@ -228,6 +283,17 @@
               This input is required. Please select an option to proceed.
             </p>
           </div>
+          <div class="go-column go-column--100 go-column--dark">
+            <label for="dark-select" class="go-form__label go-form__label--dark">
+              Dark Select
+              <em>(.go-form__label.go-form__label--dark)</em>
+            </label>
+            <select class="go-form__select go-form__select--dark" id="dark-select">
+              <option value="" disabled selected>.go-form__select.go-form__select--dark</option>
+              <option value="1">Option #1</option>
+              <option value="2">Option #2</option>
+            </select>
+          </div>
         </div>
       </form>
     </ng-container>
@@ -258,11 +324,11 @@
             that is being made.
           </p>
           <p>
-            The disabled state can be achieved by the addition of the 
-            <code class="code-block--inline">disabled</code> 
-            attribute to the parent 
+            The disabled state can be achieved by the addition of the
+            <code class="code-block--inline">disabled</code>
+            attribute to the parent
             <code class="code-block--inline">fieldset</code>
-            , while the error state can be applied by the addition of the 
+            , while the error state can be applied by the addition of the
             <code class="code-block--inline">go-form__select--error</code>
             modifier class to the same element.
           </p>
@@ -270,68 +336,158 @@
             A input with an error modifier should be followed by an error hint
             describing why it is in such a state.
           </p>
+          <p>
+            If there is an instance where an individual label or fieldset
+            needs to be displayed on top of a dark background the
+            <code class="code-block--inline">--dark</code> modifiers
+            can be added.
+          </p>
+          <ol>
+            <li>
+              <code class="code-block--inline">.go-form__label--dark</code>
+              - To apply the dark theme styles to a label
+            </li>
+            <li>
+              <code class="code-block--inline">.go-form__fieldset--dark</code>
+              - To apply the dark theme styles to the fieldset
+            </li>
+          </ol>
+        </div>
+        <div class="go-column go-column--100 go-column--no-padding">
+          <form class="go-form">
+            <div class="go-container">
+              <div class="go-column go-column--100">
+                <fieldset class="go-form__fieldset">
+                  <legend class="go-form__legend">Select a Default Option</legend>
+                  <div>
+                    <input class="go-form__checkbox" id="default-checkbox-1" type="checkbox" checked>
+                    <label for="default-checkbox-1" class="go-form__label go-form__label--inline">
+                      Option #1
+                    </label>
+                  </div>
+                  <div>
+                    <input class="go-form__checkbox" id="default-checkbox-2" type="checkbox">
+                    <label for="default-checkbox-2" class="go-form__label go-form__label--inline">
+                      Option #2
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="go-form__fieldset" disabled>
+                  <legend class="go-form__legend">Select a Disabled Option</legend>
+                  <div>
+                    <input class="go-form__checkbox" id="disabled-checkbox-1" type="checkbox" checked>
+                    <label for="disabled-checkbox-1" class="go-form__label go-form__label--inline">
+                      Option #1
+                    </label>
+                  </div>
+                  <div>
+                    <input class="go-form__checkbox" id="disabled-checkbox-2" type="checkbox">
+                    <label for="disabled-checkbox-2" class="go-form__label go-form__label--inline">
+                      Option #2
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="go-form__fieldset go-form__fieldset--error go-form__fieldset--no-margin">
+                  <legend class="go-form__legend">Select an Error Option</legend>
+                  <div>
+                    <input class="go-form__checkbox" id="error-checkbox-1" type="checkbox" checked>
+                    <label for="error-checkbox-1" class="go-form__label go-form__label--inline">
+                      Option #1
+                    </label>
+                  </div>
+                  <div>
+                    <input class="go-form__checkbox" id="error-checkbox-2" type="checkbox">
+                    <label for="error-checkbox-2" class="go-form__label go-form__label--inline">
+                      Option #2
+                    </label>
+                    <p class="go-hint go-hint--error">
+                      <span class="go-hint__status">Error:</span>
+                      This input is required. Please select an option to proceed.
+                    </p>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="go-column go-column--100 go-column--dark">
+                <fieldset class="go-form__fieldset go-form__fieldset--dark go-form__fieldset--no-margin">
+                  <legend class="go-form__legend go-form__legend--dark">Select a dark option</legend>
+                  <div>
+                    <input class="go-form__checkbox" id="dark-checkbox-1" type="checkbox" checked>
+                    <label for="dark-checkbox-1" class="go-form__label go-form__label--dark go-form__label--inline">
+                      #1 .go-form__label.go-form__label--dark
+                    </label>
+                  </div>
+                  <div>
+                    <input class="go-form__checkbox" id="dark-checkbox-2" type="checkbox">
+                    <label for="dark-checkbox-2" class="go-form__label go-form__label--dark go-form__label--inline">
+                      #2 .go-form__label.go-form__label--dark
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-
-      <form class="go-form">
-        <fieldset class="go-form__fieldset">
-          <legend class="go-form__legend">Select a Default Option</legend>
-          <div>
-            <input class="go-form__checkbox" id="default-checkbox-1" type="checkbox" checked>
-            <label for="default-checkbox-1" class="go-form__label go-form__label--inline">
-              Option #1
-            </label>
-          </div>
-          <div>
-            <input class="go-form__checkbox" id="default-checkbox-2" type="checkbox">
-            <label for="default-checkbox-2" class="go-form__label go-form__label--inline">
-              Option #2
-            </label>
-          </div>
-        </fieldset>
-
-        <fieldset class="go-form__fieldset" disabled>
-          <legend class="go-form__legend">Select a Disabled Option</legend>
-          <div>
-            <input class="go-form__checkbox" id="disabled-checkbox-1" type="checkbox" checked>
-            <label for="disabled-checkbox-1" class="go-form__label go-form__label--inline">
-              Option #1
-            </label>
-          </div>
-          <div>
-            <input class="go-form__checkbox" id="disabled-checkbox-2" type="checkbox">
-            <label for="disabled-checkbox-2" class="go-form__label go-form__label--inline">
-              Option #2
-            </label>
-          </div>
-        </fieldset>
-
-        <fieldset class="go-form__fieldset go-form__fieldset--error go-form__fieldset--no-margin">
-          <legend class="go-form__legend">Select an Error Option</legend>
-          <div>
-            <input class="go-form__checkbox" id="error-checkbox-1" type="checkbox" checked>
-            <label for="error-checkbox-1" class="go-form__label go-form__label--inline">
-              Option #1
-            </label>
-          </div>
-          <div>
-            <input class="go-form__checkbox" id="error-checkbox-2" type="checkbox">
-            <label for="error-checkbox-2" class="go-form__label go-form__label--inline">
-              Option #2
-            </label>
-            <p class="go-hint go-hint--error">
-              <span class="go-hint__status">Error:</span>
-              This input is required. Please select an option to proceed.
-            </p>
-          </div>
-        </fieldset>
-      </form>
     </ng-container>
   </go-card>
 
   <go-card class="go-column go-column--50" [showHeader]="false">
     <ng-container go-card-content>
       <code [highlight]="checkboxModifiers"></code>
+    </ng-container>
+  </go-card>
+
+  <go-card class="go-column go-column--50" id="dark-forms">
+    <ng-container go-card-header>
+      <h2 class="go-heading-4">Dark Forms</h2>
+    </ng-container>
+    <ng-container go-card-content>
+      <p>
+        Dark forms are mostly like the default forms with a few
+        alterations based on the state of the input. Labels and
+        text show up as a light color so they are legible on a
+        dark background. When the input is in a disabled state,
+        the input will darken slightly to better portray itself
+        as such.
+      </p>
+
+      <h3 class="go-heading-6">Implementation</h3>
+      <p>
+        The dark form effect can be achieved in one of two ways.
+        Generally speaking we will have a whole form that we need
+        to make dark. In this case, we can simply add the
+        <code class="code-block--inline">.go-form--dark</code>
+        modifier class to the surrounding form element.
+      </p>
+      <p>
+        There might be cases, however, where individual inputs are
+        not contained within a form element. The dark input styles
+        can be applied to individual elements by adding the
+        <code class="code-block--inline">--dark</code>
+        modifier to any individual element as well. See documentation
+        above for individual examples of how to implement dark forms.
+      </p>
+
+      <h3 class="go-heading-6">Example</h3>
+      <p>
+        One of the most common use cases of a dark form is when forms
+        are being displayed in the off canvas.
+      </p>
+      <go-button
+        (handleClick)="openOffCanvas()"
+        buttonIcon="subdirectory_arrow_right"
+        buttonVariant="neutral"
+      >
+        Open Off Canvas
+      </go-button>
+    </ng-container>
+  </go-card>
+
+  <go-card class="go-column go-column--50" [showHeader]="false">
+    <ng-container go-card-content>
+      <code [highlight]="darkForm"></code>
     </ng-container>
   </go-card>
 
