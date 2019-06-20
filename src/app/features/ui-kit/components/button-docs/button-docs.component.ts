@@ -8,11 +8,11 @@ import { GoButtonComponent } from '@tangoe/goponents';
 })
 export class ButtonDocsComponent {
   
-  @ViewChild('defaultButton') defaultButton: GoButtonComponent;
-  @ViewChild('negativeButton') negativeButton: GoButtonComponent;
-  @ViewChild('negativeDarkButton') negativeDarkButton: GoButtonComponent;
-  @ViewChild('neutralButton') neutralButton: GoButtonComponent;
-  @ViewChild('positiveButton') positiveButton: GoButtonComponent;
+  @ViewChild('defaultButton', { static: false }) defaultButton: GoButtonComponent;
+  @ViewChild('negativeButton', { static: false }) negativeButton: GoButtonComponent;
+  @ViewChild('negativeDarkButton', { static: false }) negativeDarkButton: GoButtonComponent;
+  @ViewChild('neutralButton', { static: false }) neutralButton: GoButtonComponent;
+  @ViewChild('positiveButton', { static: false }) positiveButton: GoButtonComponent;
 
   pageTitle: string = "Button";
 

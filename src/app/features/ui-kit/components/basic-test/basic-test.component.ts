@@ -8,7 +8,7 @@ import { GoButtonComponent, GoOffCanvasService } from "@tangoe/goponents";
   styleUrls: ['./basic-test.component.scss']
 })
 export class BasicTestComponent {
-  @ViewChild('submitButton') submitButton: GoButtonComponent;
+  @ViewChild('submitButton', { static: false }) submitButton: GoButtonComponent;
 
   fakeTitle: string = faker.company.companyName();
   fakeCompanyBs: string = faker.company.bs();
