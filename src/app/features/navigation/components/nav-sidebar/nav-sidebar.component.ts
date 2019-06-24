@@ -8,7 +8,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class NavSidebarComponent {
   menuItems = [
-    { route: 'standards', routeIcon: 'power_settings_new', routeTitle: 'Standards', subRoutes: [
+    { route: 'getting-started', routeIcon: 'power_settings_new', routeTitle: 'Getting Started' },
+    { route: 'standards', routeIcon: 'gavel', routeTitle: 'Standards', subRoutes: [
       { route: 'standards/colors', routeTitle: 'Colors' },
       { route: 'standards/forms', routeTitle: 'Forms' },
       { route: 'standards/grid', routeTitle: 'Grid System' },
