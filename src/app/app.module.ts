@@ -13,11 +13,15 @@ import { CoreModule } from './core/core.module';
 import { FeaturesModule } from './features/features.module';
 
 import { HighlightModule } from 'ngx-highlightjs';
+import bash from 'highlight.js/lib/languages/bash';
 import typescript from 'highlight.js/lib/languages/typescript';
+import scss from 'highlight.js/lib/languages/scss';
 import xml from 'highlight.js/lib/languages/xml';
 
 export function hljsLanguages () {
   return [
+    { name: 'bash', func: bash },
+    { name: 'scss', func: scss },
     { name: 'typescript', func: typescript },
     { name: 'xml', func: xml }
   ]

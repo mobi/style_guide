@@ -52,3 +52,19 @@ code {
   background-color: $theme-dark-bg;
   padding-top: $column-gutter;
 }
+
+.go-list {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  list-style: disc;
+  padding: 1rem 1.5rem;
+}
+
+.go-container--centered {
+  padding: 0 25%;
+
+  @media (max-width: $breakpoint_tablet) {
+    padding: 0;
+  }
+}
