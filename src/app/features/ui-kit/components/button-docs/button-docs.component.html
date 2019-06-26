@@ -258,7 +258,7 @@
     </ng-container>
   </go-card>
 
-  <go-card class="go-column go-column--100 go-column--no-padding" id="dark-buttons">
+  <go-card class="go-column go-column--100" id="dark-buttons">
     <ng-container go-card-header>
       <h2 class="go-heading-5">Dark buttons</h2>
     </ng-container>
@@ -321,6 +321,33 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </ng-container>
+  </go-card>
+
+  <go-card class="go-column go-column--100 go-column--no-padding" id="button-group">
+    <ng-container go-card-header>
+      <h2 class="go-heading-5">Button Groups</h2>
+    </ng-container>
+    <ng-container go-card-content>
+      <div class="go-container">
+        <div class="go-column go-column--100 go-column--no-padding">
+          <p>
+            Sometimes it will be necessary to group buttons together. There are a set of helper
+            classes available to accomplish this.
+          </p>
+          <code [highlight]="buttonGroup"></code>
+        </div>
+        <div class="go-column go-column--100 go-column--no-padding">
+          <ul class="go-button-group">
+            <li class="go-button-group__item">
+              <go-button>Button 1</go-button>
+            </li>
+            <li class="go-button-group__item">
+              <go-button>Button 2</go-button>
+            </li>
+          </ul>
         </div>
       </div>
     </ng-container>

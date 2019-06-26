@@ -60,6 +60,17 @@ export class ButtonDocsComponent {
   </go-button>
   `;
 
+  buttonGroup: string = `
+  <ul class="go-button-group">
+    <li class="go-button-group__item">
+      <go-button>Button 1</go-button>
+    </li>
+    <li class="go-button-group__item">
+      <go-button>Button 2</go-button>
+    </li>
+  </ul>
+  `;
+
   public testClick(): void {
     alert("Button clicked!");
   }
