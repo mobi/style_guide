@@ -68,4 +68,18 @@ export class GridComponent {
     </div>
   </section>
   `;
+
+  collapseColumn: string = `
+  <section class="go-container">
+    <div class="go-column">Column 1</div>
+    <div class="go-column go-column--collapse">Column 2</div>
+  </section>
+  `;
+
+  alignCenterContainer: string = `
+  <section class="go-container go-container--align-center">
+    <div class="go-column go-column--50">Column 1</div>
+    <div class="go-column go-column--50">Column 2</div>
+  </section>
+  `;
 }
