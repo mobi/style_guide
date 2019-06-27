@@ -56,7 +56,7 @@ export class IconDocsComponent {
   iconOverrideWarning: string = `
   You most likely will never need to perform an override like the one shown below.
   This functionality goes against the guidelines Angular sets, but we've included it just in case this is absolutely necessary.
-  If possible, apply a class directory to the <go-icon> element before performing this override.
+  If possible, apply a class directly to the <go-icon> element before performing this override.
   `;
 
   constructor() { }
