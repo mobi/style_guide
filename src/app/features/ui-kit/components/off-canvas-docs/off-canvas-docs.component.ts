@@ -11,7 +11,7 @@ export class OffCanvasDocsComponent {
   noteMessage: string = 'For this example, the component we want to render in the off canvas is "BasicTestComponent", but we can follow the same pattern to render any component inside of the off canvas.';
 
   appModuleImport: string = `
-  import { GoOffCanvasModule } from 'goponents';
+  import { GoOffCanvasModule } from '@tangoe/goponents';
 
   @NgModule({
     declarations: [AppComponent],
@@ -24,7 +24,7 @@ export class OffCanvasDocsComponent {
   `;
 
   uiKitExample: string = `
-  import { GoOffCanvasModule, GoOffCanvasService } from 'goponents';
+  import { GoOffCanvasModule, GoOffCanvasService } from '@tangoe/goponents';
   import { BasicTestComponent } from './components/basic-test/basic-test.component';
 
   @NgModule({
@@ -45,7 +45,7 @@ export class OffCanvasDocsComponent {
   `;
 
   implementationExample: string = `
-  import { GoOffCanvasService } from 'goponents';
+  import { GoOffCanvasService } from '@tangoe/goponents';
   import { BasicTestComponent } from '../basic-test/basic-test.component';
 
   constructor(private goOffCanvasService: GoOffCanvasService) { }

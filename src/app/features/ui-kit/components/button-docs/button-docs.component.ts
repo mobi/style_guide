@@ -32,7 +32,7 @@ export class ButtonDocsComponent {
 
   <go-button (handleClick)="testClick()" buttonDisabled="true">Disabled</go-button>
 
-  <go-button (handleClick)="testClick()" icon="work">With Icon</go-button>
+  <go-button (handleClick)="testClick()" buttonIcon="work">With Icon</go-button>
   `;
 
   negativeExample: string = this.buttonTemplate('negative', 'delete');
@@ -92,7 +92,7 @@ export class ButtonDocsComponent {
     Disabled
   </go-button>
 
-  <go-button (handleClick)="testClick()" buttonVariant="${variant}" icon="${icon}">
+  <go-button (handleClick)="testClick()" buttonVariant="${variant}" buttonIcon="${icon}">
     With Icon
   </go-button>
     `;
