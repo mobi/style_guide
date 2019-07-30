@@ -4,8 +4,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './config/routes/app-routing.module';
 
 import {
+  GoIconButtonModule,
+  GoHeaderModule,
+  GoLayoutModule,
   GoModalModule,
   GoOffCanvasModule,
+  GoSideNavModule,
   GoToasterModule
 } from '@tangoe/goponents';
 
@@ -24,7 +28,7 @@ export function hljsLanguages () {
     { name: 'scss', func: scss },
     { name: 'typescript', func: typescript },
     { name: 'xml', func: xml }
-  ]
+  ];
 }
 
 @NgModule({
@@ -35,10 +39,14 @@ export function hljsLanguages () {
     AppRoutingModule,
     CoreModule,
     FeaturesModule,
+    GoIconButtonModule,
+    GoHeaderModule,
+    GoLayoutModule,
     GoModalModule,
     GoOffCanvasModule,
+    GoSideNavModule,
     GoToasterModule,
-    HighlightModule.forRoot({ languages: hljsLanguages })
+    HighlightModule.forRoot({ languages: hljsLanguages }),
   ],
   providers: [],
   bootstrap: [AppComponent]

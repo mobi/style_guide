@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AssetsModule } from './assets/assets.module';
 import { BrandingModule } from './branding/branding.module';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { NavigationModule } from './navigation/navigation.module';
 import { PatternsModule } from './patterns/patterns.module';
 import { StandardsModule } from './standards/standards.module';
 import { ThemesModule } from './themes/themes.module';
@@ -19,9 +18,6 @@ import { UiKitModule } from './ui-kit/ui-kit.module';
 // ====================================================================================
 
 @NgModule({
-  exports: [
-    NavigationModule
-  ],
   imports: [
     AssetsModule,
     BrandingModule,
