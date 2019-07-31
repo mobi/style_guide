@@ -8,6 +8,7 @@ import {
   GoButtonModule,
   GoCardModule,
   GoIconModule,
+  GoLoaderModule,
   GoModalModule,
   GoModalService,
   GoOffCanvasModule,
@@ -38,6 +39,7 @@ import { ToastDocsComponent } from './components/toast-docs/toast-docs.component
 import { UiKitComponent } from './components/ui-kit/ui-kit.component';
 import { BasicTestComponent } from './components/basic-test/basic-test.component';
 import { OffCanvasDocsComponent } from './components/off-canvas-docs/off-canvas-docs.component';
+import { LoaderDocsComponent } from './components/loader-docs/loader-docs.component';
 
 @NgModule({
   imports: [
@@ -46,6 +48,7 @@ import { OffCanvasDocsComponent } from './components/off-canvas-docs/off-canvas-
     GoButtonModule,
     GoCardModule,
     GoIconModule,
+    GoLoaderModule,
     GoModalModule,
     GoOffCanvasModule,
     GoTableModule,
@@ -70,7 +73,8 @@ import { OffCanvasDocsComponent } from './components/off-canvas-docs/off-canvas-
     TableSortingComponent,
     TableTemplatesComponent,
     ToastDocsComponent,
-    UiKitComponent
+    UiKitComponent,
+    LoaderDocsComponent
   ],
   entryComponents: [
     BasicTestComponent,
