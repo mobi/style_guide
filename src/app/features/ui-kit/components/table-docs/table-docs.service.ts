@@ -5,12 +5,10 @@ import * as faker from 'faker';
   providedIn: 'root'
 })
 export class TableDocsService {
-  pageTitle: string;
-
   public generateData(length: number): Array<{}> {
-    return Array.from({length: length}, (_, key: number) => key).map(index => {
+    return Array.from({ length: length }, (_, key: number) => key).map(index => {
       return {
-        id: index+1,
+        id: index + 1,
         name: {
           first: faker.name.firstName(),
           last: faker.name.lastName()
@@ -18,7 +16,7 @@ export class TableDocsService {
         email: faker.internet.email(),
         gender: index % 3 ? 'Male' : 'Female',
         ip_address: faker.internet.ip()
-      }
+      };
     });
   }
 }

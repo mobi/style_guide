@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
 import { GoTableConfig } from '@tangoe/goponents';
 import { TableDocsService } from '../../table-docs.service';
+import { SubNavService } from 'src/app/shared/components/sub-nav/sub-nav.service';
 
 @Component({
   templateUrl: './table-templates.component.html',
   styleUrls: ['./table-templates.component.scss']
 })
 export class TableTemplatesComponent {
-  constructor(private tableDocsService: TableDocsService) {
-    this.tableDocsService.pageTitle = "Table Templating";
+  constructor(
+    private tableDocsService: TableDocsService,
+    private subNavService: SubNavService
+  ) {
+    this.subNavService.pageTitle = 'Table Templating';
   }
 
   ////////////////////////////
@@ -40,12 +44,12 @@ export class TableTemplatesComponent {
   `;
 
   tableConfig: object = new GoTableConfig({
-    tableData:  this.tableDocsService.generateData(20)
+    tableData: this.tableDocsService.generateData(20)
   });
 
 
   // Private Functions
-  //===================
+  // ===================
 
   private customHeader(column: string, field: string): string {
     return `

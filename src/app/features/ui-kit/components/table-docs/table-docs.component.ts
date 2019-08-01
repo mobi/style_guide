@@ -1,35 +1,22 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { routerAnimation } from '../../../../app.animations';
-import { TableDocsService } from './table-docs.service';
+import { Component } from '@angular/core';
+
+import { NavGroup } from '@tangoe/goponents/lib/components/go-side-nav/nav-group.model';
 
 @Component({
-  animations: [routerAnimation],
   styleUrls: ['./table-docs.component.scss'],
-  templateUrl: './table-docs.component.html',
-  encapsulation: ViewEncapsulation.None
+  templateUrl: './table-docs.component.html'
 })
 export class TableDocsComponent {
 
-  mobileSubmenuShown: boolean = false;
-
-  constructor (public tableDocsService: TableDocsService) {
-    this.tableDocsService.pageTitle = "Table";
-  }
-
-  getRouteAnimation(outlet){
-		return outlet.isActivated ? outlet.activatedRoute : '';
-  }
-
-  toggleSubmenu() : void {
-    this.mobileSubmenuShown = this.mobileSubmenuShown ? false : true;
-  }
-  
-  submenuIcon() : string {
-    return this.mobileSubmenuShown ? "chevron_right" : "chevron_left";
-  }
-  
-  closeMobileMenu() : void {
-    this.mobileSubmenuShown = false;
-  }
-
+  menuItems: Array<NavGroup> = [
+    { routeTitle: 'Basics', subRoutes: [
+      { route: './', routeTitle: 'Overview' },
+      { route: './pagination', routeTitle: 'Pagination' },
+      { route: './sorting', routeTitle: 'Sorting' },
+      { route: './templating', routeTitle: 'Templating' }
+    ]},
+    { routeTitle: 'Advanced', subRoutes: [
+      { route: './server-integration', routeTitle: 'Server-Side Integration' }
+    ]}
+  ];
 }

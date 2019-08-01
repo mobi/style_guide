@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { TableDocsService } from '../../table-docs.service';
 import { GoTableConfig, GoTableSortConfig, SortDirection } from '@tangoe/goponents';
+import { SubNavService } from 'src/app/shared/components/sub-nav/sub-nav.service';
 
 @Component({
   templateUrl: './table-sorting.component.html'
 })
 export class TableSortingComponent {
-  constructor(private tableDocsService: TableDocsService) {
-    this.tableDocsService.pageTitle = "Table Sorting";
+  constructor(
+    private tableDocsService: TableDocsService,
+    private subNavService: SubNavService
+  ) {
+    this.subNavService.pageTitle = 'Table Sorting';
   }
 
   ////////////////////////////
@@ -39,7 +43,7 @@ export class TableSortingComponent {
   });
   `;
 
-  tableConfigEx_html: string  = `
+  tableConfigEx_html: string = `
   <go-table [tableConfig]="tableConfig">
     <go-table-column field="id" title="ID"></go-table-column>
     <go-table-column field="name.first" title="First Name"></go-table-column>

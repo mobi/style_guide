@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HighlightModule } from 'ngx-highlightjs';
+import { SharedModule } from '../../shared/shared.module';
 
 // GoPonents
 import {
@@ -54,6 +55,7 @@ import { LoaderDocsComponent } from './components/loader-docs/loader-docs.compon
     GoTableModule,
     GoToastModule,
     HighlightModule,
+    SharedModule,
     UiKitRoutesModule
   ],
   declarations: [

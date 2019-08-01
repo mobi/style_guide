@@ -1,0 +1,110 @@
+@import '~@tangoe/gosheets/base/variables';
+@import '~@tangoe/goponents/styles/mixins';
+
+.sub-nav-container {
+  align-items: flex-start;
+  display: flex;
+  position: relative;
+}
+
+.sub-nav-outlet {
+  flex: 1;
+  position: relative;
+}
+
+.sub-nav-container-outlet ~ * {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.sub-nav-submenu {
+  margin-left: 2rem;
+  min-width: 200px;
+  position: relative;
+
+  @media (max-width: $breakpoint-tablet) {
+    background: $theme-light-bg;
+    border-radius: $global-radius;
+    padding: 1rem;
+    position: fixed;
+    right: calc(-200px - 3rem);
+    z-index: 10;
+    @include transition(all);
+
+    &.sub-nav-submenu--mobile-show {
+      box-shadow: $global-box-shadow;
+      right: 0;
+    }
+  }
+}
+
+.sub-nav-submenu-mobile-toggle {
+  background: $theme-light-bg;
+  border-radius: $global-radius 0 0 $global-radius;
+  box-shadow: $global-box-shadow;
+  cursor: pointer;
+  display: none;
+  height: 3rem;
+  margin-top: 2rem;
+  position: fixed;
+  right: 0;
+  user-select: none;
+  width: 2rem;
+  @include transition(all);
+
+  &:hover {
+    width: 2.5rem;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    display: flex;
+  }
+}
+
+.sub-nav-submenu-mobile-toggle--expand {
+  right: 200px;
+}
+
+.sub-nav-submenu-mobile-toggle__icon {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-size: 1.5rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.sub-nav-submenu__title {
+  border-bottom: 1px solid $theme-light-border;
+  padding-bottom: 0.5rem;
+}
+
+.sub-nav-submenu__ul {
+  padding-bottom: 1rem;
+}
+
+.sub-nav-submenu__a {
+  border-bottom: 0;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0 0.25rem 0;
+  position: relative;
+  @include transition(all);
+  
+  &.sub-nav-submenu__a--active {
+    padding-left: 0.75rem;
+
+    &::before {
+      background: $ui-color-neutral-gradient;
+      border-radius: 2px;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 4px;
+    }
+  }
+}

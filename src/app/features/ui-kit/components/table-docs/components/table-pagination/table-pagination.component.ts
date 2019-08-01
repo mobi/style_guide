@@ -2,13 +2,17 @@ import { Component } from '@angular/core';
 
 import { TableDocsService } from '../../table-docs.service';
 import { GoTableConfig, GoTablePageConfig } from '@tangoe/goponents';
+import { SubNavService } from 'src/app/shared/components/sub-nav/sub-nav.service';
 
 @Component({
   templateUrl: './table-pagination.component.html'
 })
 export class TablePaginationComponent {
-  constructor(private tableDocsService: TableDocsService) {
-    this.tableDocsService.pageTitle = "Table Pagination";
+  constructor(
+    private tableDocsService: TableDocsService,
+    private subNavService: SubNavService
+  ) {
+    this.subNavService.pageTitle = 'Table Pagination';
   }
 
   ////////////////////////////
@@ -19,7 +23,7 @@ export class TablePaginationComponent {
     pageSizes: number[] = [10, 25, 50];
     perPage: number = 10;
   }
-  
+
   /**
    * Default values are assigned in when the class is instantiated
    * so that there is consistency among the various tables throughout

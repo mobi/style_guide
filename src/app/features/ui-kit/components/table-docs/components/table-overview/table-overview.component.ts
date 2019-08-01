@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
 
 import { GoTableConfig } from '@tangoe/goponents';
+import { SubNavService } from 'src/app/shared/components/sub-nav/sub-nav.service';
 import { TableDocsService } from '../../table-docs.service';
 
 @Component({
   templateUrl: './table-overview.component.html'
 })
 export class TableOverviewComponent {
-  constructor(private tableDocsService: TableDocsService) {
-    this.tableDocsService.pageTitle = "Table Overview";
+  constructor(
+    private subNavService: SubNavService,
+    private tableDocsService: TableDocsService
+  ) {
+    this.subNavService.pageTitle = 'Table Overview';
   }
 
   ////////////////////////////

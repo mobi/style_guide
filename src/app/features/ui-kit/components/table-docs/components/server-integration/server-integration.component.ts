@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { TableDocsService } from '../../table-docs.service';
+import { SubNavService } from 'src/app/shared/components/sub-nav/sub-nav.service';
 
 @Component({
   templateUrl: './server-integration.component.html'
 })
 export class ServerIntegrationComponent {
-  constructor(private tableDocsService: TableDocsService) {
-    this.tableDocsService.pageTitle = "Table Server Integration";
+  constructor(private subNavService: SubNavService) {
+    this.subNavService.pageTitle = 'Table Server Integration';
   }
 
   ////////////////////////////
@@ -24,7 +24,7 @@ export class ServerIntegrationComponent {
     this.handleTableChange(this.tableConfig);
   }
   `;
-  
+
   tableConfig_ts_tableChange: string = `
   handleTableChange(currentTableConfig: GoTableConfig) : void {
     this.mockService.getMockData(currentTableConfig).subscribe(data => {
@@ -51,7 +51,7 @@ export class ServerIntegrationComponent {
   </go-table>
   `;
 
-  server_response: string  = `
+  server_response: string = `
   {
     results: [{}], // the actual results for the table
     totalCount: 12345 // the total count for the entire table, not just this page
