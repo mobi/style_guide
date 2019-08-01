@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { NavGroup } from '@tangoe/goponents/lib/components/go-side-nav/nav-group.model';
 
 @Component({
-  styleUrls: ['./table-docs.component.scss'],
   templateUrl: './table-docs.component.html'
 })
 export class TableDocsComponent {

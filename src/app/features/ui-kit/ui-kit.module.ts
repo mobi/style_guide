@@ -41,6 +41,8 @@ import { UiKitComponent } from './components/ui-kit/ui-kit.component';
 import { BasicTestComponent } from './components/basic-test/basic-test.component';
 import { OffCanvasDocsComponent } from './components/off-canvas-docs/off-canvas-docs.component';
 import { LoaderDocsComponent } from './components/loader-docs/loader-docs.component';
+import { LayoutDocsComponent } from './components/layout-docs/layout-docs.component';
+import { LayoutOverviewComponent } from './components/layout-docs/components/layout-overview/layout-overview.component';
 
 @NgModule({
   imports: [
@@ -76,7 +78,9 @@ import { LoaderDocsComponent } from './components/loader-docs/loader-docs.compon
     TableTemplatesComponent,
     ToastDocsComponent,
     UiKitComponent,
-    LoaderDocsComponent
+    LoaderDocsComponent,
+    LayoutDocsComponent,
+    LayoutOverviewComponent
   ],
   entryComponents: [
     BasicTestComponent,
