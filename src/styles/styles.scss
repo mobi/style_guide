@@ -3,7 +3,7 @@
 
 @import 'settings';
 @import 'typography';
-@import '~highlight.js/styles/rainbow.css';
+@import '~highlight.js/styles/github.css';
 
 // Base Styling
 ::-webkit-scrollbar {
@@ -33,6 +33,10 @@ code {
   line-height: 1.6;
   overflow-x: auto;
   white-space: pre;
+
+  &.hljs {
+    border: 1px solid $theme-light-app-bg;
+  }
 
   .hljs-section, .hljs-name, .hljs-strong {
     font-weight: normal;

@@ -19,6 +19,7 @@ import { OffCanvasDocsComponent } from '../components/off-canvas-docs/off-canvas
 import { LoaderDocsComponent } from '../components/loader-docs/loader-docs.component';
 import { LayoutDocsComponent } from '../components/layout-docs/layout-docs.component';
 import { LayoutOverviewComponent } from '../components/layout-docs/components/layout-overview/layout-overview.component';
+import { LayoutNavComponent } from '../components/layout-docs/components/layout-nav/layout-nav.component';
 
 const routes: Routes = [
   { path: 'ui-kit', component: UiKitComponent },
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: 'ui-kit/button', component: ButtonDocsComponent },
   { path: 'ui-kit/card', component: CardDocsComponent },
   { path: 'ui-kit/layout', component: LayoutDocsComponent, children: [
-    { path: '', component: LayoutOverviewComponent }
+    { path: '', component: LayoutOverviewComponent },
+    { path: 'side-nav', component: LayoutNavComponent }
   ]},
   { path: 'ui-kit/loader', component: LoaderDocsComponent },
   { path: 'ui-kit/icon', component: IconDocsComponent },

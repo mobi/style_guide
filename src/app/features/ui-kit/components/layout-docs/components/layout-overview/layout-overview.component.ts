@@ -7,10 +7,6 @@ import { SubNavService } from 'src/app/shared/components/sub-nav/sub-nav.service
 })
 export class LayoutOverviewComponent implements OnInit {
 
-  componentBindings = `
-  @Input()
-  `;
-
   basicExample_module = `
   // Required imports for the layout:
   import {

@@ -10,7 +10,8 @@ export class LayoutDocsComponent implements OnInit {
 
   menuItems: Array<NavGroup> = [
     { routeTitle: 'Basics', subRoutes: [
-      { route: './', routeTitle: 'Overview' }
+      { route: './', routeTitle: 'Overview' },
+      { route: './side-nav', routeTitle: 'Side Nav' }
     ]}
   ];
 

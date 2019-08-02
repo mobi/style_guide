@@ -43,6 +43,7 @@ import { OffCanvasDocsComponent } from './components/off-canvas-docs/off-canvas-
 import { LoaderDocsComponent } from './components/loader-docs/loader-docs.component';
 import { LayoutDocsComponent } from './components/layout-docs/layout-docs.component';
 import { LayoutOverviewComponent } from './components/layout-docs/components/layout-overview/layout-overview.component';
+import { LayoutNavComponent } from './components/layout-docs/components/layout-nav/layout-nav.component';
 
 @NgModule({
   imports: [
@@ -80,7 +81,8 @@ import { LayoutOverviewComponent } from './components/layout-docs/components/lay
     UiKitComponent,
     LoaderDocsComponent,
     LayoutDocsComponent,
-    LayoutOverviewComponent
+    LayoutOverviewComponent,
+    LayoutNavComponent
   ],
   entryComponents: [
     BasicTestComponent,
