@@ -20,6 +20,7 @@ import { LoaderDocsComponent } from '../components/loader-docs/loader-docs.compo
 import { LayoutDocsComponent } from '../components/layout-docs/layout-docs.component';
 import { LayoutOverviewComponent } from '../components/layout-docs/components/layout-overview/layout-overview.component';
 import { LayoutNavComponent } from '../components/layout-docs/components/layout-nav/layout-nav.component';
+import { LayoutHeaderComponent } from '../components/layout-docs/components/layout-header/layout-header.component';
 
 const routes: Routes = [
   { path: 'ui-kit', component: UiKitComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'ui-kit/card', component: CardDocsComponent },
   { path: 'ui-kit/layout', component: LayoutDocsComponent, children: [
     { path: '', component: LayoutOverviewComponent },
+    { path: 'header', component: LayoutHeaderComponent },
     { path: 'side-nav', component: LayoutNavComponent }
   ]},
   { path: 'ui-kit/loader', component: LoaderDocsComponent },

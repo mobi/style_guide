@@ -44,6 +44,7 @@ import { LoaderDocsComponent } from './components/loader-docs/loader-docs.compon
 import { LayoutDocsComponent } from './components/layout-docs/layout-docs.component';
 import { LayoutOverviewComponent } from './components/layout-docs/components/layout-overview/layout-overview.component';
 import { LayoutNavComponent } from './components/layout-docs/components/layout-nav/layout-nav.component';
+import { LayoutHeaderComponent } from './components/layout-docs/components/layout-header/layout-header.component';
 
 @NgModule({
   imports: [
@@ -82,7 +83,8 @@ import { LayoutNavComponent } from './components/layout-docs/components/layout-n
     LoaderDocsComponent,
     LayoutDocsComponent,
     LayoutOverviewComponent,
-    LayoutNavComponent
+    LayoutNavComponent,
+    LayoutHeaderComponent
   ],
   entryComponents: [
     BasicTestComponent,
