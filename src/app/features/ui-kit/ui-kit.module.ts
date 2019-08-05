@@ -46,6 +46,7 @@ import { LayoutOverviewComponent } from './components/layout-docs/components/lay
 import { LayoutNavComponent } from './components/layout-docs/components/layout-nav/layout-nav.component';
 import { LayoutHeaderComponent } from './components/layout-docs/components/layout-header/layout-header.component';
 import { LayoutSearchComponent } from './components/layout-docs/components/layout-search/layout-search.component';
+import { LayoutExampleComponent } from './components/layout-docs/components/layout-example/layout-example.component';
 
 @NgModule({
   imports: [
@@ -86,7 +87,8 @@ import { LayoutSearchComponent } from './components/layout-docs/components/layou
     LayoutOverviewComponent,
     LayoutNavComponent,
     LayoutHeaderComponent,
-    LayoutSearchComponent
+    LayoutSearchComponent,
+    LayoutExampleComponent
   ],
   entryComponents: [
     BasicTestComponent,

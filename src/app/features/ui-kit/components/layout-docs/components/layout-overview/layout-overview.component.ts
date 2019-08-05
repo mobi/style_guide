@@ -10,8 +10,10 @@ export class LayoutOverviewComponent implements OnInit {
   basicExample_module = `
   // Required imports for the layout:
   import {
+    GoHeaderModule,
     GoIconButtonModule,
-    GoLayoutModule
+    GoLayoutModule,
+    GoSideNavModule
   } from '@tangoe/goponents';
 
   @NgModule({
@@ -19,8 +21,10 @@ export class LayoutOverviewComponent implements OnInit {
       AppComponent
     ],
     imports: [
+      GoHeaderModule,
       GoIconButtonModule,
-      GoLayoutModule
+      GoLayoutModule,
+      GoSideNavModule
     ],
     bootstrap: [AppComponent]
   })
