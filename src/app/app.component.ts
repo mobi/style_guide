@@ -2,8 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { routerAnimation } from './app.animations';
 
-import { NavGroup } from '@tangoe/goponents/lib/components/go-side-nav/nav-group.model';
-import { NavItem } from '@tangoe/goponents/lib/components/go-side-nav/nav-item.model';
+import { NavGroup, NavItem } from '@tangoe/goponents';
 
 @Component({
   selector: 'app-root',

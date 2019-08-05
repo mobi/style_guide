@@ -12,6 +12,7 @@ export class LayoutDocsComponent implements OnInit {
     { routeTitle: 'Basics', subRoutes: [
       { route: './', routeTitle: 'Overview' },
       { route: './header', routeTitle: 'Header' },
+      { route: './search', routeTitle: 'Search' },
       { route: './side-nav', routeTitle: 'Side Nav' }
     ]}
   ];

@@ -2,6 +2,11 @@ strong {
   font-weight: $weight-bold;
 }
 
+caption.method-type {
+  margin: 0;
+  vertical-align: middle;
+}
+
 em {
   font-style: italic;
 }
