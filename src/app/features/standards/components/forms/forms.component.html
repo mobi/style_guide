@@ -1,10 +1,10 @@
 <header class="go-page-title">
-  <h3 class="go-heading-3">{{ pageTitle }}</h3>
+  <h1 class="go-heading-3">{{ pageTitle }}</h1>
 </header>
 <section class="go-container">
   <go-card class="go-column go-column--50">
     <ng-container go-card-header>
-      <h2 class="go-heading-4" id="basic-forms">Basic Forms</h2>
+      <h1 class="go-heading-4" id="basic-forms">Basic Forms</h1>
     </ng-container>
     <ng-container go-card-content>
       <div class="go-container">
@@ -80,12 +80,12 @@
     <ng-container go-card-content>
       <div class="go-container">
         <div class="go-column go-column--100">
-          <p>
+          <p class="go-body-copy">
             Form hints exist to help give more information about the inputs they
             are attached to. They should be directly preceded by the input in
             which they describe.
           </p>
-          <p>
+          <p class="go-body-copy">
             Hints have two states. The default state is established by the
             <code class="code-block--inline">go-hint</code> class.
           </p>
@@ -103,12 +103,12 @@
             </p>
           </div>
           <div class="go-column go-column--100">
-           <p>
+           <p class="go-body-copy">
               If more information is needed to describe an input in an error state
               the <code class="code-block--inline">go-hint--error</code> modifier
               class can be additionally added to make the errors more prominent.
             </p>
-            <p>
+            <p class="go-body-copy">
               For better accessibility in the error state, an additional 
               <code class="code-block--inline">go-hint__status</code>
               element can be added directly inside the hint to better
@@ -146,29 +146,29 @@
     <ng-container go-card-content>
       <div class="go-container">
         <div class="go-column go-column--100">
-          <p>All inputs have three basic states.</p>
-          <p>
+          <p class="go-body-copy">All inputs have three basic states.</p>
+          <p class="go-body-copy">
             The default state is established by the <code class="code-block--inline">go-form__input</code>
             class on text based inputs.
           </p>
-          <p>
+          <p class="go-body-copy">
             The disabled state can be achieved by the addition of the
             <code class="code-block--inline">disabled</code> attribute,
             while the error state can be applied by the addition of the
             <code class="code-block--inline">go-form__input--error</code>
             modifier class.
           </p>
-          <p>
+          <p class="go-body-copy">
             An input with an error modifier should be followed by an error hint describing
             why it is in such a state.
           </p>
-          <p>
+          <p class="go-body-copy">
             If there is an instance where an individual label or input
             needs to be displayed on top of a dark background the
             <code class="code-block--inline">--dark</code> modifiers
             can be added.
           </p>
-          <ol>
+          <ol class="go-list go-list--ordered">
             <li>
               <code class="code-block--inline">.go-form__label--dark</code>
               - To apply the dark theme styles to a label
@@ -220,28 +220,28 @@
     <ng-container go-card-content>
       <div class="go-container">
         <div class="go-column go-column--100">
-          <p>
+          <p class="go-body-copy">
             Similar to the input element, the default state of select boxes are established
             by the <code class="code-block--inline">go-form__select</code> class.
           </p>
-          <p>
+          <p class="go-body-copy">
             The disabled state can be achieved by the addition of the
             <code class="code-block--inline">disabled</code>
             attribute, while the error state can be applied by the addition of the
             <code class="code-block--inline">go-form__select--error</code>
             modifier class.
           </p>
-          <p>
+          <p class="go-body-copy">
             A select box with an error modifier should be followed by an error hint
             describing why it is in such a state.
           </p>
-          <p>
+          <p class="go-body-copy">
             If there is an instance where an individual label or select
             box needs to be displayed on top of a dark background the
             <code class="code-block--inline">--dark</code> modifiers
             can be added.
           </p>
-          <ol>
+          <ol class="go-list go-list--ordered">
             <li>
               <code class="code-block--inline">.go-form__label--dark</code>
               - To apply the dark theme styles to a label
@@ -312,18 +312,18 @@
     <ng-container go-card-content>
       <div class="go-container">
         <div class="go-column go-column--100">
-          <p>
+          <p class="go-body-copy">
             Similar to the input element, the default state of check boxes and radio buttons
             are established by the <code class="code-block--inline">go-form__checkbox</code>
             class.
           </p>
-          <p>
+          <p class="go-body-copy">
             These types of inputs often appear in groups and should always be wrapped in a
             <code class="code-block--inline">fieldset</code> element with an additional
             <code class="code-block--inline">legend</code> element describing the choice
             that is being made.
           </p>
-          <p>
+          <p class="go-body-copy">
             The disabled state can be achieved by the addition of the
             <code class="code-block--inline">disabled</code>
             attribute to the parent
@@ -332,17 +332,17 @@
             <code class="code-block--inline">go-form__select--error</code>
             modifier class to the same element.
           </p>
-          <p>
+          <p class="go-body-copy">
             A input with an error modifier should be followed by an error hint
             describing why it is in such a state.
           </p>
-          <p>
+          <p class="go-body-copy">
             If there is an instance where an individual label or fieldset
             needs to be displayed on top of a dark background the
             <code class="code-block--inline">--dark</code> modifiers
             can be added.
           </p>
-          <ol>
+          <ol class="go-list go-list--ordered">
             <li>
               <code class="code-block--inline">.go-form__label--dark</code>
               - To apply the dark theme styles to a label
@@ -444,7 +444,7 @@
       <h2 class="go-heading-4">Dark Forms</h2>
     </ng-container>
     <ng-container go-card-content>
-      <p>
+      <p class="go-body-copy">
         Dark forms are mostly like the default forms with a few
         alterations based on the state of the input. Labels and
         text show up as a light color so they are legible on a
@@ -454,14 +454,14 @@
       </p>
 
       <h3 class="go-heading-6">Implementation</h3>
-      <p>
+      <p class="go-body-copy">
         The dark form effect can be achieved in one of two ways.
         Generally speaking we will have a whole form that we need
         to make dark. In this case, we can simply add the
         <code class="code-block--inline">.go-form--dark</code>
         modifier class to the surrounding form element.
       </p>
-      <p>
+      <p class="go-body-copy">
         There might be cases, however, where individual inputs are
         not contained within a form element. The dark input styles
         can be applied to individual elements by adding the
@@ -471,7 +471,7 @@
       </p>
 
       <h3 class="go-heading-6">Example</h3>
-      <p>
+      <p class="go-body-copy">
         One of the most common use cases of a dark form is when forms
         are being displayed in the off canvas.
       </p>
@@ -500,7 +500,7 @@
     <ng-container go-card-content>
       <div class="go-container">
         <div class="go-column go-column--100">
-          <p>
+          <p class="go-body-copy">
             Below is an example of all of the pieces working together.
             This includes a good example of how to use the grid system
             in conjunction with the form inputs to create a more robust layout.

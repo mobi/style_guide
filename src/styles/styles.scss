@@ -61,8 +61,12 @@ code {
   display: flex;
   flex-direction: column;
   line-height: 1.5;
-  list-style: disc;
+  list-style-type: disc;
   padding: 1rem 1.5rem;
+}
+
+.go-list--ordered {
+  list-style-type: decimal;
 }
 
 .go-container--centered {

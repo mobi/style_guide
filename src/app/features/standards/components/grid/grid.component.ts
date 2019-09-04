@@ -60,7 +60,7 @@ export class GridComponent {
   <section class="go-container example-grid">
     <div class="go-column go-column--25">25%</div>
     <div class="go-column go-column--75 go-column--no-padding">
-      <p>75%</p>
+      <p class="go-body-copy">75%</p>
       <div class="go-container">
         <div class="go-column go-column--50">50%</div>
         <div class="go-column go-column--50">50%</div>

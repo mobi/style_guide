@@ -1,27 +1,27 @@
 <header class="go-page-title">
-  <h3 class="go-heading-h3">{{ pageTitle }}</h3>
+  <h1 class="go-heading-3">{{ pageTitle }}</h1>
 </header>
 
-<div class="go-container">
+<section class="go-container">
   <go-card [showHeader]="false" class="go-column go-column--100">
     <div go-card-content>
       <!-- Intro -->
-      <h5>Usage</h5>
-      <p>The Go Accordion Component should be used when multiple sets of data need to be rendered, but vertical space is a concern.</p>
+      <h1 class="go-heading-5">Usage</h1>
+      <p class="go-body-copy">The Go Accordion Component should be used when multiple sets of data need to be rendered, but vertical space is a concern.</p>
 
-      <p>
+      <p class="go-body-copy">
         The <code class="code-block--inline">go-accordion</code> element must be accompanied by
         <code class="code-block--inline">go-accordion-panel</code> children.
         See <a [routerLink]="['/ui-kit/accordion-panel']">Accordion Panel</a> for details.
       </p>
 
       <!-- Bindings -->
-      <h5>Bindings</h5>
+      <h1 class="go-heading-5">Bindings</h1>
       <code [highlight]="componentBindings"></code>
 
       <!-- expandAll -->
-      <h6>expandAll</h6>
-      <p>
+      <h2 class="go-heading-6">expandAll</h2>
+      <p class="go-body-copy">
         <code class="code-block--inline">expandAll</code>
         will ensure each panel in the accordion is expanded on first render.
         <code class="code-block--inline">expandAll</code> will also override
@@ -29,15 +29,15 @@
       </p>
       
       <!-- multiExpand -->
-      <h6>multiExpand</h6>
-      <p>
+      <h2 class="go-heading-6">multiExpand</h2>
+      <p class="go-body-copy">
         <code class="code-block--inline">multiExpand</code>
         will allow for multiple panels to be expanded at any given time.
       </p>
 
       <!-- showIcons -->
-      <h6>showIcons</h6>
-      <p>
+      <h2 class="go-heading-6">showIcons</h2>
+      <p class="go-body-copy">
         This will enable each panel to have an icon shown to the left of the title.
       </p>
       <caption>
@@ -51,7 +51,7 @@
       <!-- theme -->
       <!-- <h6>theme</h6>
       <code [highlight]="themeOptions"></code>
-      <p>
+      <p class="go-body-copy">
         This will set the appearance of the <code class="code-block--inline">accordion</code>. <code class="code-block--inline">light</code>
         is the default <code class="code-block--inline">theme</code> and should be used in most places. The only time the
         <code class="code-block--inline">dark</code> theme should be used is when the accordion
@@ -62,16 +62,16 @@
 
   <go-card class="go-column go-column--100">
     <header go-card-header>
-      <h5>Default</h5>
+      <h1 class="go-heading-5">Default</h1>
     </header>
     <div go-card-content>
       <div class="go-container">
         <div class="go-column go-column--50">
-          <h6>Code</h6>
+          <h2 class="go-heading-6">Code</h2>
           <code [highlight]="defaultExample"></code>
         </div>
         <div class="go-column go-column--50">
-          <h6>View</h6>
+          <h2 class="go-heading-6">View</h2>
           <go-accordion>
             <go-accordion-panel title="Test 1" expanded="true">
               This is some content for <b>Test 1</b>.
@@ -90,16 +90,16 @@
 
   <go-card class="go-column go-column--100">
     <header go-card-header>
-      <h5>Expand All</h5>
+      <h1 class="go-heading-5">Expand All</h1>
     </header>
     <div go-card-content>
       <div class="go-container">
         <div class="go-column go-column--50">
-          <h6>Code</h6>
+          <h2 class="go-heading-6">Code</h2>
           <code [highlight]="expandAllExample"></code>
         </div>
         <div class="go-column go-column--50">
-          <h6>View</h6>
+          <h2 class="go-heading-6">View</h2>
           <go-accordion [expandAll]="true">
             <go-accordion-panel title="Test 1">
               This is some content for <b>Test 1</b>.
@@ -118,16 +118,16 @@
 
   <go-card class="go-column go-column--100">
     <header go-card-header>
-      <h5>Multiple Expansion</h5>
+      <h1 class="go-heading-5">Multiple Expansion</h1>
     </header>
     <div go-card-content>
       <div class="go-container">
         <div class="go-column go-column--50">
-          <h6>Code</h6>
+          <h2 class="go-heading-6">Code</h2>
           <code [highlight]="multiExpandExample"></code>
         </div>
         <div class="go-column go-column--50">
-          <h6>View</h6>
+          <h2 class="go-heading-6">View</h2>
           <go-accordion [multiExpand]="true">
             <go-accordion-panel title="Test 1" expanded="true">
               This is some content for <b>Test 1</b>.
@@ -146,16 +146,16 @@
 
   <go-card class="go-column go-column--100">
     <header go-card-header>
-      <h5>With Icons</h5>
+      <h1 class="go-heading-5">With Icons</h1>
     </header>
     <div go-card-content>
       <div class="go-container">
         <div class="go-column go-column--50">
-          <h6>Code</h6>
+          <h2 class="go-heading-6">Code</h2>
           <code [highlight]="showIconsExample"></code>
         </div>
         <div class="go-column go-column--50">
-          <h6>View</h6>
+          <h2 class="go-heading-6">View</h2>
           <go-accordion [showIcons]="true">
             <go-accordion-panel title="Test 1" icon="home" expanded="true">
               This is some content for <b>Test 1</b>.
@@ -171,4 +171,4 @@
       </div>
     </div>
   </go-card>
-</div>
+</section>

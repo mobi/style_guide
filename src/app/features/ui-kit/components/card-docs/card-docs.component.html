@@ -1,21 +1,21 @@
 <header class="go-page-title">
-  <h3 class="go-heading-h3">{{ pageTitle }}</h3>
+  <h1 class="go-heading-3">{{ pageTitle }}</h1>
 </header>
 
-<div class="go-container">
+<section class="go-container">
   <go-card [showHeader]="false" class="go-column go-column--100">
     <ng-container go-card-content>
       <!-- Intro -->
-      <h5>Usage</h5>
-      <p>The <code class="code-block--inline">&lt;go-card&gt;</code> component should be the default container for all content.</p>
+      <h1 class="go-heading-5">Usage</h1>
+      <p class="go-body-copy">The <code class="code-block--inline">&lt;go-card&gt;</code> component should be the default container for all content.</p>
 
       <!-- Bindings -->
-      <h5>Bindings</h5>
+      <h1 class="go-heading-5">Bindings</h1>
       <code [highlight]="componentBindings"></code>
 
       <!-- expandAll -->
-      <h6>showHeader</h6>
-      <p>
+      <h2 class="go-heading-6">showHeader</h2>
+      <p class="go-body-copy">
         <code class="code-block--inline">showHeader</code>
         by default is true, but if set to false it will hide the header
         of the card even if one is passed.
@@ -25,21 +25,21 @@
 
   <go-card class="go-column go-column--100">
     <ng-container go-card-header>
-      <h5>Default</h5>
+      <h1 class="go-heading-5">Default</h1>
     </ng-container>
     <ng-container go-card-content>
-      <h6>Code (for this card)</h6>
+      <h2 class="go-heading-6">Code (for this card)</h2>
       <code [highlight]="defaultExample"></code>
     </ng-container>
   </go-card>
 
   <go-card [showHeader]="false" class="go-column go-column--100">
     <ng-container go-card-header>
-      <h5>Default</h5>
+      <h1 class="go-heading-5">Default</h1>
     </ng-container>
     <ng-container go-card-content>
-      <h6>Code (for this card, no header example)</h6>
+      <h2 class="go-heading-6">Code (for this card, no header example)</h2>
       <code [highlight]="showHeaderExample"></code>
     </ng-container>
   </go-card>
-</div>
+</section>
