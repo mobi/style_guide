@@ -5,20 +5,22 @@
     </ng-container>
     <ng-container go-card-content>
       <div class="go-container">
-        <p class="go-column go-column--100">
-          The <code class="code-block--inline">&lt;go-side-nav&gt;</code> component should only be used once, at the root level component.
-          It should be placed inside a <code class="code-block--inline">&lt;go-layout&gt;</code> and be given the attribute of 
-          <code class="code-block--inline">go-layout-nav</code>.
-          This component will generate a set of links and accordions on the left of the application and uses the built in routing provided
-          by Angular.
-        </p>
+        <div class="go-column go-column--100">
+          <p class="go-body-copy">
+            The <code class="code-block--inline">&lt;go-side-nav&gt;</code> component should only be used once, at the root level component.
+            It should be placed inside a <code class="code-block--inline">&lt;go-layout&gt;</code> and be given the attribute of 
+            <code class="code-block--inline">go-layout-nav</code>.
+            This component will generate a set of links and accordions on the left of the application and uses the built in routing provided
+            by Angular.
+          </p>
+        </div>
   
         <div class="go-column go-column--100">
           <h5 class="go-heading-5">Bindings</h5>
           <code [highlight]="componentBindings"></code>
 
           <h6 class="go-heading-6">menuItems</h6>
-          <p>
+          <p class="go-body-copy">
             The data passed to this binding contains the structure of the navigation. There are variations of how this
             data could look, but it has to conform to either a <code class="code-block--inline">NavItem</code> or a
             <code class="code-block--inline">NavGroup</code> model. These models have the following properties:
@@ -66,7 +68,7 @@
     <ng-container go-card-content>
       <div class="go-container">
         <div class="go-column go-column--100 go-column--no-padding">
-          <p>
+          <p class="go-body-copy">
             For the sake of this example, we'll be referencing the layout of this application because it's a living example of the
             entire layout component and family. It is also being shown inside of the layout component because it's required to be inside it.
           </p>
@@ -91,7 +93,7 @@
       <ng-container go-card-content>
         <div class="go-container">
           <div class="go-column go-column--100 go-column--no-padding">
-            <p>
+            <p class="go-body-copy">
               If there is an instance where the side nav needs collapsed based on some action performed in the rest of 
               the UI the <code class="code-block--inline">GoSideNavService</code> can be used. Note: the <code class="code-block--inline">GoHeaderComponent</code>
               handles expanding/collapsing of the navigation and should be used as the primary way to do this.

@@ -7,7 +7,7 @@
     <ng-container go-card-content>
       <!-- Intro -->
       <h5>Usage</h5>
-      <p>
+      <p class="go-body-copy">
         The <code class="code-block--inline">&lt;go-loader&gt;</code> component should be used to
         indicate the processing of data, awaiting a server request, or any other time the user may
         need to wait on the application to do something.
@@ -18,7 +18,7 @@
       <code [highlight]="componentBindings"></code>
 
       <h6>loaderSize</h6>
-      <p>
+      <p class="go-body-copy">
         This binding determines what size of loader is generated. The available options are:
       </p>
       <ol>
@@ -28,7 +28,7 @@
       </ol>
 
       <h6>loaderType</h6>
-      <p>
+      <p class="go-body-copy">
         This binding determines what type of loader is generated. The available options are:
       </p>
       <ol>
@@ -44,7 +44,7 @@
       <h5>Basic Example</h5>
     </ng-container>
     <ng-container go-card-content>
-      <p>
+      <p class="go-body-copy">
         Shows a basic use case of each type and size.
       </p>
       <code [highlight]="basicHtml"></code>
@@ -65,7 +65,7 @@
     <ng-container go-card-content>
       <div class="go-container">
         <div class="go-column go-column--50">
-          <p>
+          <p class="go-body-copy">
             The Loader has an animation built into Angular's <code class="code-block--inline">*ngIf</code>
             syntax that fades the loader in/out. To implement this, simply throw an <code class="code-block--inline">*ngIf</code>
             on the <code class="code-block--inline">&lt;go-loader&gt;</code>
