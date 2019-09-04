@@ -9,7 +9,7 @@
           <div class="go-column go-column--100">
             <!-- Intro -->
             <h2 class="go-heading-5">Usage</h2>
-            <p>
+            <p class="go-body-copy">
               The <code class="code-block--inline">&lt;go-button&gt;</code>
               component should be used for any instance of a button throughout
               the app.
@@ -21,40 +21,40 @@
           </div>
           <div class="go-column go-column--50">
             <h3 class="go-heading-6">buttonDisabled</h3>
-            <p>
+            <p class="go-body-copy">
               Disables the button. This should be handled by the parent
               component.
             </p>
 
             <h3 class="go-heading-6">buttonIcon</h3>
-            <p>
+            <p class="go-body-copy">
               Add an icon to the left of the text in the button. See the 
               <a href="https://material.io/tools/icons/">Material Design System Icons</a>
               page for available icons.
             </p>
 
             <h3 class="go-heading-6">buttonType</h3>
-            <p>
+            <p class="go-body-copy">
               Changes the type attribute of the button. This attribute
               defaults to "button" but other options are necessary when
               doing things like submitting or resetting forms. 
             </p>
 
             <h3 class="go-heading-6">handleClick</h3>
-            <p>
+            <p class="go-body-copy">
               This event fires when the button is clicked. Use this event 
               to handle the click event.
             </p>
           </div>
           <div class="go-column go-column--50">
             <h3 class="go-heading-6">buttonVariant</h3>
-            <p>
+            <p class="go-body-copy">
               The <code class="code-block--inline">buttonVariant</code>
               binding controls the style of the button. This includes
               options that allow us to implement the following
               modifications:
             </p>
-            <ol>
+            <ol class="go-list go-list--ordered">
               <li>Default: <code class="code-block--inline">.go-button</code></li>
               <li>Negative: <code class="code-block--inline">.go-button--negative</code></li>
               <li>Neutral: <code class="code-block--inline">.go-button--neutral</code></li>
@@ -62,7 +62,7 @@
             </ol>
 
             <h3 class="go-heading-6">useLoader</h3>
-            <p>
+            <p class="go-body-copy">
               Allows the use of the loading animation inside the button.
               By default this is false. It is recommended to use this when
               processing data that will take longer than 250ms. Examples:
@@ -70,7 +70,7 @@
               server, etc.
             </p>
             <h3 class="go-heading-6">useDarkTheme</h3>
-            <p>
+            <p class="go-body-copy">
               Applies a dark theme to the button component.
               The dark button styles can be applied by setting the
               <code class="code-block--inline">useDarkTheme</code>
@@ -87,7 +87,7 @@
       <h2 class="go-heading-5">Default Button</h2>
     </ng-container>
     <ng-container go-card-content>
-      <p>
+      <p class="go-body-copy">
         The default button is preferred when the action being performed
         is of little importance. Ideally, the button itself describes
         what it does. For example, a button to close a modal would be
@@ -114,7 +114,7 @@
       <h2 class="go-heading-5">Negative Buttons</h2>
     </ng-container>
     <ng-container go-card-content>
-      <p>
+      <p class="go-body-copy">
         Negative buttons are displayed in red. Use negative buttons to designate
         an action as being dangerous or negative. Deleting a resource
         is a good example of when to use this button. It could also be
@@ -141,7 +141,7 @@
       <h2 class="go-heading-5">Neutral Buttons</h2>
     </ng-container>
     <ng-container go-card-content>
-      <p>
+      <p class="go-body-copy">
         Neutral buttons are displayed in purple. Use neutral buttons to designate
         an action as being informational. Opening up a chat modal or
         sending a user to an external resource might be a good example
@@ -169,7 +169,7 @@
       <h2 class="go-heading-5">Positive Buttons</h2>
     </ng-container>
     <ng-container go-card-content>
-      <p>
+      <p class="go-body-copy">
         Positive buttons are displayed in blue. Use positive buttons to
         designate an action as being positive. Creating a resource or
         submitting a form might be a good example of when to use this
@@ -196,7 +196,7 @@
       <h2 class="go-heading-5">Button with loader</h2>
     </ng-container>
     <ng-container go-card-content>
-      <p>
+      <p class="go-body-copy">
         Loading buttons display the loading animation inside the
         button.  By default this is false. It is recommended to use
         this when processing data that will take longer than 250ms.
@@ -265,13 +265,13 @@
     <ng-container go-card-content>
       <div class="go-container">
         <div class="go-column go-column--100 go-column--no-padding">
-          <p>
+          <p class="go-body-copy">
             Dark buttons work all the same as the rest of the buttons,
             the difference being that some of the colors have been tweaked
             to allow this button to maintain an appropriate amount of
             contrast when displayed on a dark background.
           </p>
-          <p>
+          <p class="go-body-copy">
             The dark button styles can be applied by setting the
             <code class="code-block--inline">useDarkTheme</code>
             binding to <code class="code-block--inline">true</code>.

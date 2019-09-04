@@ -1,15 +1,15 @@
-<div class="go-container">
+<section class="go-container">
   <go-card class="go-column go-column--100">
     <ng-container go-card-header>
-      <h5>Implementing Templating</h5>
+      <h1 class="go-heading-5">Implementing Templating</h1>
     </ng-container>
     <ng-container go-card-content>
-      <p>
+      <p class="go-body-copy">
         It is possible to add custom templates for column's heading or cell
         by using <code class="code-block--inline">#goTableHead</code> and
         <code class="code-block--inline">#goTableCell</code> respectively.
       </p>
-      <p>
+      <p class="go-body-copy">
         The content within these areas can be any HTML and is supported by
         Angular so you can make use of components, pipes, etc.
       </p>
@@ -18,10 +18,10 @@
 
   <go-card class="go-column go-column--100" id="cellTemplating">
     <ng-container go-card-header>
-      <h5>Adding Cell Templating</h5>
+      <h1 class="go-heading-5">Adding Cell Templating</h1>
     </ng-container>
     <ng-container go-card-content>
-      <h6>example.html</h6>
+      <h2 class="go-heading-6">example.html</h2>
       <code [highlight]="columnTemplating" class="code-block--no-bottom-margin"></code>
     </ng-container>
   </go-card>
@@ -41,10 +41,10 @@
 
   <go-card class="go-column go-column--100" id="headTemplating">
     <ng-container go-card-header>
-      <h5>Adding Header Templating</h5>
+      <h1 class="go-heading-5">Adding Header Templating</h1>
     </ng-container>
     <ng-container go-card-content>
-      <h6>example.html</h6>
+      <h2 class="go-heading-6">example.html</h2>
       <code [highlight]="headerTemplating" class="code-block--no-bottom-margin"></code>
     </ng-container>
   </go-card>
@@ -99,4 +99,4 @@
       </ng-template>
     </go-table-column>
   </go-table>
-</div>
+</section>

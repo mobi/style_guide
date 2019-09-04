@@ -1,18 +1,18 @@
 <header class="go-page-title">
-  <h3 class="go-heading-h3">{{ pageTitle }}</h3>
+  <h1 class="go-heading-3">{{ pageTitle }}</h1>
 </header>
-<div class="go-container">
+<section class="go-container">
   <go-card class="go-column go-column--50">
     <ng-container go-card-header>
-      <h5 class="go-heading-5">Default Usage</h5>
+      <h1 class="go-heading-5">Default Usage</h1>
     </ng-container>
 
     <ng-container go-card-content>
-      <p>
+      <p class="go-body-copy">
         By default we apply margin to the bottom of all of the basic typograhical elements.
         This allows us to establish a more clear vertical rhythm to enhance readibility.
       </p>
-      <p>
+      <p class="go-body-copy">
         To learn how to remove this margin see below.
       </p>
       <code [highlight]="basicExample"></code>
@@ -24,12 +24,12 @@
       <div [innerHtml]="basicExample"></div>
     </ng-container>
   </go-card>
-</div>
+</section>
 
-<div class="go-container">
+<section class="go-container">
   <go-card class="go-column go-column--50">
     <ng-container go-card-header>
-      <h5 class="go-heading-5">Removing Margin</h5>
+      <h1 class="go-heading-5">Removing Margin</h1>
     </ng-container>
 
     <ng-container go-card-content>
@@ -82,4 +82,4 @@
       </p>
     </ng-container>
   </go-card>
-</div>
+</section>
