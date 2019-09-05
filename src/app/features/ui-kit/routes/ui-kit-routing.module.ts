@@ -23,6 +23,8 @@ import { LayoutNavComponent } from '../components/layout-docs/components/layout-
 import { LayoutHeaderComponent } from '../components/layout-docs/components/layout-header/layout-header.component';
 import { LayoutSearchComponent } from '../components/layout-docs/components/layout-search/layout-search.component';
 import { LayoutExampleComponent } from '../components/layout-docs/components/layout-example/layout-example.component';
+import { FormDocsComponent } from '../components/form-docs/form-docs.component';
+import { FormsOverviewComponent } from '../components/form-docs/components/forms-overview/forms-overview.component';
 
 const routes: Routes = [
   { path: 'ui-kit', component: UiKitComponent },
@@ -30,6 +32,9 @@ const routes: Routes = [
   { path: 'ui-kit/accordion-panel', component: AccordionPanelDocsComponent },
   { path: 'ui-kit/button', component: ButtonDocsComponent },
   { path: 'ui-kit/card', component: CardDocsComponent },
+  { path: 'ui-kit/forms', component: FormDocsComponent, children: [
+    { path: '', component: FormsOverviewComponent }
+  ]},
   { path: 'ui-kit/layout', component: LayoutDocsComponent, children: [
     { path: '', component: LayoutOverviewComponent },
     { path: 'header', component: LayoutHeaderComponent },

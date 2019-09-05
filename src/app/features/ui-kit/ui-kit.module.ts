@@ -27,6 +27,7 @@ import { AccordionDocsComponent } from './components/accordion-docs/accordion-do
 import { AccordionPanelDocsComponent } from './components/accordion-panel-docs/accordion-panel-docs.component';
 import { ButtonDocsComponent } from './components/button-docs/button-docs.component';
 import { CardDocsComponent } from './components/card-docs/card-docs.component';
+import { FormDocsComponent } from './components/form-docs/form-docs.component';
 import { IconDocsComponent } from './components/icon-docs/icon-docs.component';
 import { ModalDocsComponent } from './components/modal-docs/modal-docs.component';
 import { ModalTestComponent } from './components/modal-test/modal-test.component';
@@ -47,6 +48,7 @@ import { LayoutNavComponent } from './components/layout-docs/components/layout-n
 import { LayoutHeaderComponent } from './components/layout-docs/components/layout-header/layout-header.component';
 import { LayoutSearchComponent } from './components/layout-docs/components/layout-search/layout-search.component';
 import { LayoutExampleComponent } from './components/layout-docs/components/layout-example/layout-example.component';
+import { FormsOverviewComponent } from './components/form-docs/components/forms-overview/forms-overview.component';
 
 @NgModule({
   imports: [
@@ -70,6 +72,8 @@ import { LayoutExampleComponent } from './components/layout-docs/components/layo
     BasicTestComponent,
     ButtonDocsComponent,
     CardDocsComponent,
+    FormDocsComponent,
+    FormsOverviewComponent,
     IconDocsComponent,
     ModalDocsComponent,
     ModalTestComponent,

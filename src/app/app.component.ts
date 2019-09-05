@@ -26,6 +26,7 @@ export class AppComponent {
       { route: 'ui-kit/accordion-panel', routeTitle: 'Accordion Panel' },
       { route: 'ui-kit/button', routeTitle: 'Button' },
       { route: 'ui-kit/card', routeTitle: 'Card' },
+      { route: 'ui-kit/forms', routeTitle: 'Forms' },
       { route: 'ui-kit/layout', routeTitle: 'Layout' },
       { route: 'ui-kit/loader', routeTitle: 'Loader' },
       { route: 'ui-kit/icon', routeTitle: 'Icon' },
