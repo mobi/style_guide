@@ -10,7 +10,7 @@ export class AccordionPanelDocsComponent implements OnInit {
 
   defaultExample = `
   <go-accordion>
-    <go-accordion-panel title="Test 1" expanded="true">
+    <go-accordion-panel title="Test 1" [expanded]="true">
       This is some content for Test 1.
     </go-accordion-panel>
     <go-accordion-panel title="Test 2">
@@ -24,7 +24,7 @@ export class AccordionPanelDocsComponent implements OnInit {
 
   showIconsExample = `
   <go-accordion [showIcons]="true">
-    <go-accordion-panel title="Test 1" icon="home" expanded="true">
+    <go-accordion-panel title="Test 1" icon="home" [expanded]="true">
       This is some content for Test 1.
     </go-accordion-panel>
     <go-accordion-panel title="Test 2" icon="settings">
