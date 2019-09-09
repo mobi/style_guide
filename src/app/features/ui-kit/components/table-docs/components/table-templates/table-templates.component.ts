@@ -24,7 +24,7 @@ export class TableTemplatesComponent {
     <go-table-column field="name.last" title="Last Name"></go-table-column>
     <go-table-column field="email" title="Email">
       <ng-template #goTableCell let-item>
-        <a href="mailto:{{ item.email }}">{{ item.email }}</a>
+        <a class="go-link" href="mailto:{{ item.email }}">{{ item.email }}</a>
       </ng-template>
     </go-table-column>
     <go-table-column field="gender" title="Gender"></go-table-column>
