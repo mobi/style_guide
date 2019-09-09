@@ -13,6 +13,7 @@ export class InputDocsComponent implements OnInit {
   name5: FormControl = new FormControl('');
   name6: FormControl = new FormControl({ value: '', disabled: true });
   name7: FormControl = new FormControl('');
+  name8: FormControl = new FormControl('');
   password: FormControl = new FormControl('');
 
   hints: Array<string> = [
