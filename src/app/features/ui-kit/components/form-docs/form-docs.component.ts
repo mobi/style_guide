@@ -10,6 +10,7 @@ export class FormDocsComponent {
     {
       routeTitle: 'Basics', subRoutes: [
         { route: './', routeTitle: 'Overview' },
+        { route: './input', routeTitle: 'Input' },
       ]
     }
   ];

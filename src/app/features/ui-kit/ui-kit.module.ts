@@ -16,7 +16,8 @@ import {
   GoOffCanvasService,
   GoTableModule,
   GoToastModule,
-  GoToasterService
+  GoToasterService,
+  GoInputModule
 } from '@tangoe/goponents';
 
 // Module Routes
@@ -49,6 +50,7 @@ import { LayoutHeaderComponent } from './components/layout-docs/components/layou
 import { LayoutSearchComponent } from './components/layout-docs/components/layout-search/layout-search.component';
 import { LayoutExampleComponent } from './components/layout-docs/components/layout-example/layout-example.component';
 import { FormsOverviewComponent } from './components/form-docs/components/forms-overview/forms-overview.component';
+import { InputDocsComponent } from './components/form-docs/components/input-docs/input-docs.component';
 
 @NgModule({
   imports: [
@@ -57,6 +59,7 @@ import { FormsOverviewComponent } from './components/form-docs/components/forms-
     GoButtonModule,
     GoCardModule,
     GoIconModule,
+    GoInputModule,
     GoLoaderModule,
     GoModalModule,
     GoOffCanvasModule,
@@ -75,6 +78,7 @@ import { FormsOverviewComponent } from './components/form-docs/components/forms-
     FormDocsComponent,
     FormsOverviewComponent,
     IconDocsComponent,
+    InputDocsComponent,
     ModalDocsComponent,
     ModalTestComponent,
     OffCanvasDocsComponent,

@@ -34,6 +34,12 @@ caption {
   padding: 0 1rem 1rem;
 }
 
+.go-heading--underlined {
+  border-bottom: 1px solid $theme-light-app-bg;
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+}
+
 pre {
   margin: .5rem 0;
 }
