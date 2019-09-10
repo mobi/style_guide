@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl } from "@angular/forms";
-import { timeout } from "q";
 
 @Component({
   templateUrl: './input-docs.component.html'
@@ -20,20 +19,6 @@ export class InputDocsComponent implements OnInit {
     'Please put your first and last name here',
     'This is a second hint for no reason'
   ];
-
-  basicFormControl: string = `
-  import { Component } from '@angular/core';
-  import { FormControl } from '@angular/forms';
-
-  @Component({
-    selector: 'app-name-editor',
-    templateUrl: './name-editor.component.html',
-    styleUrls: ['./name-editor.component.css']
-  })
-  export class NameEditorComponent {
-    name = new FormControl('');
-  }
-  `;
 
   basicInputExample: string = `
   <go-input [control]="name"></go-input>

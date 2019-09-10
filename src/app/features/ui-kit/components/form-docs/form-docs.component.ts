@@ -11,6 +11,7 @@ export class FormDocsComponent {
       routeTitle: 'Basics', subRoutes: [
         { route: './', routeTitle: 'Overview' },
         { route: './input', routeTitle: 'Input' },
+        { route: './textarea', routeTitle: 'Text Area' }
       ]
     }
   ];
