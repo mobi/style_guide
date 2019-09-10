@@ -17,7 +17,8 @@ import {
   GoTableModule,
   GoToastModule,
   GoToasterService,
-  GoInputModule
+  GoInputModule,
+  GoTextAreaModule
 } from '@tangoe/goponents';
 
 // Module Routes
@@ -51,6 +52,8 @@ import { LayoutSearchComponent } from './components/layout-docs/components/layou
 import { LayoutExampleComponent } from './components/layout-docs/components/layout-example/layout-example.component';
 import { FormsOverviewComponent } from './components/form-docs/components/forms-overview/forms-overview.component';
 import { InputDocsComponent } from './components/form-docs/components/input-docs/input-docs.component';
+import { TextAreaDocsComponent } from './components/form-docs/components/text-area-docs/text-area-docs.component';
+import { FormControlDocsComponent } from './components/form-docs/components/form-control-docs/form-control-docs.component';
 
 @NgModule({
   imports: [
@@ -60,6 +63,7 @@ import { InputDocsComponent } from './components/form-docs/components/input-docs
     GoCardModule,
     GoIconModule,
     GoInputModule,
+    GoTextAreaModule,
     GoLoaderModule,
     GoModalModule,
     GoOffCanvasModule,
@@ -75,6 +79,7 @@ import { InputDocsComponent } from './components/form-docs/components/input-docs
     BasicTestComponent,
     ButtonDocsComponent,
     CardDocsComponent,
+    FormControlDocsComponent,
     FormDocsComponent,
     FormsOverviewComponent,
     IconDocsComponent,
@@ -88,6 +93,7 @@ import { InputDocsComponent } from './components/form-docs/components/input-docs
     TablePaginationComponent,
     TableSortingComponent,
     TableTemplatesComponent,
+    TextAreaDocsComponent,
     ToastDocsComponent,
     UiKitComponent,
     LoaderDocsComponent,

@@ -2,91 +2,91 @@
   <app-form-control-docs
     class="go-column go-column--100"
   ></app-form-control-docs>
-  <go-card id="form-input-control" class="go-column go-column--100">
+  <go-card id="form-textarea-control" class="go-column go-column--100">
     <ng-container go-card-header>
       <h1 class="go-heading-5">Component Control</h1>
     </ng-container>
     <ng-container go-card-content>
       <p class="go-body-copy">
         As with most of the form components, the only <code class="code-block--inline">@Input</code>
-        required of the input component is a <code class="code-block--inline">FormControl</code>.
+        required of the text area component is a <code class="code-block--inline">FormControl</code>.
         The FormControl can be passed in via the <code class="code-block--inline">[control]</code>
-        attribute on the &lt;go-input&gt; component.
+        attribute on the &lt;go-text-area&gt; component.
       </p>
       <div class="go-container">
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">View</h2>
-          <go-input [control]="name"></go-input>
+          <go-text-area [control]="message"></go-text-area>
         </div>
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">Code</h2>
           <code
-            [highlight]="basicInputExample"
+            [highlight]="basicExample"
             class="code-block--no-bottom-margin"
           ></code>
         </div>
       </div>
     </ng-container>
   </go-card>
-  <go-card id="form-input-label" class="go-column go-column--100">
+  <go-card id="form-textarea-label" class="go-column go-column--100">
     <ng-container go-card-header>
       <h1 class="go-heading-5">Component Label</h1>
     </ng-container>
     <ng-container go-card-content>
       <p class="go-body-copy">
         All form components include an <code class="code-block--inline">@Input() label: string;</code>
-        that can be used to add a label to the input components.
+        that can be used to add a label to the textarea components.
         In addition to displaying an HTML label, the text passed
         in via the <code class="code-block--inline">[label]</code>
         attribute is used to generate a unique ID to associate the
-        label with the input. If no label is passed in, a generic,
+        label with the textarea. If no label is passed in, a generic,
         but still unique ID will be generated.
       </p>
       <div class="go-container">
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">View</h2>
-          <go-input
-            [control]="name2"
-            label="Your Name"
-          ></go-input>
+          <go-text-area
+            [control]="message2"
+            label="Your Message"
+          ></go-text-area>
         </div>
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">Code</h2>
           <code
-            [highlight]="basicInputLabelExample"
+            [highlight]="basicLabelExample"
             class="code-block--no-bottom-margin"
           ></code>
         </div>
       </div>
     </ng-container>
   </go-card>
-  <go-card id="form-input-key" class="go-column go-column--100">
+  <go-card id="form-textarea-key" class="go-column go-column--100">
     <ng-container go-card-header>
       <h1 class="go-heading-5">Component Key</h1>
     </ng-container>
     <ng-container go-card-content>
       <p class="go-body-copy">
         As stated above the label attribute is used to generate a
-        unique ID to associate the label with the input. As this might
+        unique ID to associate the label with the textarea. As this might
         not be desired, the <code class="code-block--inline">@Input() key: string;</code>
-        can be used to configure the ID attribute of the input directly.
+        can be used to configure the ID attribute of the textarea directly.
         Anything passed into the component via the <code class="code-block--inline">[key]</code>
-        attribute will be used to both assign the ID to the input and
-        associate the label with the input.
+        attribute will be used to both assign the ID to the textarea and
+        associate the label with the textarea.
       </p>
       <div class="go-container">
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">View</h2>
-          <go-input
-            [control]="name3"
+          <go-text-area
+            [control]="message3"
             label="Your Name"
-            key="your-name-input"
-          ></go-input>
+            key="your-message-input"
+          ></go-text-area>
         </div>
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">Code</h2>
           <code
-            [highlight]="basicInputKeyExample"
+            [highlight]="basicKeyExample"
             class="code-block--no-bottom-margin"
           ></code>
         </div>
@@ -95,35 +95,35 @@
           <p class="go-body-copy">
             Notice in the below example output that the <code class="code-block--inline">key</code> has been assigned
             to both the <code class="code-block--inline">id</code> attribute on
-            the input and the <code class="code-block--inline">for</code> attribute
+            the textarea and the <code class="code-block--inline">for</code> attribute
             on the label.
           </p>
           <code
-            [highlight]="basicInputKeyExampleOutput"
+            [highlight]="basicKeyExampleOutput"
             class="code-block--no-bottom-margin"
           ></code>
         </div>
       </div>
     </ng-container>
   </go-card>
-  <go-card id="form-input-hints" class="go-column go-column--100">
+  <go-card id="form-textarea-hints" class="go-column go-column--100">
     <ng-container go-card-header>
       <h1 class="go-heading-5">Component Hints</h1>
     </ng-container>
     <ng-container go-card-content>
       <p class="go-body-copy">
         Form hints exist to help give more information about the
-        inputs they are attached to. The <code class="code-block--inline">@Input() key: Array&lt;string&gt;</code>
-        can be used to pass in an array of hints to the input component.
+        textareas they are attached to. The <code class="code-block--inline">@Input() key: Array&lt;string&gt;</code>
+        can be used to pass in an array of hints to the textarea component.
       </p>
       <div class="go-container">
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">View</h2>
-          <go-input
-            [control]="name4"
-            label="Your Name"
+          <go-text-area
+            [control]="message4"
+            label="Your Message"
             [hints]="hints"
-          ></go-input>
+          ></go-text-area>
         </div>
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">Code</h2>
@@ -132,14 +132,14 @@
             class="code-block--no-bottom-margin"
           ></code>
           <code
-            [highlight]="basicInputHintsExample"
+            [highlight]="basicHintsExample"
             class="code-block--no-bottom-margin"
           ></code>
         </div>
       </div>
     </ng-container>
   </go-card>
-  <go-card id="form-input-errors" class="go-column go-column--100">
+  <go-card id="form-textarea-errors" class="go-column go-column--100">
     <ng-container go-card-header>
       <h1 class="go-heading-5">Component Errors</h1>
     </ng-container>
@@ -151,21 +151,21 @@
         data needs to be displayed in a specific structure.
       </p>
       <p class="go-body-copy">
-        By default the input type is set to "Error", however this can be
+        By default the error type is set to "Error", however this can be
         overridden as shown below.
       </p>
       <div class="go-container">
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">View</h2>
-          <go-input
-            [control]="name5"
+          <go-text-area
+            [control]="message5"
             label="Your Name"
-          ></go-input>
+          ></go-text-area>
         </div>
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">Code</h2>
           <code
-            [highlight]="basicInputLabelExample"
+            [highlight]="basicLabelExample"
             class="code-block--no-bottom-margin"
           ></code>
           <code
@@ -176,7 +176,7 @@
       </div>
     </ng-container>
   </go-card>
-  <go-card id="form-input-disabled" class="go-column go-column--100">
+  <go-card id="form-textarea-disabled" class="go-column go-column--100">
     <ng-container go-card-header>
       <h1 class="go-heading-5">Disable Component</h1>
     </ng-container>
@@ -190,16 +190,16 @@
           <h2 class="go-heading-6 go-heading--underlined">View</h2>
           <div class="go-container">
             <div class="go-column go-column--100">
-              <go-input
-                [control]="name6"
-                label="First Name"
-              ></go-input>
+              <go-text-area
+                [control]="message6"
+                label="Your Message"
+              ></go-text-area>
             </div>
             <div class="go-column go-column--100">
-              <go-input
-                [control]="name7"
-                label="Last Name"
-              ></go-input>
+              <go-text-area
+                [control]="message7"
+                label="Your Other Message"
+              ></go-text-area>
             </div>
           </div>
         </div>
@@ -217,66 +217,29 @@
       </div>
     </ng-container>
   </go-card>
-
-  <go-card id="form-input-placeholder" class="go-column go-column--100">
+  <go-card id="form-textarea-placeholder" class="go-column go-column--100">
     <ng-container go-card-header>
       <h1 class="go-heading-5">Component Placeholder</h1>
     </ng-container>
     <ng-container go-card-content>
       <p class="go-body-copy">
-        The input component's placeholder attribute can be set via
+        The text area component's placeholder attribute can be set via
         <code class="code-block--inline">@Input() placeholder: string;</code>
         and the <code class="code-block--inline">[placeholder]</code> attribute.
       </p>
       <div class="go-container">
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">View</h2>
-          <go-input
-            [control]="name8"
+          <go-text-area
+            [control]="message8"
             label="Your Name"
-            placeholder="Nymphadora Tonks"
-          ></go-input>
+            placeholder="Tell us a little bit about yourself."
+          ></go-text-area>
         </div>
         <div class="go-column go-column--50">
           <h2 class="go-heading-6 go-heading--underlined">Code</h2>
           <code
             [highlight]="basicPlaceholderExample"
-            class="code-block--no-bottom-margin"
-          ></code>
-        </div>
-      </div>
-    </ng-container>
-  </go-card>
-
-  <go-card id="form-input-type" class="go-column go-column--100">
-    <ng-container go-card-header>
-      <h1 class="go-heading-5">Component Type</h1>
-    </ng-container>
-    <ng-container go-card-content>
-      <p class="go-body-copy">
-        The input type can be set via the
-        <code class="code-block--inline">@Input() inputType: string;</code>
-        and the <code class="code-block--inline">[inputType]</code> attribute.
-        By default this is set to text, but it should be changed to implement
-        other basic text based input types.
-      </p>
-      <p class="go-body-copy">
-        In the example below we show how to use <code class="code-block--inline">[inputType]</code>
-        to build a password input.
-      </p>
-      <div class="go-container">
-        <div class="go-column go-column--50">
-          <h2 class="go-heading-6 go-heading--underlined">View</h2>
-          <go-input
-            [control]="password"
-            label="Your Password"
-            inputType="password"
-          ></go-input>
-        </div>
-        <div class="go-column go-column--50">
-          <h2 class="go-heading-6 go-heading--underlined">Code</h2>
-          <code
-            [highlight]="basicPasswordExample"
             class="code-block--no-bottom-margin"
           ></code>
         </div>
