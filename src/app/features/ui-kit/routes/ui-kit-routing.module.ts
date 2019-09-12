@@ -5,6 +5,7 @@ import { AccordionDocsComponent } from '../components/accordion-docs/accordion-d
 import { AccordionPanelDocsComponent } from '../components/accordion-panel-docs/accordion-panel-docs.component';
 import { ButtonDocsComponent } from '../components/button-docs/button-docs.component';
 import { CardDocsComponent } from '../components/card-docs/card-docs.component';
+import { DatepickerDocsComponent } from '../components/form-docs/components/datepicker-docs/datepicker-docs.component';
 import { IconDocsComponent } from '../components/icon-docs/icon-docs.component';
 import { ModalDocsComponent } from '../components/modal-docs/modal-docs.component';
 import { ServerIntegrationComponent } from '../components/table-docs/components/server-integration/server-integration.component';
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'ui-kit/card', component: CardDocsComponent },
   { path: 'ui-kit/forms', component: FormDocsComponent, children: [
     { path: '', component: FormsOverviewComponent },
+    { path: 'datepicker', component: DatepickerDocsComponent },
     { path: 'input', component: InputDocsComponent },
     { path: 'textarea', component: TextAreaDocsComponent }
   ]},

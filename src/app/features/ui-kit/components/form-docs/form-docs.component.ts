@@ -10,6 +10,7 @@ export class FormDocsComponent {
     {
       routeTitle: 'Basics', subRoutes: [
         { route: './', routeTitle: 'Overview' },
+        { route: './datepicker', routeTitle: 'Datepicker' },
         { route: './input', routeTitle: 'Input' },
         { route: './textarea', routeTitle: 'Text Area' }
       ]

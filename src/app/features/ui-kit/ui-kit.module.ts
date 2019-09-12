@@ -8,6 +8,7 @@ import {
   GoAccordionModule,
   GoButtonModule,
   GoCardModule,
+  GoDatepickerModule,
   GoIconModule,
   GoLoaderModule,
   GoModalModule,
@@ -29,6 +30,7 @@ import { AccordionDocsComponent } from './components/accordion-docs/accordion-do
 import { AccordionPanelDocsComponent } from './components/accordion-panel-docs/accordion-panel-docs.component';
 import { ButtonDocsComponent } from './components/button-docs/button-docs.component';
 import { CardDocsComponent } from './components/card-docs/card-docs.component';
+import { DatepickerDocsComponent } from './components/form-docs/components/datepicker-docs/datepicker-docs.component';
 import { FormDocsComponent } from './components/form-docs/form-docs.component';
 import { IconDocsComponent } from './components/icon-docs/icon-docs.component';
 import { ModalDocsComponent } from './components/modal-docs/modal-docs.component';
@@ -61,6 +63,7 @@ import { FormControlDocsComponent } from './components/form-docs/components/form
     GoAccordionModule,
     GoButtonModule,
     GoCardModule,
+    GoDatepickerModule,
     GoIconModule,
     GoInputModule,
     GoTextAreaModule,
@@ -80,6 +83,7 @@ import { FormControlDocsComponent } from './components/form-docs/components/form
     ButtonDocsComponent,
     CardDocsComponent,
     FormControlDocsComponent,
+    DatepickerDocsComponent,
     FormDocsComponent,
     FormsOverviewComponent,
     IconDocsComponent,
