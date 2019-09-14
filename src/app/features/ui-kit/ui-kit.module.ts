@@ -6,6 +6,7 @@ import { SharedModule } from '../../shared/shared.module';
 // GoPonents
 import {
   GoAccordionModule,
+  GoBadgeModule,
   GoButtonModule,
   GoCardModule,
   GoDatepickerModule,
@@ -56,11 +57,13 @@ import { FormsOverviewComponent } from './components/form-docs/components/forms-
 import { InputDocsComponent } from './components/form-docs/components/input-docs/input-docs.component';
 import { TextAreaDocsComponent } from './components/form-docs/components/text-area-docs/text-area-docs.component';
 import { FormControlDocsComponent } from './components/form-docs/components/form-control-docs/form-control-docs.component';
+import { BadgeDocsComponent } from './components/badge-docs/badge-docs.coponent';
 
 @NgModule({
   imports: [
     CommonModule,
     GoAccordionModule,
+    GoBadgeModule,
     GoButtonModule,
     GoCardModule,
     GoDatepickerModule,
@@ -80,6 +83,7 @@ import { FormControlDocsComponent } from './components/form-docs/components/form
     AccordionDocsComponent,
     AccordionPanelDocsComponent,
     BasicTestComponent,
+    BadgeDocsComponent,
     ButtonDocsComponent,
     CardDocsComponent,
     FormControlDocsComponent,
