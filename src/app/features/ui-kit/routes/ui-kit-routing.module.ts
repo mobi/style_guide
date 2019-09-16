@@ -28,11 +28,13 @@ import { FormDocsComponent } from '../components/form-docs/form-docs.component';
 import { FormsOverviewComponent } from '../components/form-docs/components/forms-overview/forms-overview.component';
 import { InputDocsComponent } from '../components/form-docs/components/input-docs/input-docs.component';
 import { TextAreaDocsComponent } from '../components/form-docs/components/text-area-docs/text-area-docs.component';
+import { BadgeDocsComponent } from '../components/badge-docs/badge-docs.coponent';
 
 const routes: Routes = [
   { path: 'ui-kit', component: UiKitComponent },
   { path: 'ui-kit/accordion', component: AccordionDocsComponent },
   { path: 'ui-kit/accordion-panel', component: AccordionPanelDocsComponent },
+  { path: 'ui-kit/badge', component: BadgeDocsComponent },
   { path: 'ui-kit/button', component: ButtonDocsComponent },
   { path: 'ui-kit/card', component: CardDocsComponent },
   { path: 'ui-kit/forms', component: FormDocsComponent, children: [
