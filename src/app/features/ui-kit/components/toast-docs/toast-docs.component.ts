@@ -51,7 +51,7 @@ export class ToastDocsComponent implements OnInit {
   `;
 
   toaster_app_ts = `
-  import { GoToasterService } from '@tangoe/goponents';
+  import { GoToasterModule } from '@tangoe/goponents';
 
   NgModule({
     imports: [
