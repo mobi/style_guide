@@ -26,17 +26,16 @@
 
       <h2 class="go-heading-6">icon</h2>
       <p class="go-body-copy">
-        This will set an icon for the panel, shown to the left of the title.
+        This will set an icon for the panel, shown to the left of the heading.
       </p>
       <caption>
         Note: the icon will only appear if the parent <code class="code-block--inline">go-accordion</code>
         has <code class="code-block--inline">[showIcons]="true"</code> set.
       </caption>
 
-      <h2 class="go-heading-6">title - (required)</h2>
+      <h2 class="go-heading-6">heading - (required)</h2>
       <p class="go-body-copy">
-        The title for the panel. This is a string, but HTML
-        can be passed in as well. For general purposes, just pass a title as a string.
+        The heading for the panel accepted as a string.
       </p>
 
     </div>
@@ -55,13 +54,13 @@
         <div class="go-column go-column--50">
           <h2 class="go-heading-6">View</h2>
           <go-accordion>
-            <go-accordion-panel title="Test 1" [expanded]="true">
+            <go-accordion-panel heading="Test 1" [expanded]="true">
               This is some content for Test 1.
             </go-accordion-panel>
-            <go-accordion-panel title="Test 2">
+            <go-accordion-panel heading="Test 2">
               This is a second thing. 
             </go-accordion-panel>
-            <go-accordion-panel title="Test 3">
+            <go-accordion-panel heading="Test 3">
               This is a third thing. 
             </go-accordion-panel>
           </go-accordion>
@@ -83,13 +82,13 @@
         <div class="go-column go-column--50">
           <h2 class="go-heading-6">View</h2>
           <go-accordion [showIcons]="true">
-            <go-accordion-panel title="Test 1" icon="home" [expanded]="true">
+            <go-accordion-panel heading="Test 1" icon="home" [expanded]="true">
               This is some content for Test 1.
             </go-accordion-panel>
-            <go-accordion-panel title="Test 2" icon="settings">
+            <go-accordion-panel heading="Test 2" icon="settings">
               This is a second thing. 
             </go-accordion-panel>
-            <go-accordion-panel title="Test 3" icon="landscape">
+            <go-accordion-panel heading="Test 3" icon="landscape">
               This is a third thing. 
             </go-accordion-panel>
           </go-accordion>
