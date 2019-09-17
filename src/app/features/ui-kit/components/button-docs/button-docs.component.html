@@ -61,10 +61,9 @@
               <li>Positive: <code class="code-block--inline">.go-button--positive</code></li>
             </ol>
 
-            <h3 class="go-heading-6">useLoader</h3>
+            <h3 class="go-heading-6">isProcessing</h3>
             <p class="go-body-copy">
-              Allows the use of the loading animation inside the button.
-              By default this is false. It is recommended to use this when
+              Turns the loading state on/off. It is recommended to use this when
               processing data that will take longer than 250ms. Examples:
               submitting a form, sorting data, refreshing data from the
               server, etc.
@@ -209,12 +208,12 @@
       <code [highlight]="loadingExampleTS"></code>
       <h3 class="go-heading-6">example.html</h3>
       <code [highlight]="loadingExampleHTML"></code>
-      <h6>View</h6>
+      <h6 class="go-heading-6">View</h6>
       <div class="go-container">
         <div class="go-column go-column--50">
           <go-button
             (handleClick)="testSubmit('defaultButton')"
-            useLoader="true"
+            [isProcessing]="defaultButtonLoading"
             buttonIcon="close"
             #defaultButton
           >
@@ -224,7 +223,7 @@
         <div class="go-column go-column--50">
           <go-button
             (handleClick)="testSubmit('negativeButton')"
-            useLoader="true"
+            [isProcessing]="negativeButtonLoading"
             buttonIcon="delete"
             buttonVariant="negative"
             #negativeButton
@@ -235,7 +234,7 @@
         <div class="go-column go-column--50">
           <go-button
             (handleClick)="testSubmit('neutralButton')"
-            useLoader="true"
+            [isProcessing]="neutralButtonLoading"
             buttonIcon="info"
             buttonVariant="neutral"
             #neutralButton
@@ -246,7 +245,7 @@
         <div class="go-column go-column--50">
           <go-button
             (handleClick)="testSubmit('positiveButton')"
-            useLoader="true"
+            [isProcessing]="positiveButtonLoading"
             buttonIcon="check"
             buttonVariant="positive"
             #positiveButton
@@ -303,7 +302,7 @@
                   [useDarkTheme]="true"
                   buttonIcon="delete"
                   buttonVariant="negative"
-                  useLoader="true"
+                  [isProcessing]="negativeDarkButtonLoading"
                   #negativeDarkButton
                 >
                   Negative Loading

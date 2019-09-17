@@ -14,6 +14,12 @@ export class ButtonDocsComponent {
   @ViewChild('neutralButton', { static: false }) neutralButton: GoButtonComponent;
   @ViewChild('positiveButton', { static: false }) positiveButton: GoButtonComponent;
 
+  defaultButtonLoading: boolean = false;
+  negativeButtonLoading: boolean = false;
+  neutralButtonLoading: boolean = false;
+  positiveButtonLoading: boolean = false;
+  negativeDarkButtonLoading: boolean = false;
+
   pageTitle: string = "Button";
 
   componentBindings: string = `
@@ -21,7 +27,7 @@ export class ButtonDocsComponent {
   @Input() buttonIcon: string;
   @Input() buttonType: string = 'button';
   @Input() buttonVariant: string;
-  @Input() useLoader: boolean;
+  @Input() isProcessing: boolean;
   @Input() useDarkTheme: boolean;
 
   @Output() handleClick = new EventEmitter<boolean>();
@@ -44,14 +50,18 @@ export class ButtonDocsComponent {
 
   @ViewChild('submitButton') submitButton: GoButtonComponent;
 
+  submitButtonLoading: boolean = false;
+
   testSubmit() {
+    this.submitButtonLoading = true;
+
     // Do something with click, then reset the button
     this.submitButton.reset();
   }
   `;
 
   loadingExampleHTML: string = `
-  <go-button (handleClick)="testSubmit()" [useLoader]="true" #submitButton>Load Me</go-button>
+  <go-button (handleClick)="testSubmit()" [isProcessing]="submitButtonLoading" #submitButton>Load Me</go-button>
   `;
 
   darkButtonExample: string = `
@@ -76,8 +86,9 @@ export class ButtonDocsComponent {
   }
 
   public testSubmit(button: string): void {
+    this[button + 'Loading'] = true;
     setTimeout(() => {
-      this[button].reset();
+      this[button + 'Loading'] = false;
     }, 3800);
   }
 
