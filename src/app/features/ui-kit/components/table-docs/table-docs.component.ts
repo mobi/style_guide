@@ -10,6 +10,7 @@ export class TableDocsComponent {
   menuItems: Array<NavGroup> = [
     { routeTitle: 'Basics', subRoutes: [
       { route: './', routeTitle: 'Overview' },
+      { route: './actions', routeTitle: 'Actions' },
       { route: './pagination', routeTitle: 'Pagination' },
       { route: './selection', routeTitle: 'Selection' },
       { route: './sorting', routeTitle: 'Sorting' },

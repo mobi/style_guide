@@ -11,6 +11,7 @@ import {
   GoCardModule,
   GoCopyModule,
   GoDatepickerModule,
+  GoIconButtonModule,
   GoIconModule,
   GoLoaderModule,
   GoModalModule,
@@ -61,6 +62,7 @@ import { LayoutSearchComponent } from './components/layout-docs/components/layou
 import { LayoutExampleComponent } from './components/layout-docs/components/layout-example/layout-example.component';
 import { TextAreaDocsComponent } from './components/form-docs/components/text-area-docs/text-area-docs.component';
 import { TableSelectionComponent } from './components/table-docs/components/table-selection/table-selection.component';
+import { TableActionsDocsComponent } from './components/table-docs/components/table-actions-docs/table-actions-docs.component';
 
 @NgModule({
   imports: [
@@ -71,6 +73,7 @@ import { TableSelectionComponent } from './components/table-docs/components/tabl
     GoCardModule,
     GoCopyModule,
     GoDatepickerModule,
+    GoIconButtonModule,
     GoIconModule,
     GoInputModule,
     GoTextAreaModule,
@@ -116,7 +119,8 @@ import { TableSelectionComponent } from './components/table-docs/components/tabl
     LayoutHeaderComponent,
     LayoutSearchComponent,
     LayoutExampleComponent,
-    TableSelectionComponent
+    TableSelectionComponent,
+    TableActionsDocsComponent
   ],
   entryComponents: [
     BasicTestComponent,
