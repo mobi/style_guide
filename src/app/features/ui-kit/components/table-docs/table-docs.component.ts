@@ -11,6 +11,7 @@ export class TableDocsComponent {
     { routeTitle: 'Basics', subRoutes: [
       { route: './', routeTitle: 'Overview' },
       { route: './pagination', routeTitle: 'Pagination' },
+      { route: './selection', routeTitle: 'Selection' },
       { route: './sorting', routeTitle: 'Sorting' },
       { route: './templating', routeTitle: 'Templating' }
     ]},

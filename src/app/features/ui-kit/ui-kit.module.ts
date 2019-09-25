@@ -60,6 +60,7 @@ import { LayoutHeaderComponent } from './components/layout-docs/components/layou
 import { LayoutSearchComponent } from './components/layout-docs/components/layout-search/layout-search.component';
 import { LayoutExampleComponent } from './components/layout-docs/components/layout-example/layout-example.component';
 import { TextAreaDocsComponent } from './components/form-docs/components/text-area-docs/text-area-docs.component';
+import { TableSelectionComponent } from './components/table-docs/components/table-selection/table-selection.component';
 
 @NgModule({
   imports: [
@@ -114,7 +115,8 @@ import { TextAreaDocsComponent } from './components/form-docs/components/text-ar
     LayoutNavComponent,
     LayoutHeaderComponent,
     LayoutSearchComponent,
-    LayoutExampleComponent
+    LayoutExampleComponent,
+    TableSelectionComponent
   ],
   entryComponents: [
     BasicTestComponent,
