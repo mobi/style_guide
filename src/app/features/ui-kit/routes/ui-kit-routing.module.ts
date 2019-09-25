@@ -30,6 +30,7 @@ import { LayoutHeaderComponent } from '../components/layout-docs/components/layo
 import { LayoutSearchComponent } from '../components/layout-docs/components/layout-search/layout-search.component';
 import { LayoutExampleComponent } from '../components/layout-docs/components/layout-example/layout-example.component';
 import { TextAreaDocsComponent } from '../components/form-docs/components/text-area-docs/text-area-docs.component';
+import { TableSelectionComponent } from '../components/table-docs/components/table-selection/table-selection.component';
 
 const routes: Routes = [
   { path: 'ui-kit', component: UiKitComponent },
@@ -59,6 +60,7 @@ const routes: Routes = [
   { path: 'ui-kit/table', component: TableDocsComponent, children: [
     { path: '', component: TableOverviewComponent },
     { path: 'pagination', component: TablePaginationComponent },
+    { path: 'selection', component: TableSelectionComponent },
     { path: 'server-integration', component: ServerIntegrationComponent },
     { path: 'sorting', component: TableSortingComponent },
     { path: 'templating', component: TableTemplatesComponent }
